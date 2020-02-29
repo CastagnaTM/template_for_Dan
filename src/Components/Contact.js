@@ -6,7 +6,9 @@ export default  function Contact() {
 
     return (
         <div className='component'>
-            <h1 className='contact-header'>Contact info</h1>
+            <div className='header-container'>
+                <h1 className='contact-header'>Contact info</h1>
+            </div>
             <div className='contact-column'>
                 <div className='contact-row'>
                     <p className='contact-text'>Email</p>

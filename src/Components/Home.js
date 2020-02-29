@@ -34,7 +34,9 @@ export default class Home extends Component {
     render(){
         return (
             <div className='component'>
-                <h1 className='component-header'>Dan's Designs</h1>
+                <div className='header-container'>
+                    <h1 className='component-header'>Dan's Designs</h1>
+                </div>
                 <div className='component-body'>
                     <div className='component-slideshow'>
                         <figure>
