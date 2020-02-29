@@ -65,6 +65,7 @@ nav-bar {
 .component-body {
   display: flex;
   flex-direction: row;
+  width: 95%;
   justify-content: space-around;
   flex-flow: wrap;
   margin-left: 5%;
@@ -73,8 +74,8 @@ nav-bar {
 }
 
 .component-slideshow, .component-image-div{
-  min-width: 45%;
-  max-width: 45%;
+  min-width: 60%;
+  max-width: 60%;
   justify-content: center;
   text-align: center;
 }
@@ -88,19 +89,18 @@ nav-bar {
 }
 
 @-webkit-keyframes fadeinout {
-  from { opacity: .6 }
+  from { opacity: .4 }
   to { opacity: 1 }
 }
 
 @keyframes fadeinout {
-  from { opacity: .6 }
+  from { opacity: .4 }
   to { opacity: 1 }
 }
 
 .component-text {
   min-width: 30%;
   max-width: 30%;
-  margin-left: 10%;
   margin-right: 5%;
   text-align: center;
   padding: .5em;
