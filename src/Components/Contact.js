@@ -1,0 +1,28 @@
+import React from 'react'
+import FB from '../Assets/FB_Logo.png'
+import Insta from '../Assets/insta_logo.png'
+
+export default  function Contact() {
+
+    return (
+        <div className='component'>
+            <h1 className='contact-header'>Contact info</h1>
+            <div className='contact-column'>
+                <div className='contact-row'>
+                    <p className='contact-text'>Email</p>
+                </div>
+                <div className='contact-row'></div>
+                    <p className='contact-text'>Phone</p>
+                <div className='contact-row'>
+                    <p className='contact-text'>Facebook</p>
+                    <a href='https://www.facebook.com/dan.castrogivanni' target='_blank' rel="noopener noreferrer"><img src={FB} alt='Facebook logo' className='contact-logo'></img></a>
+                </div>
+                <div className='contact-row'>
+                    <p className='contact-text'>Instagram</p>
+                    <a href='https://www.instagram.com/big_dan_castro/' target='_blank' rel="noopener noreferrer"><img src={Insta} alt='Instagram logo' className='contact-logo'></img></a>
+                </div>
+            </div>
+        </div>
+    )
+    
+}
