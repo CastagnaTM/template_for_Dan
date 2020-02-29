@@ -5,7 +5,9 @@ export default function About() {
 
     return (
         <div className='component'>
-            <h1 className='component-header'>Dan</h1>
+             <div className='header-container'>
+                <h1 className='component-header'>Dan</h1>
+            </div>
             <div className='component-body'>
                 <div className='component-image-div'>
                     <img src={Zoidberg} className='component-image' alt="gif"></img>
