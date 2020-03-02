@@ -34,7 +34,7 @@ export default class Designs extends React.Component {
     
     render(){
         return (
-            <div className='component'>
+            <div className='component' id="designs-component">
                  <div className='header-container'>
                     <h1 className='component-header'>Designs</h1>
                 </div>  
