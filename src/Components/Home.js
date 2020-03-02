@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 
+
+// this component used to hold a slideshow. I've since decided to get rid of that, in favor of a cleaner and more streamlined user experience
 export default class Home extends Component {
- //temporarily storing example images in the front end, and then using a set timeout function to iterate through an array of those images
     
-    // The images array held in state here will fetch from the backend when there is one, and load it into componentDidMount
     state = {
         images: [],
         currentImage: 1
     }
 
     componentDidMount = () => {
-        setInterval(this.changeSlide, 2500);
+        // setInterval(this.changeSlide, 2500);
     }
 
     getImage = () => {
@@ -33,17 +33,17 @@ export default class Home extends Component {
 
     render(){
         return (
-            <div className='component'>
+            <div className='component' id='home-component'>
                 <div className='header-container'>
                     <h1 className='component-header'>Dan's Designs</h1>
                 </div>
                 <div className='component-body'>
-                    <div className='component-slideshow'>
+                    {/* <div className='component-slideshow'>
                         <figure>
                             <img src={this.getImage()} className='component-slideshow-slide' alt="slideshow images"></img>
                             <figcaption className='caption'>A description for each image could go here</figcaption>
                         </figure>
-                    </div>
+                    </div> */}
                     <div className='component-text'>
                         <p>
                             This is a space where you could put a brief introduction
