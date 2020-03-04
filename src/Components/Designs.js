@@ -39,6 +39,9 @@ export default class Designs extends React.Component {
                     <h1 className='component-header'>Designs</h1>
                 </div>  
                 {this.displayImages()}
+                <section id='packages'>
+                    <p>This is where packages might go</p>
+                </section>
             </div>
         )
     }
