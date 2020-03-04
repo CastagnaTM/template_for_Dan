@@ -16,7 +16,18 @@ export default class Designs extends React.Component {
     }
 
     componentDidMount = () => {
+
         this.setImages();
+        if (this.props.location.state){
+            console.log(this.props.location.state)
+            this.getPackages()
+        }
+
+    }
+
+    getPackages = async () => {
+       let scroll = await document.getElementById('packages');
+       scroll.scrollIntoView({behavior: 'smooth'})
     }
 
     setImages = () => {
@@ -31,6 +42,11 @@ export default class Designs extends React.Component {
     displayImages = () => {
         return this.state.designImages.map((item, i) => <Image key={i} item={item}/>)
     }
+
+    loadPackages = () => {
+        const packageSection = document.getElementById('packages');
+        window.scrollTo(packageSection);
+    }
     
     render(){
         return (
@@ -39,6 +55,10 @@ export default class Designs extends React.Component {
                     <h1 className='component-header'>Designs</h1>
                 </div>  
                 {this.displayImages()}
+                <section id='packages' ref={this.myRef}>
+                    <p>This is where packages might go</p>
+                </section>
+                
             </div>
         )
     }
