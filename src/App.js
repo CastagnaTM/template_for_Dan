@@ -6,27 +6,19 @@ import Navbar from './Components/Navbar';
 import Banner from './Components/Banner'
 import Designs from './Components/Designs';
 import Home from './Components/Home';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class App extends Component {
   // This will hold state, holding which component is in view. I don't think any other component needs state for this app. It's super simple
   
-  componentDidMount = () => {
-    window.addEventListener( 'scroll', () => {
-      const isTop = window.scrollY < 100;
-      const nav = document.getElementById('banner');
-      if (isTop){
-        // nav.classList.add('scrolled');
-      } else {
-        // nav.classList.remove('scrolled')
+  // componentDidMount = () => {
+  //   const packageSection = document.getElementById('packages');
+  //   if(packageSection){
+  //     console.log('yes')
+  //   }
+  // }
 
-      }
-    });
-  }
   
-  componentWillUnmount() {
-    window.removeEventListener('scroll');
-  }
   
   
   render() {
@@ -34,9 +26,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* <div className='banner'>
-            <p>hey, this is a banner... </p>
-          </div> */}
           <Navbar />
           <Banner />
           <Switch>
@@ -45,7 +34,6 @@ class App extends Component {
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
           </Switch>
-          
         </div>
       </Router>
     );
