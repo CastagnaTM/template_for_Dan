@@ -27,7 +27,11 @@ export default class Designs extends React.Component {
 
     getPackages = async () => {
        let scroll = await document.getElementById('packages');
-       scroll.scrollIntoView({behavior: 'smooth'})
+       if(scroll){
+           setTimeout(() =>{
+            scroll.scrollIntoView({behavior: 'smooth'})
+           }, 500);
+       } 
     }
 
     setImages = () => {
