@@ -47,8 +47,6 @@ nav-bar {
   text-decoration: none;
 }
 
-/* figure out the rest of the border and how to make the text link to a specific portion of another page, 
-probably through a function and not an actual link */
 .banner {
   position: fixed;
   bottom: 0;
@@ -56,6 +54,7 @@ probably through a function and not an actual link */
   width: 99%;
   background: rgb(38, 36, 36);
   text-align: center;
+  margin-top:5%;
   padding: 1.5%;
   border-top: solid teal .36em;
   border-left: solid rgba(203, 132, 1, 0.858) .36em;
@@ -112,24 +111,6 @@ probably through a function and not an actual link */
   text-align: center;
 }
 
-/* .component-slideshow-slide {
-  max-width: 90%;
-  max-height: 90%;
-  -webkit-animation: fadeinout 2.5s infinite forwards;
-  animation: fadeinout 2.5s infinite forwards;
-  opacity: 0;
-}
-
-@-webkit-keyframes fadeinout {
-  from { opacity: .4 }
-  to { opacity: 1 }
-}
-
-@keyframes fadeinout {
-  from { opacity: .4 }
-  to { opacity: 1 }
-} */
-
 .component-text {
   min-width: 30%;
   max-width: 30%;
@@ -180,7 +161,6 @@ probably through a function and not an actual link */
   display: flex;
   flex-direction: column;
   width: 60%;
-  /* margin-top: 2%; */
   margin-left: 10%;
 }
 
@@ -213,6 +193,7 @@ probably through a function and not an actual link */
     width: auto;
     margin-top: 2%;
   }
+  
   .component-header {
     width: 90%;
     margin: 0 auto;
@@ -231,7 +212,6 @@ probably through a function and not an actual link */
     justify-content: space-around;
     align-content: center;
     margin-bottom: 15%;
-
   }
 }
 

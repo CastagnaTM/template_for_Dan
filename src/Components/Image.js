@@ -78,5 +78,3 @@ export default class Image extends React.Component {
         
     }
 }
-    
-

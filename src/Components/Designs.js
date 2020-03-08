@@ -19,14 +19,14 @@ export default class Designs extends React.Component {
 
         this.setImages();
         if (this.props.location.state){
-            console.log(this.props.location.state)
             this.getPackages()
+            
         }
 
     }
 
-    getPackages = async () => {
-       let scroll = await document.getElementById('packages');
+    getPackages = () => {
+        let scroll = document.getElementById('packages');
        if(scroll){
            setTimeout(() =>{
             scroll.scrollIntoView({behavior: 'smooth'})
@@ -68,3 +68,4 @@ export default class Designs extends React.Component {
     }
 
 }
+
