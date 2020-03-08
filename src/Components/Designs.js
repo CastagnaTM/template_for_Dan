@@ -46,11 +46,6 @@ export default class Designs extends React.Component {
     displayImages = () => {
         return this.state.designImages.map((item, i) => <Image key={i} item={item}/>)
     }
-
-    loadPackages = () => {
-        const packageSection = document.getElementById('packages');
-        window.scrollTo(packageSection);
-    }
     
     render(){
         return (
@@ -59,8 +54,9 @@ export default class Designs extends React.Component {
                     <h1 className='component-header'>Designs</h1>
                 </div>  
                 {this.displayImages()}
-                <section id='packages' ref={this.myRef}>
+                <section id='packages' >
                     <p>This is where packages might go</p>
+                    <h1>ULTIMATE WEDDING PACKAGE</h1>
                 </section>
                 
             </div>

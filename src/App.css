@@ -50,12 +50,11 @@ nav-bar {
 .banner {
   position: fixed;
   bottom: 0;
-  max-height: 8%;
+  max-height: 10vh;
   width: 99%;
   background: rgb(38, 36, 36);
   text-align: center;
-  margin-top:5%;
-  padding: 1.5%;
+  padding: 2%;
   border-top: solid teal .36em;
   border-left: solid rgba(203, 132, 1, 0.858) .36em;
   border-right: solid rgba(203, 132, 1, 0.858) .36em;
@@ -145,7 +144,11 @@ nav-bar {
   -o-background-size: cover;
 }
 
-#packages p {
+#packages {
+  padding-bottom: 10vh;
+}
+
+#packages p, h1 {
   text-align: center;
   color:white;
 }
