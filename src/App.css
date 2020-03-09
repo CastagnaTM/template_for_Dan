@@ -95,7 +95,7 @@ nav-bar {
 .component-body {
   display: flex;
   flex-direction: row;
-  width: 95%;
+  width: 90%;
   justify-content: space-around;
   flex-flow: wrap;
   margin-left: 5%;
@@ -151,6 +151,44 @@ nav-bar {
 #packages p, h1 {
   text-align: center;
   color:white;
+}
+
+.scroll-up-button-div {
+  position: fixed;
+  top:0;
+  height: 5vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#scroll-up-button {
+  width: 10%;
+  height: 5vh;
+  margin-left: 45%;
+  margin-right: 45%;
+  z-index: 2;
+  border-radius: 1.5em;
+  display: none;
+  text-align: center;
+  color: whitesmoke;
+  border: solid 2px grey;
+}
+
+#scroll-up-button.scrolling {
+  display: block;
+  cursor: pointer;
+  background-color: rgb(7, 7, 7);
+  animation: fade 0.25s linear;
+}
+
+@keyframes fade {
+  from { opacity: 0% };
+  to { opacity: 100% };
+}
+
+#scroll-up-button.scrolling:focus{
+  outline: none;
 }
 
 .contact-header {
@@ -215,6 +253,11 @@ nav-bar {
     justify-content: space-around;
     align-content: center;
     margin-bottom: 15%;
+  }
+
+  #scroll-up-button.scrolling {
+    width: 25%;
+    margin-left: 37.5%;
   }
 }
 
