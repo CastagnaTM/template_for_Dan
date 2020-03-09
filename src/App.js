@@ -9,17 +9,6 @@ import Home from './Components/Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class App extends Component {
-  // This will hold state, holding which component is in view. I don't think any other component needs state for this app. It's super simple
-  
-  // componentDidMount = () => {
-  //   const packageSection = document.getElementById('packages');
-  //   if(packageSection){
-  //     console.log('yes')
-  //   }
-  // }
-
-  
-  
   
   render() {
 
