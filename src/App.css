@@ -144,6 +144,14 @@ nav-bar {
   -o-background-size: cover;
 }
 
+#designs-a {
+  background-color: grey;
+}
+
+#designs-b {
+  background: rgb(38, 36, 36);
+}
+
 #packages {
   padding-bottom: 10vh;
 }
@@ -153,13 +161,14 @@ nav-bar {
   color:white;
 }
 
-.scroll-up-button-div {
+#scroll-up-button-div {
   position: fixed;
   top:0;
   height: 5vh;
   width: 100%;
   justify-content: center;
   align-items: center;
+  z-index: -2;
 }
 
 #scroll-up-button {
@@ -167,15 +176,20 @@ nav-bar {
   height: 5vh;
   margin-left: 45%;
   margin-right: 45%;
-  z-index: 2;
   border-radius: 1.5em;
   display: none;
   text-align: center;
   color: whitesmoke;
   border: solid 2px grey;
+  z-index: -2;
+}
+
+#scroll-up-button-div.scrolling {
+  z-index: 2;
 }
 
 #scroll-up-button.scrolling {
+  z-index: 2;
   display: block;
   cursor: pointer;
   background-color: rgb(7, 7, 7);
@@ -256,7 +270,7 @@ nav-bar {
   }
 
   #scroll-up-button.scrolling {
-    width: 25%;
+    width: 27%;
     margin-left: 37.5%;
   }
 }
