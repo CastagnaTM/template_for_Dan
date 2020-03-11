@@ -100,7 +100,8 @@ nav-bar {
   flex-flow: wrap;
   margin-left: 5%;
   margin-right: 5%;
-  padding: .5em;
+  margin-bottom: 1%;
+  /* padding: .5em; */
 }
 
 .component-image-div{
@@ -108,15 +109,39 @@ nav-bar {
   max-width: 60%;
   justify-content: center;
   text-align: center;
+  /* border-bottom: solid #E9D21B 4px; */
 }
 
-.component-text {
+.figure {
+  margin-right: 0;
+}
+
+.component-image {
+  max-width: 90%;
+  max-height: 90%;
+  /* border-bottom: solid #E9D21B 4px; */
+}
+
+.caption {
+  font-size: small;
+  color: aliceblue;
+}
+
+.component-text, .designs-component-text {
   min-width: 30%;
   max-width: 30%;
-  margin-right: 5%;
   text-align: center;
   padding: .5em;
   overflow: scroll-y;
+  /* border-bottom: solid #E9D21B 4px; */
+}
+
+#designs-component-text-a {
+  margin-right: 5%;
+}
+
+#designs-component-text-b {
+  margin-left: 5%;
 }
 
 .component-text p {
@@ -124,14 +149,11 @@ nav-bar {
   color: aliceblue;
 }
 
-.component-image {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.caption {
-  font-size: small;
+.designs-component-text p {
+  line-height: 1.4em;
   color: aliceblue;
+  font-family: GT-America-Extended-Regular, Arial,sans-serif;;
+  border-bottom: solid #E9D21B 2px;
 }
 
 #home-component {
@@ -144,22 +166,35 @@ nav-bar {
   -o-background-size: cover;
 }
 
+#designs-a {
+  background-color: rgb(38, 36, 36);
+  
+}
+
+#designs-b {
+  background-color:rgb(58, 55, 55);
+}
+
 #packages {
+  text-align: center;
+  padding-top: 2%;
   padding-bottom: 10vh;
+  background-color: rgb(177, 185, 189);
 }
 
 #packages p, h1 {
   text-align: center;
-  color:white;
+  color:rgb(23, 20, 16);
 }
 
-.scroll-up-button-div {
+#scroll-up-button-div {
   position: fixed;
   top:0;
   height: 5vh;
   width: 100%;
   justify-content: center;
   align-items: center;
+  z-index: -2;
 }
 
 #scroll-up-button {
@@ -167,15 +202,20 @@ nav-bar {
   height: 5vh;
   margin-left: 45%;
   margin-right: 45%;
-  z-index: 2;
   border-radius: 1.5em;
   display: none;
   text-align: center;
   color: whitesmoke;
   border: solid 2px grey;
+  z-index: -2;
+}
+
+#scroll-up-button-div.scrolling {
+  z-index: 2;
 }
 
 #scroll-up-button.scrolling {
+  z-index: 2;
   display: block;
   cursor: pointer;
   background-color: rgb(7, 7, 7);
@@ -243,7 +283,7 @@ nav-bar {
     min-width: 90%;
     margin: 0 auto;
   }
-  .component-text {
+  .component-text, .designs-component-text {
     min-width: 90%;
     margin: 0 auto;
   }
@@ -256,8 +296,18 @@ nav-bar {
   }
 
   #scroll-up-button.scrolling {
-    width: 25%;
+    width: 27%;
     margin-left: 37.5%;
   }
+
+  #designs-component-text-a, #designs-component-text-b {
+    margin: 0 auto;
+  }
+
+  .figure {
+    margin: 0  auto;
+    padding-top: 1em;
+  }
+
 }
 

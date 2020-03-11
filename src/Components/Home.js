@@ -46,15 +46,8 @@ export default class Home extends Component {
                     </div> */}
                     <div className='component-text'>
                         <p>
-                            This is a space where you could put a brief introduction
-                        </p>
-                        <p>
-                            Something like: Hey, I'm Dan. I design things. Like these Chihuahuas.
-                            I know it sounds weird, but it's true. I designed these Chihuahuas, and for a reasonable price
-                            I could design one for you too, or you could rent one that I've already designed. 
-                        </p>
-                        <p>
-                            Take a looks at the "Designs" tab to learn more about each Chihuahua I've worked on in the past.
+                            Hello! If you are seeing this page, you've reached Dan's Unforgettable Creations. 
+                            This site is currently a work in progress, and is still receiving regular updates. Feel free to look around though!
                         </p>
                     </div>
                 </div>

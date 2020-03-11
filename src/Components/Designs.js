@@ -14,6 +14,21 @@ export default class Designs extends React.Component {
     state = {
         designImages: []
     }
+    
+    scrollListener = () => {
+        let button = document.getElementById('scroll-up-button')
+        let buttonDiv = document.getElementById('scroll-up-button-div')
+        if (window.scrollY > 100){
+            // button.classList.remove('not-scrolling');
+            button.classList.add('scrolling');
+            buttonDiv.classList.add('scrolling');
+        }
+        else {
+            button.classList.remove('scrolling');
+            buttonDiv.classList.remove('scrolling');
+            // button.classList.add('not-scrolling');
+        }
+    }
 
     componentDidMount = () => {
 
@@ -23,17 +38,11 @@ export default class Designs extends React.Component {
             
         }
         
-       window.addEventListener("scroll", () => {
-        let button = document.getElementById('scroll-up-button')
-        if (window.scrollY > 100){
-            // button.classList.remove('not-scrolling');
-            button.classList.add('scrolling');
-        }
-        else {
-            button.classList.remove('scrolling');
-            // button.classList.add('not-scrolling');
-        }
-       })
+       window.addEventListener("scroll", this.scrollListener)
+    }
+
+    componentWillUnmount = () => {
+        window.removeEventListener("scroll", this.scrollListener);
     }
 
     setImages = () => {
@@ -65,7 +74,7 @@ export default class Designs extends React.Component {
     render(){
         return (
             <div className='component' id="designs-component">
-                <div className='scroll-up-button-div' >
+                <div id='scroll-up-button-div' >
                     <button id='scroll-up-button'
                     onClick={this.scrollUp}
                     >
@@ -77,8 +86,10 @@ export default class Designs extends React.Component {
                 </div>
                 {this.displayImages()}
                 <section id='packages' >
-                    <p>This is where packages might go</p>
-                    <h1>ULTIMATE WEDDING PACKAGE</h1>
+                    {/* <div className='packages-text'> */}
+                        <p>This is where packages might go</p>
+                        <h1>ULTIMATE WEDDING PACKAGE</h1>
+                    {/* </div> */}
                 </section>
                 
             </div>
