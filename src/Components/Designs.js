@@ -86,8 +86,10 @@ export default class Designs extends React.Component {
                 </div>
                 {this.displayImages()}
                 <section id='packages' >
-                    <p>This is where packages might go</p>
-                    <h1>ULTIMATE WEDDING PACKAGE</h1>
+                    {/* <div className='packages-text'> */}
+                        <p>This is where packages might go</p>
+                        <h1>ULTIMATE WEDDING PACKAGE</h1>
+                    {/* </div> */}
                 </section>
                 
             </div>
