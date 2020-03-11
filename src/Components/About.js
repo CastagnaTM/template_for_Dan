@@ -1,7 +1,10 @@
 import React from 'react'
-import Zoidberg from '../Assets/zoidberg.gif'
+import Logo from '../Assets/logo.png'
 
 export default function About() {
+    // Something like: Hey, I'm Dan. I design things. Like these Chihuahuas.
+    // I know it sounds weird, but it's true. I designed these Chihuahuas, and for a reasonable price
+   // I could design one for you too, or you could rent one that I've already designed. 
 
     return (
         <div className='component'>
@@ -10,13 +13,11 @@ export default function About() {
             </div>
             <div className='component-body'>
                 <div className='component-image-div'>
-                    <img src={Zoidberg} className='component-image' alt="gif"></img>
+                    <img src={Logo} className='component-image' alt="gif"></img>
                 </div>
                 <div className='component-text'>
                     <p>
-                        Hi, my name is Dan. Welcome to my website.
-                        I make stuff you can rent from me for events.
-                        I am also the inventor of the "Fire Dance"
+                        This page will contain information about Dan and his business.
                     </p>
                 </div>
             </div>

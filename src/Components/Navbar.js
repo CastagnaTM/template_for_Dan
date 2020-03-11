@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dan from '../Assets/Dan.png'
+import Logo from '../Assets/logo2.png'
 
 export default function Navbar() {
 
@@ -8,7 +8,7 @@ export default function Navbar() {
         <nav-bar>
             <ul className='nav-links'>
                 <Link to='/' className='nav-style'>
-                    <li><img className='icon' src={Dan} alt='home'></img></li>
+                    <li><img className='icon' src={Logo} alt='home'></img></li>
                 </Link>
                 <Link to='/about' className='nav-style'>
                     <li>About</li>

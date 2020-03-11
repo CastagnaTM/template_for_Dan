@@ -21,7 +21,7 @@ export default  function Contact() {
                 </div>
                 <div className='contact-row'>
                     <p className='contact-text'>Instagram</p>
-                    <a href='https://www.instagram.com/big_dan_castro/' target='_blank' rel="noopener noreferrer"><img src={Insta} alt='Instagram logo' className='contact-logo'></img></a>
+                    <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"><img src={Insta} alt='Instagram logo' className='contact-logo'></img></a>
                 </div>
             </div>
         </div>

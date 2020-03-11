@@ -100,7 +100,8 @@ nav-bar {
   flex-flow: wrap;
   margin-left: 5%;
   margin-right: 5%;
-  padding: .5em;
+  margin-bottom: 1%;
+  /* padding: .5em; */
 }
 
 .component-image-div{
@@ -108,15 +109,39 @@ nav-bar {
   max-width: 60%;
   justify-content: center;
   text-align: center;
+  /* border-bottom: solid #E9D21B 4px; */
 }
 
-.component-text {
+.figure {
+  margin-right: 0;
+}
+
+.component-image {
+  max-width: 90%;
+  max-height: 90%;
+  /* border-bottom: solid #E9D21B 4px; */
+}
+
+.caption {
+  font-size: small;
+  color: aliceblue;
+}
+
+.component-text, .designs-component-text {
   min-width: 30%;
   max-width: 30%;
-  margin-right: 5%;
   text-align: center;
   padding: .5em;
   overflow: scroll-y;
+  /* border-bottom: solid #E9D21B 4px; */
+}
+
+#designs-component-text-a {
+  margin-right: 5%;
+}
+
+#designs-component-text-b {
+  margin-left: 5%;
 }
 
 .component-text p {
@@ -124,15 +149,14 @@ nav-bar {
   color: aliceblue;
 }
 
-.component-image {
-  max-width: 90%;
-  max-height: 90%;
+.designs-component-text p {
+  line-height: 1.4em;
+  color: aliceblue;
+  font-family: GT-America-Extended-Regular, Arial,sans-serif;;
+  border-bottom: solid #E9D21B 2px;
 }
 
-.caption {
-  font-size: small;
-  color: aliceblue;
-}
+
 
 #home-component {
   background-image: url('./Assets/background.jpeg');
@@ -145,11 +169,12 @@ nav-bar {
 }
 
 #designs-a {
-  background-color: grey;
+  background-color: rgb(38, 36, 36);
+  
 }
 
 #designs-b {
-  background: rgb(38, 36, 36);
+  background-color:rgb(58, 55, 55);
 }
 
 #packages {
@@ -257,7 +282,7 @@ nav-bar {
     min-width: 90%;
     margin: 0 auto;
   }
-  .component-text {
+  .component-text, .designs-component-text {
     min-width: 90%;
     margin: 0 auto;
   }
@@ -273,5 +298,15 @@ nav-bar {
     width: 27%;
     margin-left: 37.5%;
   }
+
+  #designs-component-text-a, #designs-component-text-b {
+    margin: 0 auto;
+  }
+
+  .figure {
+    margin: 0  auto;
+    padding-top: 1em;
+  }
+
 }
 
