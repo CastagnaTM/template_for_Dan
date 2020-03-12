@@ -75,21 +75,19 @@ export default class Designs extends React.Component {
         return (
             <div className='component' id="designs-component">
                 <div id='scroll-up-button-div' >
-                    <button id='scroll-up-button'
+                    <div id='scroll-up-button'
                     onClick={this.scrollUp}
                     >
-                        Scroll To Top
-                    </button>
+                     <p>&uarr;</p>
+                    </div>
                 </div>
                  <div className='header-container'>
                     <h1 className='component-header'>Designs</h1>
                 </div>
                 {this.displayImages()}
                 <section id='packages' >
-                    {/* <div className='packages-text'> */}
                         <p>This is where packages might go</p>
                         <h1>ULTIMATE WEDDING PACKAGE</h1>
-                    {/* </div> */}
                 </section>
                 
             </div>
