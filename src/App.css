@@ -61,8 +61,11 @@ nav-bar {
   background: black;
   text-align: center;
   padding: 2%;
-  border: solid black .36em;
-  animation: change 1.5s infinite;
+  /* Original banner settings in case Dan wants to change it back. I made the border a little slimmer, and the animation a little slower */
+  /* border: solid black .36em; */
+  /* animation: change 1.5s infinite; */
+  border: solid black .26em;
+  animation: change 2s infinite;
 }
 @keyframes change {
   0% { border-color: black}
@@ -269,7 +272,7 @@ nav-bar {
 
 .contact-header {
   text-align: left;
-  margin-left: 12%;
+  margin-left: 20%;
   color: azure;
   padding: 0;
 }
@@ -279,6 +282,7 @@ nav-bar {
   flex-direction: column;
   width: 60%;
   margin-left: 10%;
+  margin-top: -4%;
 }
 
 .contact-row {

@@ -13,8 +13,9 @@ export default  function Contact() {
                 <div className='contact-row'>
                     <p className='contact-text'>Email</p>
                 </div>
-                <div className='contact-row'></div>
+                <div className='contact-row'>
                     <p className='contact-text'>Phone</p>
+                </div>
                 <div className='contact-row'>
                     <p className='contact-text'>Facebook</p>
                     <a href='https://www.facebook.com/dan.castrogivanni' target='_blank' rel="noopener noreferrer"><img src={FB} alt='Facebook logo' className='contact-logo'></img></a>
