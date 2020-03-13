@@ -42,7 +42,7 @@ export default class Image extends React.Component {
                 <div className='component-body' id={this.props.item.id % 2 === 0 ? 'designs-b' : 'designs-a'}>
                     <div className='component-image-div' onClick={() => this.revealText()}>
                         <figure className='figure'>
-                            <img src={this.props.item.name} className='component-image' alt='design images'></img>
+                            <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
                             <figcaption className='caption'>{this.props.item.caption}</figcaption>
                         </figure>
                     </div>
@@ -69,7 +69,7 @@ export default class Image extends React.Component {
                         </div>
                         <div className='component-image-div' onClick={() => this.revealText()}>
                             <figure className='figure' >
-                                <img src={this.props.item.name} className='component-image' alt='design images'></img>
+                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
                                 <figcaption className='caption'>{this.props.item.caption}</figcaption>
                             </figure>
                         </div>
@@ -81,7 +81,7 @@ export default class Image extends React.Component {
                     <div className='component-body' id='designs-a'>
                         <div className='component-image-div' onClick={() => this.revealText()}>
                             <figure className='figure'>
-                                <img src={this.props.item.name} className='component-image' alt='design images'></img>
+                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
                                 <figcaption className='caption'>{this.props.item.caption}</figcaption>
                             </figure>
                         </div>
