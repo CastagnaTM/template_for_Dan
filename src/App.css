@@ -55,23 +55,18 @@ nav-bar {
 .banner {
   position: fixed;
   bottom: 0;
+  z-index:2;
   max-height: 10vh;
   width: 95.25%;
   background: black;
   text-align: center;
   padding: 2%;
   border: solid black .36em;
-  /* border-top: solid black .36em;
-  border-left: solid #E9D21B .36em;
-  border-right: solid #E9D21B .36em;
-  border-bottom: solid black .36em; */
   animation: change 1.5s infinite;
 }
 @keyframes change {
   0% { border-color: black}
   50% { border-color: #E9D21B;}
-  /* 0% { border-top-color: black; border-left-color: #E9D21B; border-right-color: #E9D21B; border-bottom-color: black }
-  50% { border-top-color: #E9D21B; border-left-color: black; border-right-color: black; border-bottom-color: #E9D21B }  */
 }
 
 .banner-link {
@@ -86,6 +81,7 @@ nav-bar {
   overflow: hidden;
   min-height: 100vh;
   margin-bottom: 5%;
+  animation: fade .25s linear;
 }
 
 .header-container {
@@ -109,7 +105,6 @@ nav-bar {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 1%;
-  /* padding: .5em; */
 }
 
 .component-image-div{
@@ -117,17 +112,29 @@ nav-bar {
   max-width: 60%;
   justify-content: center;
   text-align: center;
-  /* border-bottom: solid #E9D21B 4px; */
 }
 
 .figure {
   margin-right: 0;
 }
 
-.component-image {
+.component-image{
   max-width: 90%;
   max-height: 90%;
-  /* border-bottom: solid #E9D21B 4px; */
+}
+
+.designs-component-image, .designs-component-image-with-text {
+  max-width: 90%;
+  max-height: 90%;
+  transition: .2s;
+}
+
+.designs-component-image:hover, .designs-component-image-with-text:hover {
+  transform: scale(1.05);
+}
+
+.designs-component-image-with-text {
+  animation: fade 1.25s linear;
 }
 
 .caption {
@@ -141,7 +148,9 @@ nav-bar {
   text-align: center;
   padding: .5em;
   overflow: scroll-y;
-  /* border-bottom: solid #E9D21B 4px; */
+}
+.designs-component-text{
+  animation: fade 1.25s linear;
 }
 
 #designs-component-text-a {
@@ -206,23 +215,9 @@ nav-bar {
   z-index: -2;
 }
 
-/* #scroll-up-button {
-  width: 10%;
-  height: 5vh;
-  margin-left: -5%;
-  border-radius: 1.5em;
-  display: none;
-  text-align: center;
-  
-  color: whitesmoke;
-  border: solid 2px grey;
-  z-index: -2;
-} */
-
 #scroll-up-button {
   width: 6vh;
   height: 6vh;
-  /* margin-left: -2.5%; */
   border-radius: 3em;
   display: none;
   text-align: center;
@@ -260,7 +255,7 @@ nav-bar {
   z-index: 2;
   display: block;
   cursor: pointer;
-  animation: fade 0.25s linear;
+  animation: fade 0.5s linear;
 }
 
 @keyframes fade {
@@ -320,14 +315,17 @@ nav-bar {
     width: 90%;
     margin: 0 auto;
   }
+
   .component-slideshow, .component-image-div {
     min-width: 90%;
     margin: 0 auto;
   }
+
   .component-text, .designs-component-text {
     min-width: 90%;
     margin: 0 auto;
   }
+
   .component {
     width: 100%;
     overflow: scroll-y;
