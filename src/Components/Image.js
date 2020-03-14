@@ -18,12 +18,12 @@ export default class Image extends React.Component {
 
     resizeListener = () => {
         this.setState({
-            isMobile: window.innerWidth < 800
+            isMobile: window.innerWidth < 500
         });
     }
 
     windowSizeCheck = () => {
-        if (window.innerWidth < 800){
+        if (window.innerWidth < 500){
             this.setState({
                 isMobile: true
             })
