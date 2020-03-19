@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from './Banner'
 import FB from '../Assets/FB_Logo.png'
 import Insta from '../Assets/insta_logo.png'
 
@@ -25,6 +26,7 @@ export default  function Contact() {
                     <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"><img src={Insta} alt='Instagram logo' className='contact-logo'></img></a>
                 </div>
             </div>
+            <Banner />
         </div>
     )
     

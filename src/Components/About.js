@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from './Banner'
 import Logo from '../Assets/logo.png'
 
 export default function About() {
@@ -21,6 +22,7 @@ export default function About() {
                     </p>
                 </div>
             </div>
+            <Banner />
         </div>
     )
     

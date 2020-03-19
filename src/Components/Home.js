@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Banner from './Banner'
 
 
 // this component used to hold a slideshow. I've since decided to get rid of that, in favor of a cleaner and more streamlined user experience
@@ -51,6 +52,7 @@ export default class Home extends Component {
                         </p>
                     </div>
                 </div>
+                <Banner />
             </div>
         )
     }

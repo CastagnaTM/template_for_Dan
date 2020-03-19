@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from './Banner'
 import Image from './Image'
 import One from '../Assets/1.jpg'
 import Two from '../Assets/2.jpg'
@@ -15,6 +16,9 @@ export default class Designs extends React.Component {
     state = {
         designImages: []
     }
+    packagesRef = React.createRef();
+    scrollButtonRef = React.createRef();
+    scrollDivRef = React.createRef();
 
     componentDidMount = () => {
 
@@ -23,10 +27,10 @@ export default class Designs extends React.Component {
             this.getPackages()
             
         }
+           
+        window.addEventListener("scroll", this.scrollListener)
         
-       window.addEventListener("scroll", this.scrollListener)
-       
-       this.packageListener()
+        this.packageListener()
     }
 
     componentWillUnmount = () => {
@@ -34,17 +38,17 @@ export default class Designs extends React.Component {
     }
 
     scrollListener = () => {
-        let button = document.getElementById('scroll-up-button')
-        let buttonDiv = document.getElementById('scroll-up-button-div')
+        // let button = document.getElementById('scroll-up-button')
+        // let buttonDiv = document.getElementById('scroll-up-button-div')
+        let button = this.scrollButtonRef;
+        let buttonDiv = this.scrollDivRef;
         if (window.scrollY > 100){
-            // button.classList.remove('not-scrolling');
             button.classList.add('scrolling');
             buttonDiv.classList.add('scrolling');
         }
         else {
             button.classList.remove('scrolling');
             buttonDiv.classList.remove('scrolling');
-            // button.classList.add('not-scrolling');
         }
     }
 
@@ -77,16 +81,23 @@ export default class Designs extends React.Component {
     }
 
     getPackages = () => {
-        let scroll = document.getElementById('packages');
-       if(scroll){
-           setTimeout(() =>{
-            scroll.scrollIntoView({behavior: 'smooth'})
-           }, 500);
-       } 
+    //     let scroll = document.getElementById('packages');
+    //    if(scroll){
+    //        setTimeout(() =>{
+    //         scroll.scrollIntoView({behavior: 'smooth'})
+    //        }, 500);
+    //    } 
+    setTimeout(() =>{
+        this.packagesRef.scrollIntoView({
+            behavior: 'smooth'
+        }) 
+       }, 500);
     }
 
     scrollUp = () => {
-       document.getElementById('root').scrollIntoView();
+       document.getElementById('root').scrollIntoView({
+           behavior: 'smooth'
+       });
     }
 
     displayImages = () => {
@@ -96,8 +107,8 @@ export default class Designs extends React.Component {
     render(){
         return (
             <div className='component' id="designs-component">
-                <div id='scroll-up-button-div' >
-                    <div id='scroll-up-button'
+                <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
+                    <div id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
                     onClick={this.scrollUp}
                     >
                      <p>&uarr;</p>
@@ -108,7 +119,7 @@ export default class Designs extends React.Component {
                 </div>
                 {this.displayImages()}
                 {/* I might move this whole packages section into its own component that gets displayed here */}
-                <section id='packages' >
+                <section id='packages' ref={ref => {this.packagesRef = ref}} >
                         <h1>Available Packages</h1>
                         <div className='package-name'> 
                             <div id="menu-carrot">&#9658; </div>  
@@ -185,6 +196,9 @@ export default class Designs extends React.Component {
                             </p>
                         </div>
                 </section>
+                <Banner 
+                    getPackages={this.getPackages}
+                />
             </div>
         )
     }
