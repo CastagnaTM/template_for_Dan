@@ -48,8 +48,8 @@ nav-bar {
 }
 
 .active-nav {
-  color: #E9D21B;
-  font-weight: bold;
+  color: rgb(240, 225, 107);
+  font-size: larger;
 }
 
 .banner {
@@ -57,7 +57,7 @@ nav-bar {
   bottom: 0;
   z-index:2;
   max-height: 10vh;
-  width: 95.25%;
+  width: 95.5%;
   background: black;
   text-align: center;
   padding: 2%;
@@ -133,7 +133,7 @@ nav-bar {
 }
 
 .designs-component-image:hover, .designs-component-image-with-text:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .designs-component-image-with-text {
@@ -150,7 +150,7 @@ nav-bar {
   max-width: 30%;
   text-align: center;
   padding: .5em;
-  overflow: scroll-y;
+  overflow: scroll;
 }
 .designs-component-text{
   animation: fade 1.25s linear;
@@ -207,8 +207,8 @@ nav-bar {
 }
 
 #scroll-up-button {
-  width: 6vh;
-  height: 6vh;
+  width: 40px;
+  height: 40px;
   border-radius: 3em;
   display: none;
   text-align: center;
@@ -258,59 +258,91 @@ nav-bar {
   outline: none;
 }
 
-#packages {
-  
-  padding-top: 2%;
-  padding-bottom: 10vh;
-  background-color: rgb(177, 185, 189);
+.packages-component {
+  width: 100%;
 }
 
-#packages h1 {
+.packages {
+  padding-top: 2%;
+  padding-bottom: 10vh;
+  background-color: rgb(38, 36, 36);
+}
+
+.packages h1 {
   text-align: left;
   margin-left: 20%;
-  color:rgb(23, 20, 16);
+  color: aliceblue;
 }
 
 .package-name {
+  position: relative;
   display: flex;
   flex-direction: row;
   margin-left: 5%;
   margin-bottom:1%;
   width: 30%;
+  transition: all 400ms ease;
 }
 
 .package-name p, .package-name a{
   cursor: pointer;
   margin-top: 0;
+  color: aliceblue;
 }
 
 .package-name a {
 text-decoration: none;
-color: black;
 font-style: italic;
-margin-left: 1%;
+margin-left: 4%;
+color: aliceblue;
 }
 
-#package-description {
+.package-description {
+  margin-left: 5%;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 400ms ease-out;
+}
+
+.package-description p {
+  margin-left: 5%;
+  font-style: italic;
+  color: aliceblue;
+}
+
+.packages .packageopen .package-name{
+  margin-bottom: 1%
+}
+
+/* #package-description {
   margin-left: 5%;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
+  transition: max-height 200ms ease-out;
+} */
 
-#package-description p {
+/* #package-description p {
   margin-left: 5%;
   font-style: italic;
-}
+  color: aliceblue;
+} */
 
-.menu-carrot-open {
+.packages .packageopen .menu-carrot {
   transform: rotate(90deg);
   margin-bottom: 4%;
 }
 
-#menu-carrot{
-  margin-right: 1%;
+.packages .packageopen .package-description {
+  max-height: 1000px;
+  opacity: 1;
+  margin-bottom: 2%;
+}
+
+.menu-carrot {
+  margin-right: 2%;
   cursor: pointer;
+  color:rgb(120, 151, 177)
 }
 
 .contact-header {
@@ -353,6 +385,11 @@ margin-left: 1%;
 
 @media screen and (max-width: 500px){
  
+  nav-bar{
+    display: flex;
+    flex-direction: column;
+  }
+
   .component-body {
     flex-direction: column;
     width: auto;
@@ -380,6 +417,10 @@ margin-left: 1%;
     justify-content: space-around;
     align-content: center;
     max-height:90vh;
+  }
+
+  #scroll-up-button {
+    margin-left: -6%;
   }
 
   #scroll-up-button.scrolling {
