@@ -9,8 +9,9 @@ export default class Banner extends React.Component {
         // if(location){
         //     document.getElementById('packages').scrollIntoView({behavior: 'smooth'})
         // }
-        if(this.props.getPackages){
-            this.props.getPackages()
+        if(this.props.scrollToPackages){
+            this.props.scrollToPackages()
+            
         }
         
     }
