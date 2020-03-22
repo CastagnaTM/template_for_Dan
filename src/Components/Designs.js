@@ -56,9 +56,18 @@ export default class Designs extends React.Component {
         this.setState({
             designImages: 
                 [
-                    { id: 1, name: One, caption:'Insert a description for your design'}, { id: 2, name: Two, caption:'Insert a description for your design'}, 
-                    { id: 3, name: Three, caption:'Insert a description for your design'}, { id: 4, name: Four, caption:'Insert a description for your design'}, 
-                    { id: 5, name: Five, caption:'Insert a description for your design'}, { id: 6, name: Six, caption:'Insert a description for your design'}
+                    { id: 1, name: One, caption:'Insert a description for your design',
+                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
+                    { id: 2, name: Two, caption:'Insert a description for your design',
+                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
+                    { id: 3, name: Three, caption:'Insert a description for your design',
+                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
+                    { id: 4, name: Four, caption:'Insert a description for your design',
+                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
+                    { id: 5, name: Five, caption:'Insert a description for your design',
+                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
+                    { id: 6, name: Six, caption:'Insert a description for your design',
+                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}
                 ]
         })
     }

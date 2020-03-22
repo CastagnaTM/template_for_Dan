@@ -50,7 +50,7 @@ export default class Image extends React.Component {
                     id={this.props.item.id % 2 === 0 ? 'designs-component-text-b' : 'designs-component-text-a'}
                     style={{display: this.state.showText ? 'block' : 'none' }} >
                         <p>
-                            Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem. Irure quis dolore nulla voluptate dolore sit adipisicing. Dolore voluptate mollit velit consectetur dolor cillum adipisicing irure incididunt et sunt.
+                            {this.props.item.description}
                         </p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ export default class Image extends React.Component {
                         style={{display: this.state.showText ? 'block' : 'none' }}
                         >
                             <p>
-                                Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem. Irure quis dolore nulla voluptate dolore sit adipisicing. Dolore voluptate mollit velit consectetur dolor cillum adipisicing irure incididunt et sunt.
+                                {this.props.item.description}
                             </p>
                         </div>
                         <div className='component-image-div' onClick={() => this.revealText()}>
@@ -90,7 +90,7 @@ export default class Image extends React.Component {
                         id='designs-component-text-a'
                         style={{display: this.state.showText ? 'block' : 'none' }}>
                             <p>
-                                Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem. Irure quis dolore nulla voluptate dolore sit adipisicing. Dolore voluptate mollit velit consectetur dolor cillum adipisicing irure incididunt et sunt.
+                                {this.props.item.description}
                             </p>
                         </div>
                     </div>
