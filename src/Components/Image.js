@@ -62,7 +62,8 @@ export default class Image extends React.Component {
                     <div className='component-body' id='designs-b'>
                         <div className='designs-component-text' 
                         id='designs-component-text-b'
-                        style={{display: this.state.showText ? 'block' : 'none' }}>
+                        style={{display: this.state.showText ? 'block' : 'none' }}
+                        >
                             <p>
                                 Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem. Irure quis dolore nulla voluptate dolore sit adipisicing. Dolore voluptate mollit velit consectetur dolor cillum adipisicing irure incididunt et sunt.
                             </p>
