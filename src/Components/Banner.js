@@ -19,7 +19,10 @@ export default class Banner extends React.Component {
     render(){
 
         return (
-            <div className='banner' onClick={this.displayProps} >
+            <div className='banner' >
+                <button 
+                onClick={this.displayProps}
+                style={{backgroundColor: 'black', border: 'none'}}>
                 <Link className='banner-link' to={{
                     pathname: '/designs',
                     state: {
@@ -29,6 +32,7 @@ export default class Banner extends React.Component {
                 >
                     ULTIMATE &nbsp; WEDDING &nbsp; PACKAGE 
                 </Link>
+                </button>
             </div>
         )
     }

@@ -6,22 +6,23 @@ function PackageContainer() {
 
     const [packages, setPackages] = useState([
         {id: 1, name: 'package one', download: `${checklist}`, open: false,
-        description: 'Hwæt. We Gardena in geardagum, þeodcyninga, þrym gefrunon, hu ða æþelingas ellen fremedon. Oft Scyld Scefing sceaþena þreatum, monegum mægþum, meodosetla ofteah, egsode eorlas. Syððan ærest wearð feasceaft funden, he þæs frofre gebad, weox under wolcnum, weorðmyndum þah, oðþæt him æghwylc þara ymbsittendra ofer hronrade hyran scolde, gomban gyldan. þæt wæs god cyning.'},
+            description: 'This is a space to provide a description of the package'},
         {id: 2, name: 'package two', download: `${checklist}`, open: false,
-        description: 'Hwæt. We Gardena in geardagum, þeodcyninga, þrym gefrunon, hu ða æþelingas ellen fremedon. Oft Scyld Scefing sceaþena þreatum, monegum mægþum, meodosetla ofteah, egsode eorlas. Syððan ærest wearð feasceaft funden, he þæs frofre gebad, weox under wolcnum, weorðmyndum þah, oðþæt him æghwylc þara ymbsittendra ofer hronrade hyran scolde, gomban gyldan. þæt wæs god cyning.'},
+            description: 'This is a space to provide a description of the package'},
         {id: 3, name: 'package three', download: `${checklist}`, open: false,
-        description: 'Hwæt. We Gardena in geardagum, þeodcyninga, þrym gefrunon, hu ða æþelingas ellen fremedon. Oft Scyld Scefing sceaþena þreatum, monegum mægþum, meodosetla ofteah, egsode eorlas. Syððan ærest wearð feasceaft funden, he þæs frofre gebad, weox under wolcnum, weorðmyndum þah, oðþæt him æghwylc þara ymbsittendra ofer hronrade hyran scolde, gomban gyldan. þæt wæs god cyning.'},
+            description: 'This is a space to provide a description of the package'},
         {id: 3, name: 'package four', download: `${checklist}`, open: false,
-        description: 'Hwæt. We Gardena in geardagum, þeodcyninga, þrym gefrunon, hu ða æþelingas ellen fremedon. Oft Scyld Scefing sceaþena þreatum, monegum mægþum, meodosetla ofteah, egsode eorlas. Syððan ærest wearð feasceaft funden, he þæs frofre gebad, weox under wolcnum, weorðmyndum þah, oðþæt him æghwylc þara ymbsittendra ofer hronrade hyran scolde, gomban gyldan. þæt wæs god cyning.'}
+            description: 'This is a space to provide a description of the package'}
 
     ])
     const togglePackages = index => {
         setPackages(packages.map((item, i) => {
             if(i === index) {
                 item.open = !item.open
-            } else {
-                item.open = false;
-            }
+            } 
+            // else {
+            //     item.open = false;    // leaving this part out leaves the other parts of the accordion open = best practices
+            // }
             return item;
         }))
     }

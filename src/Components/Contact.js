@@ -5,6 +5,7 @@ import Insta from '../Assets/insta_logo.png'
 
 export default  function Contact() {
 
+    
     return (
         <div className='component'>
             <div className='header-container'>
