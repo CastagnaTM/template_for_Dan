@@ -94,6 +94,7 @@ nav-bar {
 
 .component-header {
   text-align: center;
+  letter-spacing: .12em;
   margin: 0;
   font-family: Verdana,  Tahoma, sans-serif;
   color: azure;
@@ -278,10 +279,30 @@ nav-bar {
   background-color: rgb(38, 36, 36);
 }
 
-.packages h1 {
+.packages h2 {
   text-align: left;
+  letter-spacing: .12em;
   margin-left: 20%;
   color: aliceblue;
+}
+
+.package-button {
+  width: 70%;
+  height: auto;
+  background-color: rgb(38, 36, 36);
+  border: none;
+  font-size: 110%;
+}
+
+.package-button:focus {
+  outline: none;
+  background-color: rgb(26, 24, 24);
+}
+
+.package-button:focus .package-name p, .package-button:focus .menu-carrot, .package-name a:focus,
+.package-button:hover .package-name p, .package-button:hover .menu-carrot, .package-name a:hover {
+  color: #E9D21B;
+  font-size: 120%;
 }
 
 .package-name {
@@ -290,19 +311,20 @@ nav-bar {
   flex-direction: row;
   margin-left: 5%;
   margin-bottom:1%;
-  width: 30%;
+  width: 55%;
   transition: all 400ms ease;
 }
 
 .package-name p, .package-name a{
   cursor: pointer;
+  letter-spacing: 0.12em;
   margin-top: 0;
   color: aliceblue;
 }
 
 .package-name a {
 text-decoration: none;
-font-style: italic;
+font-size: 110%;
 margin-left: 4%;
 color: aliceblue;
 }
@@ -317,7 +339,7 @@ color: aliceblue;
 
 .package-description p {
   margin-left: 5%;
-  font-size: larger;
+  font-size: large;
   line-height: 1.5em;
   letter-spacing: 0.12em;
   word-spacing: 0.16em;

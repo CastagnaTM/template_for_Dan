@@ -108,7 +108,7 @@ export default class Designs extends React.Component {
                 </div>
                 {this.displayImages()}
                 <section className='packages' ref={ref => {this.packagesRef = ref}} >
-                        <h1>Available Packages</h1>
+                        <h2 className='packages-header'>Available Packages</h2>
                 <PackageContainer />
                 </section>               
                 <Banner 
