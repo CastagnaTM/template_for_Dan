@@ -3,10 +3,10 @@ import Banner from './Banner'
 import Logo from '../Assets/logo.png'
 
 export default function About() {
-    // Something like: Hey, I'm Dan. I design things. Like these Chihuahuas.
-    // I know it sounds weird, but it's true. I designed these Chihuahuas, and for a reasonable price
-   // I could design one for you too, or you could rent one that I've already designed. 
 
+    
+    document.title="About";
+    
     return (
         <div className='component'>
              <div className='header-container'>

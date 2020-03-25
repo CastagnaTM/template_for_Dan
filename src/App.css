@@ -148,9 +148,17 @@ nav-bar {
   min-width: 30%;
   max-width: 30%;
   text-align: center;
-  padding: .5em;
   overflow: scroll;
 }
+
+.component-text p {
+  font-size: larger;
+  line-height: 1.5em;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+  padding: .5em;
+}
+
 .designs-component-text{
   animation: fade 1.25s linear;
 }
@@ -169,9 +177,12 @@ nav-bar {
 }
 
 .designs-component-text p {
-  line-height: 1.4em;
+  font-size: 110%;
+  line-height: 1.5em;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+  padding: 0.2em;
   color: aliceblue;
-  font-family: Arial,sans-serif;;
   border-bottom: solid #E9D21B 2px;
 }
 
@@ -306,7 +317,11 @@ color: aliceblue;
 
 .package-description p {
   margin-left: 5%;
-  font-style: italic;
+  font-size: larger;
+  line-height: 1.5em;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+  padding: .5em;
   color: aliceblue;
 }
 

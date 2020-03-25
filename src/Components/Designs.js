@@ -56,18 +56,18 @@ export default class Designs extends React.Component {
         this.setState({
             designImages: 
                 [
-                    { id: 1, name: One, caption:'Insert a description for your design',
-                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
-                    { id: 2, name: Two, caption:'Insert a description for your design',
-                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
-                    { id: 3, name: Three, caption:'Insert a description for your design',
-                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
-                    { id: 4, name: Four, caption:'Insert a description for your design',
-                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
-                    { id: 5, name: Five, caption:'Insert a description for your design',
-                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}, 
-                    { id: 6, name: Six, caption:'Insert a description for your design',
-                        description: 'Proident nostrud reprehenderit aliqua sunt laboris nostrud velit ex commodo eiusmod fugiat aliqua esse eu. Id laborum in irure ex duis voluptate aliquip dolore nostrud aliquip Lorem.'}
+                    { id: 1, name: One, caption:'Insert a caption for your design',
+                        description: 'This is a space to provide a description of the image / design'}, 
+                    { id: 2, name: Two, caption:'Insert a caption for your design',
+                        description: 'This is a space to provide a description of the image / design'},
+                    { id: 3, name: Three, caption:'Insert a caption for your design',
+                        description: 'This is a space to provide a description of the image / design'}, 
+                    { id: 4, name: Four, caption:'Insert a caption for your design',
+                        description: 'This is a space to provide a description of the image / design'}, 
+                    { id: 5, name: Five, caption:'Insert a caption for your design',
+                        description: 'This is a space to provide a description of the image / design'}, 
+                    { id: 6, name: Six, caption:'Insert a caption for your design',
+                        description: 'This is a space to provide a description of the image / design'},
                 ]
         })
     }
@@ -97,11 +97,11 @@ export default class Designs extends React.Component {
         return (
             <div className='component' id="designs-component" >
                 <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
-                    <div id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
+                    <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
                     onClick={this.scrollUp}
                     >
                      <p>&uarr;</p>
-                    </div>
+                    </button>
                 </div>
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Designs</h1>

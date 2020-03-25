@@ -11,7 +11,7 @@ export default class Home extends Component {
     }
 
     componentDidMount = () => {
-        // setInterval(this.changeSlide, 2500);
+        document.title="Home";
     }
 
     getImage = () => {
