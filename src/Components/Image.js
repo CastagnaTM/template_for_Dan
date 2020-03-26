@@ -41,10 +41,15 @@ export default class Image extends React.Component {
             return (
                 <div className='component-body' id={this.props.item.id % 2 === 0 ? 'designs-b' : 'designs-a'}>
                     <div className='component-image-div' onClick={() => this.revealText()}>
-                        <figure className='figure'>
-                            <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
-                            <figcaption className='caption'>{this.props.item.caption}</figcaption>
-                        </figure>
+                        <button style={{backgroundColor: 'transparent', border: 'none'}}
+                        aria-expanded={this.state.showText ? 'true' : 'false'}
+                        aria-controls="designs-component-text-a"
+                        >
+                            <figure className='figure'>
+                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
+                                <figcaption className='caption'>{this.props.item.caption}</figcaption>
+                            </figure>
+                        </button>
                     </div>
                     <div className='designs-component-text' 
                     id={this.props.item.id % 2 === 0 ? 'designs-component-text-b' : 'designs-component-text-a'}
