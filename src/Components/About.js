@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from './Banner'
 import Logo from '../Assets/logo.png'
-
+import Navbar from './Navbar';
 export default function About() {
 
     
@@ -9,6 +9,8 @@ export default function About() {
     
     return (
         <div className='component'>
+            <Navbar />
+            <Banner />
              <div className='header-container'>
                 <h1 className='component-header'>Dan</h1>
             </div>
@@ -22,7 +24,7 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <Banner />
+
         </div>
     )
     

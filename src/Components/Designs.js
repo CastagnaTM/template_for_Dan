@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from './Banner'
+import Navbar from'./Navbar'
 import PackageContainer from '../Containers/PackageContainer';
 import Image from './Image'
 import One from '../Assets/1.jpg'
@@ -96,6 +97,10 @@ export default class Designs extends React.Component {
     render(){
         return (
             <div className='component' id="designs-component" >
+                <Navbar />
+                <Banner 
+                    scrollToPackages={this.scrollToPackages}
+                />
                 <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
                     <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
                     onClick={this.scrollUp}
@@ -111,9 +116,6 @@ export default class Designs extends React.Component {
                         <h2 className='packages-header'>Available Packages</h2>
                 <PackageContainer />
                 </section>               
-                <Banner 
-                    scrollToPackages={this.scrollToPackages}
-                />
             </div>
         )
     }
