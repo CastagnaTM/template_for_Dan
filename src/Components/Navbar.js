@@ -6,7 +6,7 @@ export default function Navbar() {
 
     return (
         <nav-bar>
-            <ul className='nav-links'>
+            <nav className='nav-links'>
                 <NavLink exact to='/' className='nav-style' activeClassName='active-nav'>
                     <li><img className='icon' src={Logo} alt='home'></img></li>
                 </NavLink>
@@ -19,7 +19,7 @@ export default function Navbar() {
                 <NavLink exact to='/contact' className='nav-style' activeClassName='active-nav'>
                     <li>Contact</li>
                 </NavLink>
-            </ul>
+            </nav>
         </nav-bar>
     )
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Banner from './Banner'
+import Navbar from'./Navbar'
 
 
 // this component used to hold a slideshow. I've since decided to get rid of that, in favor of a cleaner and more streamlined user experience
@@ -35,6 +36,9 @@ export default class Home extends Component {
     render(){
         return (
             <div className='component' id='home-component'>
+                <Navbar />
+                <Banner />
+
                 <div className='header-container'>
                     <h1 className='component-header'>Dan's Designs</h1>
                 </div>
@@ -52,7 +56,6 @@ export default class Home extends Component {
                         </p>
                     </div>
                 </div>
-                <Banner />
             </div>
         )
     }

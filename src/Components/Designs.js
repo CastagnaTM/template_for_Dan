@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from './Banner'
+import Navbar from'./Navbar'
 import PackageContainer from '../Containers/PackageContainer';
 import Image from './Image'
 import One from '../Assets/1.jpg'
@@ -15,7 +16,8 @@ export default class Designs extends React.Component {
 
     state = {
         designImages: [],
-        packages: []
+        packages: [],
+        isMobile: false
     }
     packagesRef = React.createRef();
     scrollButtonRef = React.createRef();
@@ -90,12 +92,23 @@ export default class Designs extends React.Component {
     }
 
     displayImages = () => {
-        return this.state.designImages.map((item, i) => <Image key={i} item={item}/>)
+        return this.state.designImages.map((item, i) => <Image key={i} item={item} isMobile={this.state.isMobile} />)
+    }
+
+    setMobile = () => {
+        this.setState({
+            isMobile: !this.state.isMobile
+        })
+        this.displayImages()
     }
     
     render(){
         return (
             <div className='component' id="designs-component" >
+                <Navbar />
+                <Banner 
+                    scrollToPackages={this.scrollToPackages}
+                />
                 <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
                     <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
                     onClick={this.scrollUp}
@@ -106,14 +119,20 @@ export default class Designs extends React.Component {
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Designs</h1>
                 </div>
+                {/* <form className='checkBox-container'>
+                    <p>Are you using a screen reader? Check box to update the page format: &nbsp;</p>
+                    <input type="checkbox" id="yes" value="Yes" name='screen-reader'
+                        onClick={() => this.setMobile()}
+                    ></input>
+                    <label form="yes">Yes</label>
+                    {/* <input type="radio" is="no" value="No" name='screen-reader'></input>
+                    <label for="no">No</label> 
+                </form> */}
                 {this.displayImages()}
                 <section className='packages' ref={ref => {this.packagesRef = ref}} >
                         <h2 className='packages-header'>Available Packages</h2>
                 <PackageContainer />
                 </section>               
-                <Banner 
-                    scrollToPackages={this.scrollToPackages}
-                />
             </div>
         )
     }

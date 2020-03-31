@@ -5,7 +5,8 @@ import React from 'react'
 export default class Image extends React.Component {
 
     state={
-        showText: false
+        showText: false,
+        isMobile: this.props.isMobile
     }
     componentDidMount() {
         this.windowSizeCheck();
@@ -18,12 +19,12 @@ export default class Image extends React.Component {
 
     resizeListener = () => {
         this.setState({
-            isMobile: window.innerWidth < 500
+            isMobile: window.innerWidth < 800
         });
     }
 
     windowSizeCheck = () => {
-        if (window.innerWidth < 500){
+        if (window.innerWidth < 800){
             this.setState({
                 isMobile: true
             })
@@ -41,10 +42,15 @@ export default class Image extends React.Component {
             return (
                 <div className='component-body' id={this.props.item.id % 2 === 0 ? 'designs-b' : 'designs-a'}>
                     <div className='component-image-div' onClick={() => this.revealText()}>
-                        <figure className='figure'>
-                            <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
-                            <figcaption className='caption'>{this.props.item.caption}</figcaption>
-                        </figure>
+                        <button style={{backgroundColor: 'transparent', border: 'none'}}
+                        aria-expanded={this.state.showText ? 'true' : 'false'}
+                        aria-controls="designs-component-text-a designs-component-text-b"
+                        >
+                            <figure className='figure'>
+                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design'></img>
+                                <figcaption className='caption'>{this.props.item.caption}</figcaption>
+                            </figure>
+                        </button>
                     </div>
                     <div className='designs-component-text' 
                     id={this.props.item.id % 2 === 0 ? 'designs-component-text-b' : 'designs-component-text-a'}
@@ -69,10 +75,16 @@ export default class Image extends React.Component {
                             </p>
                         </div>
                         <div className='component-image-div' onClick={() => this.revealText()}>
+                        <button style={{backgroundColor: 'transparent', border: 'none'}}
+                        aria-expanded={this.state.showText ? 'true' : 'false'}
+                        aria-controls="designs-component-text-b"
+                        
+                        >
                             <figure className='figure' >
-                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
+                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design'></img>
                                 <figcaption className='caption'>{this.props.item.caption}</figcaption>
                             </figure>
+                            </button>
                         </div>
                     </div>
                 )
@@ -81,10 +93,15 @@ export default class Image extends React.Component {
                 return (
                     <div className='component-body' id='designs-a'>
                         <div className='component-image-div' onClick={() => this.revealText()}>
+                        <button style={{backgroundColor: 'transparent', border: 'none'}}
+                        aria-expanded={this.state.showText ? 'true' : 'false'}
+                        aria-controls="designs-component-text-a"
+                        >
                             <figure className='figure'>
-                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design images'></img>
+                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design'></img>
                                 <figcaption className='caption'>{this.props.item.caption}</figcaption>
                             </figure>
+                            </button>
                         </div>
                         <div className='designs-component-text' 
                         id='designs-component-text-a'
