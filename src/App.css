@@ -69,7 +69,7 @@ nav-bar {
   width: 100%;
   background: black;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 20px;
   /* Original banner settings in case Dan wants to change it back. I made the border a little slimmer, and the animation a little slower */
   /* border: solid black .36em; */
   /* animation: change 1.5s infinite; */
@@ -93,7 +93,7 @@ nav-bar {
 #scroll-up-button-div {
   position: fixed;
   /* top:0; */
-  margin-top: 120px; 
+  margin-top: 130px; 
   left: 50%;
   height: 5vh;
   width: 100%;

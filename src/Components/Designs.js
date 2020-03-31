@@ -119,15 +119,15 @@ export default class Designs extends React.Component {
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Designs</h1>
                 </div>
-                <form className='checkBox-container'>
+                {/* <form className='checkBox-container'>
                     <p>Are you using a screen reader? Check box to update the page format: &nbsp;</p>
                     <input type="checkbox" id="yes" value="Yes" name='screen-reader'
                         onClick={() => this.setMobile()}
                     ></input>
-                    <label for="yes">Yes</label>
+                    <label form="yes">Yes</label>
                     {/* <input type="radio" is="no" value="No" name='screen-reader'></input>
-                    <label for="no">No</label> */}
-                </form>
+                    <label for="no">No</label> 
+                </form> */}
                 {this.displayImages()}
                 <section className='packages' ref={ref => {this.packagesRef = ref}} >
                         <h2 className='packages-header'>Available Packages</h2>
