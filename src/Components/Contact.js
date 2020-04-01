@@ -12,22 +12,23 @@ export default  function Contact() {
             <Navbar />
             <Banner />
             <div className='header-container'>
-                <h1 className='contact-header'>Contact info</h1>
+                <h1 className='component-header'>Contact</h1>
             </div>
-            <div className='contact-column'>
-                <div className='contact-row'>
-                    <p className='contact-text'>Email</p>
-                </div>
-                <div className='contact-row'>
-                    <p className='contact-text'>Phone</p>
-                </div>
-                <div className='contact-row'>
-                    <p className='contact-text'>Facebook</p>
-                    <a href='https://www.facebook.com/dan.castrogivanni' target='_blank' rel="noopener noreferrer"><img src={FB} alt='Facebook logo' className='contact-logo'></img></a>
-                </div>
-                <div className='contact-row'>
-                    <p className='contact-text'>Instagram</p>
-                    <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"><img src={Insta} alt='Instagram logo' className='contact-logo'></img></a>
+            <div className='component-body'>
+                <div className='contact-column'>
+                    <form className='contact-form'>
+                        <label hmtlfor="Name">Your Name</label>
+                        <input type="text" id="Name" placeholder="Your Name..."></input>
+                        <label hmtlfor="Email">Your Email</label>
+                        <input type="text" id="Email" placeholder="example@email..."></input>
+                        <label hmtlfor="Subject">Subject</label>
+                        <input type="text" id="Subject" placeholder="Subject..."></input>
+                        <label hmtlfor="Message">Message</label>
+                        <textarea type="text" id="Message" className='contact-message'placeholder="Message..."></textarea>
+                    </form>
+                    <div className='contact-item'>
+                        <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"> Follow Dan's Unforgettable Creations on Instagram!</a>
+                    </div>
                 </div>
             </div>
         </div>
