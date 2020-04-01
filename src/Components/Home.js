@@ -40,7 +40,7 @@ export default class Home extends Component {
                 <Banner />
 
                 <div className='header-container'>
-                    <h1 className='component-header'>Dan's Designs</h1>
+                    <h1 className='component-header'>DAN'S UNFORGETTABLE CREATIONS</h1>
                 </div>
                 <div className='component-body'>
                     {/* <div className='component-slideshow'>

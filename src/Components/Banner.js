@@ -5,15 +5,9 @@ import { Link } from 'react-router-dom'
 export default class Banner extends React.Component {
 
     displayProps = () => {
-        // let location = document.getElementById('designs-component')
-        // if(location){
-        //     document.getElementById('packages').scrollIntoView({behavior: 'smooth'})
-        // }
         if(this.props.scrollToPackages){
             this.props.scrollToPackages()
-            
         }
-        
     }
 
     render(){
@@ -32,6 +26,7 @@ export default class Banner extends React.Component {
                 >
                     ULTIMATE &nbsp; WEDDING &nbsp; PACKAGE 
                 </Link>
+                <p>EVERYTHING YOU NEED FOR YOUR SPECIAL DAY</p>
                 </button>
             </div>
         )

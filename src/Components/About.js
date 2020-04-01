@@ -12,7 +12,7 @@ export default function About() {
             <Navbar />
             <Banner />
              <div className='header-container'>
-                <h1 className='component-header'>Dan</h1>
+                <h1 className='component-header'>About Me</h1>
             </div>
             <div className='component-body'>
                 <div className='component-image-div'>

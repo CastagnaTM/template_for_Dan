@@ -40,77 +40,76 @@ export default class Image extends React.Component {
     render(){
         if(this.state.isMobile){
             return (
-                <div className='component-body' id={this.props.item.id % 2 === 0 ? 'designs-b' : 'designs-a'}>
-                    <div className='component-image-div' onClick={() => this.revealText()}>
-                        <button style={{backgroundColor: 'transparent', border: 'none'}}
-                        aria-expanded={this.state.showText ? 'true' : 'false'}
-                        aria-controls="designs-component-text-a designs-component-text-b"
-                        >
-                            <figure className='figure'>
-                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design'></img>
-                                <figcaption className='caption'>{this.props.item.caption}</figcaption>
-                            </figure>
-                        </button>
+                <li>
+                <div className='design-component-body' id={this.props.item.id % 2 === 0 ? 'designs-b' : 'designs-a'}>
+                    <div className='designs-component-image-div'>
+                        <img src={this.props.item.name} className='designs-component-image' alt='design'></img>
                     </div>
-                    <div className='designs-component-text' 
-                    id={this.props.item.id % 2 === 0 ? 'designs-component-text-b' : 'designs-component-text-a'}
-                    style={{display: this.state.showText ? 'block' : 'none' }} >
-                        <p>
-                            {this.props.item.description}
-                        </p>
+                    <div className='designs-component-text-div' 
+                        // id={this.props.item.id % 2 === 0 ? 'designs-component-text-b' : 'designs-component-text-a'}
+                        // style={{display: this.state.showText ? 'block' : 'none' }} 
+                    >
+                        <div className='text-div-container'>
+                            <p>
+                                {this.props.item.caption}
+                            </p>
+                            <p id="image-description">
+                                {this.props.item.description}
+                            </p>
+                        </div>
                     </div>
                 </div>
+                </li>
             )
         }
         else {
             if(this.props.item.id % 2 === 0){
                 return (
-                    <div className='component-body' id='designs-b'>
-                        <div className='designs-component-text' 
-                        id='designs-component-text-b'
-                        style={{display: this.state.showText ? 'block' : 'none' }}
-                        >
-                            <p>
-                                {this.props.item.description}
-                            </p>
+                    <li>
+                        <div className='design-component-body' id='designs-b'>
+                            <div className='designs-component-text-div' 
+                            id='designs-component-text-b'
+                            // style={{display: this.state.showText ? 'block' : 'none' }}
+                            >
+                                <div className='text-div-container'>
+                                    <p>
+                                        {this.props.item.caption}
+                                    </p>
+                                    <p id="image-description">
+                                        {this.props.item.description}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='designs-component-image-div-b' onClick={() => this.revealText()}
+                            >
+                            <img src={this.props.item.name} className='designs-component-image' alt='design'></img>            
+                            </div>
                         </div>
-                        <div className='component-image-div' onClick={() => this.revealText()}>
-                        <button style={{backgroundColor: 'transparent', border: 'none'}}
-                        aria-expanded={this.state.showText ? 'true' : 'false'}
-                        aria-controls="designs-component-text-b"
-                        
-                        >
-                            <figure className='figure' >
-                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design'></img>
-                                <figcaption className='caption'>{this.props.item.caption}</figcaption>
-                            </figure>
-                            </button>
-                        </div>
-                    </div>
+                    </li>
                 )
             }
             else {
                 return (
-                    <div className='component-body' id='designs-a'>
-                        <div className='component-image-div' onClick={() => this.revealText()}>
-                        <button style={{backgroundColor: 'transparent', border: 'none'}}
-                        aria-expanded={this.state.showText ? 'true' : 'false'}
-                        aria-controls="designs-component-text-a"
-                        >
-                            <figure className='figure'>
-                                <img src={this.props.item.name} className={this.state.showText ? 'designs-component-image-with-text' : 'designs-component-image'} alt='design'></img>
-                                <figcaption className='caption'>{this.props.item.caption}</figcaption>
-                            </figure>
-                            </button>
+                    <li>
+                        <div className='design-component-body' id='designs-a'>
+                            <div className='designs-component-image-div-a' onClick={() => this.revealText()}>
+                                <img src={this.props.item.name} className='designs-component-image' alt='design'></img>
+                            </div>
+                            <div className='designs-component-text-div' 
+                            id='designs-component-text-a'
+                            // style={{display: this.state.showText ? 'block' : 'none' }}
+                            >
+                                <div className='text-div-container'>
+                                    <p>
+                                        {this.props.item.caption}
+                                    </p>
+                                    <p id="image-description">
+                                        {this.props.item.description}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div className='designs-component-text' 
-                        id='designs-component-text-a'
-                        style={{display: this.state.showText ? 'block' : 'none' }}>
-                            <p>
-                                {this.props.item.description}
-                            </p>
-                        </div>
-                    </div>
+                    </li>
                 )
             }
         }

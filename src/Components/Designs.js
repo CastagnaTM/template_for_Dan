@@ -44,7 +44,7 @@ export default class Designs extends React.Component {
     scrollListener = () => {
         let button = this.scrollButtonRef;
         let buttonDiv = this.scrollDivRef;
-        if (window.scrollY > 10){
+        if (window.scrollY > 20){
             button.classList.add('scrolling');
             buttonDiv.classList.add('scrolling');
         }
@@ -58,17 +58,17 @@ export default class Designs extends React.Component {
         this.setState({
             designImages: 
                 [
-                    { id: 1, name: One, caption:'Insert a caption for your design',
+                    { id: 1, name: One, caption:'Image Name / Title',
                         description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 2, name: Two, caption:'Insert a caption for your design',
+                    { id: 2, name: Two, caption:'Image Name / Title',
                         description: 'This is a space to provide a description of the image / design'},
-                    { id: 3, name: Three, caption:'Insert a caption for your design',
+                    { id: 3, name: Three, caption:'Image Name / Title',
                         description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 4, name: Four, caption:'Insert a caption for your design',
+                    { id: 4, name: Four, caption:'Image Name / Title',
                         description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 5, name: Five, caption:'Insert a caption for your design',
+                    { id: 5, name: Five, caption:'Image Name / Title',
                         description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 6, name: Six, caption:'Insert a caption for your design',
+                    { id: 6, name: Six, caption:'Image Name / Title',
                         description: 'This is a space to provide a description of the image / design'},
                 ]
         })
@@ -119,16 +119,7 @@ export default class Designs extends React.Component {
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Designs</h1>
                 </div>
-                {/* <form className='checkBox-container'>
-                    <p>Are you using a screen reader? Check box to update the page format: &nbsp;</p>
-                    <input type="checkbox" id="yes" value="Yes" name='screen-reader'
-                        onClick={() => this.setMobile()}
-                    ></input>
-                    <label form="yes">Yes</label>
-                    {/* <input type="radio" is="no" value="No" name='screen-reader'></input>
-                    <label for="no">No</label> 
-                </form> */}
-                {this.displayImages()}
+                <ul className="design-list">{this.displayImages()}</ul>
                 <section className='packages' ref={ref => {this.packagesRef = ref}} >
                         <h2 className='packages-header'>Available Packages</h2>
                 <PackageContainer />

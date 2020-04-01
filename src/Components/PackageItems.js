@@ -17,10 +17,10 @@ function PackageItems({item, index, togglePackages}) {
 
                 </div>
             </button>
-                <div className='package-description'>
-                    <p>{item.description}</p>
-                    <a id='download-link' href={item.download} download='Package Checklist'>Download</a>
-                </div>
+            <div className='package-description'>
+                <p>{item.description}</p>
+                <a id='download-link' href={item.download} download='Package Checklist'>Download</a>
+            </div>
         </div>
     )
 }
