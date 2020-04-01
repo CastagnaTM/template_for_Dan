@@ -41,18 +41,15 @@ export default class Image extends React.Component {
         if(this.state.isMobile){
             return (
                 <li>
-                <div className='design-component-body' id={this.props.item.id % 2 === 0 ? 'designs-b' : 'designs-a'}>
+                <div className='design-component-body'>
                     <div className='designs-component-image-div'>
                         <img src={this.props.item.name} className='designs-component-image' alt='design'></img>
                     </div>
-                    <div className='designs-component-text-div' 
-                        // id={this.props.item.id % 2 === 0 ? 'designs-component-text-b' : 'designs-component-text-a'}
-                        // style={{display: this.state.showText ? 'block' : 'none' }} 
-                    >
+                    <div className='designs-component-text-div'>
                         <div className='text-div-container'>
-                            <p>
+                            <h2>
                                 {this.props.item.caption}
-                            </p>
+                            </h2>
                             <p id="image-description">
                                 {this.props.item.description}
                             </p>
@@ -72,9 +69,9 @@ export default class Image extends React.Component {
                             // style={{display: this.state.showText ? 'block' : 'none' }}
                             >
                                 <div className='text-div-container'>
-                                    <p>
+                                    <h2>
                                         {this.props.item.caption}
-                                    </p>
+                                    </h2>
                                     <p id="image-description">
                                         {this.props.item.description}
                                     </p>
@@ -100,9 +97,9 @@ export default class Image extends React.Component {
                             // style={{display: this.state.showText ? 'block' : 'none' }}
                             >
                                 <div className='text-div-container'>
-                                    <p>
+                                    <h2>
                                         {this.props.item.caption}
-                                    </p>
+                                    </h2>
                                     <p id="image-description">
                                         {this.props.item.description}
                                     </p>

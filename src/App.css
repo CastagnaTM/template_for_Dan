@@ -1,6 +1,6 @@
 html {
   min-height: 100vh;
-  background: rgb(55, 55, 58);
+  background: rgb(34, 34, 36);
   /* background: rgb(113, 113, 119); */
   background-position: center;
   background-repeat: no-repeat;
@@ -10,6 +10,7 @@ html {
   -o-background-size: cover;
   margin: 0%;
   max-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -52,6 +53,7 @@ nav-bar {
 .nav-style {
   color: whitesmoke;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .active-nav {
@@ -177,10 +179,7 @@ nav-bar {
   text-align: center;
   letter-spacing: .12em;
   margin: 0;
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Montserrat', sans-serif;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   color: aliceblue;
   -webkit-text-stroke: 0px black;
 }
@@ -216,24 +215,22 @@ nav-bar {
 }
 .component-image{
   max-width: 80%;
-  border: solid 1px aliceblue;
+  /* border: solid 1px aliceblue; */
+  box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
 .design-component-body {
   background-color: rgba(0, 0, 0, 0.671);
   margin-bottom: 2%;
-  /* border: solid 1px aliceblue; */
 }
 
 .design-list {
   list-style: none;
   padding: 0;
-  /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
 .designs-component-text-div {
   max-width: 45%;
-  /* border: solid 1px aliceblue; */
 }
 
 .designs-component-image-div-a, .designs-component-image-div-b, .designs-component-text-div {
@@ -243,7 +240,6 @@ nav-bar {
   text-align: center;
   margin-top: 2%;
   margin-bottom: 2%;
-  /* border: solid 1px aliceblue; */
 }
 
 .designs-component-image-div-a, .designs-component-image-div-b {
@@ -304,13 +300,16 @@ nav-bar {
   color: aliceblue;
 }
 
-.designs-component-text-div p {
-  font-size: 110%;
+.designs-component-text-div p, h2 {
   line-height: 1.5em;
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
   padding: 0.2em;
   color: aliceblue;
+}
+
+.designs-component-text-div p {
+  font-size: 110%;
 }
 
 #image-description {
@@ -351,7 +350,6 @@ nav-bar {
   letter-spacing: .12em;
   margin-left: 20%;
   color: aliceblue;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .package-button {
@@ -365,7 +363,8 @@ nav-bar {
 .package-button:focus .package-name-container p, .package-button:focus .menu-carrot,
 .package-button:hover .package-name-container p, .package-button:hover .menu-carrot {
   color: #E9D21B;
-  font-size: 120%;
+  letter-spacing: 0.3em;
+  /* font-size: 120%; */
 }
 
 .package-name-container {
@@ -384,6 +383,7 @@ nav-bar {
   letter-spacing: 0.12em;
   margin-top: 0;
   color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .package-description a {
@@ -393,6 +393,11 @@ nav-bar {
   margin-left: 3em;
   margin-block-start: 1em;
   margin-block-end: 1em;
+}
+
+.package-description a:hover { 
+  color: #E9D21B;
+  letter-spacing: 0.3em;
 }
 
 .package-description {
@@ -449,7 +454,6 @@ nav-bar {
   flex-direction: column;
   align-items: left;
   width: 90%;
-  /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
 .contact-form label {
@@ -518,13 +522,18 @@ nav-bar {
     /* margin-top: 60px */
   }
 
+  .banner {
+    min-height: 50px;
+    max-height: 50px;
+  }
+
   .design-component-body {
     flex-direction: column;
     width: auto;
   }
 
   .header-container {
-    margin-top: 140px;
+    margin-top: 150px;
   }
   
   .component-header {
@@ -590,5 +599,20 @@ nav-bar {
   .packages .packageopen .menu-carrot {
     margin-bottom: 16%;
     margin-right: 14%;
+  }
+}
+
+@media screen and (max-width: 450px){
+  #scroll-up-button-div {
+    margin-top: 180px;
+  }
+
+  .banner {
+    min-height: 90px;
+    max-height: 90px;
+  }
+
+  .header-container {
+    margin-top: 180px;
   }
 }
