@@ -1,7 +1,6 @@
 import React from 'react'
 import Banner from './Banner'
 import Navbar from './Navbar'
-import FB from '../Assets/FB_Logo.png'
 import Insta from '../Assets/insta_logo.png'
 
 export default  function Contact() {
@@ -26,8 +25,10 @@ export default  function Contact() {
                         <label hmtlfor="Message">Message</label>
                         <textarea type="text" id="Message" className='contact-message'placeholder="Message..."></textarea>
                     </form>
-                    <div className='contact-item'>
-                        <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"> Follow Dan's Unforgettable Creations on Instagram!</a>
+                    <div className='contact-link'>
+    <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"> Follow Dan's Unforgettable Creations! &nbsp;
+        <img className='contact-logo' style={{marginBottom: '-5px'}} src={Insta} alt="Instagram Logo"></img>
+    </a>
                     </div>
                 </div>
             </div>

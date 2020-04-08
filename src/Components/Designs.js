@@ -3,12 +3,10 @@ import Banner from './Banner'
 import Navbar from'./Navbar'
 import PackageContainer from '../Containers/PackageContainer';
 import Image from './Image'
-import One from '../Assets/1.jpg'
-import Two from '../Assets/2.jpg'
-import Three from '../Assets/3.jpg'
-import Four from '../Assets/4.jpg'
-import Five from '../Assets/5.jpg'
-import Six from '../Assets/6.jpg'
+import One from '../Assets/1.jpeg'
+import Two from '../Assets/2.jpeg'
+import Three from '../Assets/3.jpeg'
+
 
 
 
@@ -58,24 +56,17 @@ export default class Designs extends React.Component {
         this.setState({
             designImages: 
                 [
-                    { id: 1, name: One, caption:'Image Name / Title',
+                    { id: 1, name: One, caption:'I Do BBQ',
                         description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 2, name: Two, caption:'Image Name / Title',
+                    { id: 2, name: Two, caption:'Something New',
                         description: 'This is a space to provide a description of the image / design'},
-                    { id: 3, name: Three, caption:'Image Name / Title',
-                        description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 4, name: Four, caption:'Image Name / Title',
-                        description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 5, name: Five, caption:'Image Name / Title',
-                        description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 6, name: Six, caption:'Image Name / Title',
-                        description: 'This is a space to provide a description of the image / design'},
+                    { id: 3, name: Three, caption:'Baby Shower',
+                        description: 'This is a space to provide a description of the image / design'}
                 ]
         })
     }
 
    
-
     scrollToPackages = () => {
         setTimeout(() =>{
             this.packagesRef.scrollIntoView({
@@ -91,8 +82,14 @@ export default class Designs extends React.Component {
         });
     }
 
-    displayImages = () => {
-        return this.state.designImages.map((item, i) => <Image key={i} item={item} isMobile={this.state.isMobile} />)
+    displayImages = (section) => {
+        switch(section){
+            case 'signs':
+                return this.state.designImages.slice(0,3).map((item, i) => <Image key={i} item={item} isMobile={this.state.isMobile} />)
+            default:
+                return this.state.designImages.map((item, i) => <Image key={i} item={item} isMobile={this.state.isMobile} />)
+        }
+        
     }
 
     setMobile = () => {
@@ -119,7 +116,10 @@ export default class Designs extends React.Component {
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Designs</h1>
                 </div>
-                <ul className="design-list">{this.displayImages()}</ul>
+                <div>
+                    <h2 className='component-header' id='h2'> Signs </h2>
+                </div>
+                <ul className="design-list">{this.displayImages('signs')}</ul>
                 <section className='packages' ref={ref => {this.packagesRef = ref}} >
                         <h2 className='packages-header'>Available Packages</h2>
                 <PackageContainer />
