@@ -18,7 +18,7 @@ export default function About() {
                 <div className='component-image-div'>
                     <img src={Logo} className='component-image' alt="gif"></img>
                 </div>
-                <div className='component-text'>
+                <div className='component-text' id="about-text">
                     <p>
                         This page will contain information about Dan and his business.
                     </p>

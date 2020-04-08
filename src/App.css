@@ -1,7 +1,6 @@
 html {
   min-height: 100vh;
   background: rgb(34, 34, 36);
-  /* background: rgb(113, 113, 119); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -184,6 +183,10 @@ nav-bar {
   -webkit-text-stroke: 0px black;
 }
 
+#h2 {
+  color: #E9D21B
+}
+
 .component-body, .design-component-body {
   display: flex;
   flex-direction: row;
@@ -191,14 +194,18 @@ nav-bar {
   justify-content: space-around;
   margin-left: 5%;
   margin-right: 5%;
+  /* max-height: 500px; */
 }
 
 .component-text {
   min-width: 40%;
   max-width: 40%;
-  margin-right: 10%;
   text-align: center;
   overflow: scroll;
+}
+
+#about-text {
+  margin-right: 10%;
 }
 
 .component-text p {
@@ -481,7 +488,7 @@ nav-bar {
   height: 175px;
 }
 
-.contact-item {
+.contact-link {
   width: 80%;
   margin-top: 2%;
   margin-bottom: 10%;
@@ -493,7 +500,7 @@ nav-bar {
   transition: all 500ms
 }
 
-.contact-item a {
+.contact-link a {
   color: aliceblue;
   text-decoration: none;
   font-size: 140%;
@@ -504,7 +511,7 @@ nav-bar {
   transition: all 500ms
 }
 
-.contact-item:hover {
+.contact-link:hover {
   background-color: rgb(26, 24, 24);
   border-bottom: solid aliceblue;
   border-top-left-radius: 5px;
@@ -512,9 +519,13 @@ nav-bar {
   transition: all 500ms ease-in;
 }
 
-.contact-item:hover a{
+.contact-link:hover a{
   color: #E9D21B;
   transition: all 500ms ease-in;
+}
+
+.contact-logo {
+  width: 30px;
 }
 
 @media screen and (max-width: 800px){
@@ -544,6 +555,11 @@ nav-bar {
     margin: 0 auto;
   }
 
+  #h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .designs-component-image-div, .designs-component-text-div, .component-image-div {
     min-width: 90%;
     margin: 0 auto;
@@ -551,7 +567,7 @@ nav-bar {
     max-width: 90%;
   }
 
-  .component-text {
+  .component-text, #about-text {
     min-width: 90%;
     margin: 0 auto;
   }
@@ -587,11 +603,9 @@ nav-bar {
     margin-left: 3em;
   }
 
-  .contact-logo {
-    min-width: 30%;
-    max-width: 70px;
-    margin-top: 20px;
-    margin-left: 5%;
+  .contact-link {
+   font-size: 80%;
+   text-align: center;
   }
 
   .contact-header {
@@ -599,10 +613,15 @@ nav-bar {
     margin-left: 0;
   }
 
+  .contact-column {
+    margin-left: 8%;
+  }
+
   .packages .packageopen .menu-carrot {
     margin-bottom: 16%;
     margin-right: 14%;
   }
+
 }
 
 @media screen and (max-width: 450px){
@@ -617,5 +636,10 @@ nav-bar {
 
   .header-container {
     margin-top: 180px;
+  }
+
+  .contact-link {
+    text-align: left;
+    margin-left: 15%;
   }
 }
