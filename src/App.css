@@ -484,8 +484,22 @@ nav-bar {
   letter-spacing: 0.16em;
 }
 
-.contact-message {
+#Message {
   height: 175px;
+}
+
+#submit-button {
+  width: 20%;
+  min-width: 100px;
+  transition: all 500ms ease-in-out;
+  border: solid .26em transparent;
+}
+
+#submit-button:hover{
+  border: solid .26em #E9D21B;
+  background-color: black;
+  color: rgb(236, 226, 145);
+  transition: all 500ms ease-in-out;
 }
 
 .contact-link {
