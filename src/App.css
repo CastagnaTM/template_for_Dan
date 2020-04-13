@@ -10,6 +10,7 @@ html {
   margin: 0%;
   max-height: 100vh;
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 body{
@@ -50,9 +51,8 @@ nav-bar {
 }
 
 .nav-style {
-  color: whitesmoke;
+  color: aliceblue;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .active-nav {
@@ -62,7 +62,7 @@ nav-bar {
 
 .banner {
   position: fixed;
-  z-index:3;
+  z-index:2;
   margin-top: 50px;
   min-height: 50px;
   max-height: 50px;
@@ -89,7 +89,6 @@ nav-bar {
 }
 
 .banner p {
-  /* font-size: x-small; */
   color: rgb(235, 233, 222);
   font-size: 95%;
   word-spacing: 0.5em;
@@ -98,7 +97,6 @@ nav-bar {
 
 #scroll-up-button-div {
   position: fixed;
-  /* top:0; */
   margin-top: 140px; 
   left: 48.5%;
   height: 5vh;
@@ -178,7 +176,6 @@ nav-bar {
   text-align: center;
   letter-spacing: .12em;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   color: aliceblue;
   -webkit-text-stroke: 0px black;
 }
@@ -195,6 +192,16 @@ nav-bar {
   margin-left: 5%;
   margin-right: 5%;
   /* max-height: 500px; */
+}
+
+#home-component {
+  background-image: url('./Assets/background.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .component-text {
@@ -255,7 +262,6 @@ nav-bar {
 .designs-component-image-div-a, .designs-component-image-div-b {
   max-width: 500px;
   background-color: rgba(0, 0, 0, 0.774);
-  /* border: solid 2px #030909; */
   border-top: solid 2px #030909;
   border-left: solid 2px #030909;
   border-right: solid 2px #030909;
@@ -271,7 +277,7 @@ nav-bar {
 
 .designs-component-image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100vh;
   margin: 0 auto;
 }
 
@@ -326,14 +332,58 @@ nav-bar {
   border-bottom: solid #E9D21B 2px;
 }
 
-#home-component {
-  background-image: url('./Assets/background.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+.zoom {
+  z-index: -1;
+}
+
+.zoom-in {
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  /* padding-top: 1em; */
+  background-color: rgba(1, 21, 39, 0.582);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-img-button {
+  background-color: rgba(0, 0, 0, 0.774);
+  display: grid;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.zoom-image-container {
+  display: grid;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.zoom-image {
+  max-height: 85vh;
+  margin: 0 auto;
+}
+
+.zoom-button {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  font-family: inherit;
+  font-size: 1.2em;
+  letter-spacing: 0.12em;
+  transition: all 200ms ease-in-out;
+  border: solid 2px transparent;
+}
+
+.zoom-button:hover{
+  border: solid 2px #E9D21B;
+  background-color: black;
+  color: rgb(236, 226, 145);
+  letter-spacing: 0.18em;
+  transition: all 500ms ease-in-out;
 }
 
 .package, .packageopen {
@@ -373,8 +423,8 @@ nav-bar {
 .package-button:focus .package-name-container p, .package-button:focus .menu-carrot,
 .package-button:hover .package-name-container p, .package-button:hover .menu-carrot {
   color: #E9D21B;
-  letter-spacing: 0.3em;
-  /* font-size: 120%; */
+  letter-spacing: 0.22em;
+  transition: all 200ms ease;
 }
 
 .package-name-container {
@@ -384,7 +434,6 @@ nav-bar {
   margin-left: 5%;
   margin-bottom:2%;
   width: 55%;
-  transition: all 400ms ease;
 }
 
 .package-name-container p, .package-description a { 
@@ -393,7 +442,6 @@ nav-bar {
   letter-spacing: 0.12em;
   margin-top: 0;
   color: aliceblue;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .package-description a {
@@ -408,6 +456,7 @@ nav-bar {
 .package-description a:hover { 
   color: #E9D21B;
   letter-spacing: 0.3em;
+  transition: all 200ms ease;
 }
 
 .package-description {
@@ -579,6 +628,16 @@ nav-bar {
     margin: 0 auto;
     margin-top: 4%;
     max-width: 90%;
+  }
+  .zoom-img-button {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .zoom-image {
+    max-width: 110%;
+    margin-top: 25%;
+
   }
 
   .component-text, #about-text {

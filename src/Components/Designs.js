@@ -15,7 +15,8 @@ export default class Designs extends React.Component {
     state = {
         designImages: [],
         packages: [],
-        isMobile: false
+        isMobile: false,
+        selectedImage: null
     }
     packagesRef = React.createRef();
     scrollButtonRef = React.createRef();
@@ -55,14 +56,14 @@ export default class Designs extends React.Component {
     setImages = () => {
         this.setState({
             designImages: 
-                [
-                    { id: 1, name: One, caption:'I Do BBQ',
-                        description: 'This is a space to provide a description of the image / design'}, 
-                    { id: 2, name: Two, caption:'Something New',
-                        description: 'This is a space to provide a description of the image / design'},
-                    { id: 3, name: Three, caption:'Baby Shower',
-                        description: 'This is a space to provide a description of the image / design'}
-                ]
+            [
+                { id: 1, name: One, caption:'I Do BBQ',
+                    description: 'This is a space to provide a description of the image / design', import: One}, 
+                { id: 2, name: Two, caption:'Something New',
+                    description: 'This is a space to provide a description of the image / design', import: Two},
+                { id: 3, name: Three, caption:'Baby Shower',
+                    description: 'This is a space to provide a description of the image / design', import: Three}
+            ]
         })
     }
 
@@ -84,10 +85,14 @@ export default class Designs extends React.Component {
 
     displayImages = (section) => {
         switch(section){
-            case 'signs':
-                return this.state.designImages.slice(0,3).map((item, i) => <Image key={i} item={item} isMobile={this.state.isMobile} />)
-            default:
-                return this.state.designImages.map((item, i) => <Image key={i} item={item} isMobile={this.state.isMobile} />)
+        case 'signs':
+            return this.state.designImages.slice(0,3).map((item, i) => <Image key={i} item={item} 
+            isMobile={this.state.isMobile}
+            handleZoom={this.handleZoom} />)
+        default:
+            return this.state.designImages.map((item, i) => <Image key={i} item={item} 
+            isMobile={this.state.isMobile}
+            handleZoom={this.handleZoom} />)
         }
         
     }
@@ -97,6 +102,25 @@ export default class Designs extends React.Component {
             isMobile: !this.state.isMobile
         })
         this.displayImages()
+    }
+
+    handleZoom = (value) => {
+        this.setState({
+            selectedImage: value
+        })
+    }
+
+    getSelectedImage = () => {
+        return( 
+            <div className={"zoom" + (this.state.selectedImage ? "-in" : "")}>
+                <div className='zoom-img-button'>
+                    <div className='zoom-image-container'>
+                        <img src={this.state.selectedImage.import} className='zoom-image' alt={this.state.selectedImage.name}></img>
+                        <button className="zoom-button" onClick={() => this.handleZoom(null)}>Close</button>
+                    </div>
+                </div>
+            </div>
+        )
     }
     
     render(){
@@ -116,6 +140,10 @@ export default class Designs extends React.Component {
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Designs</h1>
                 </div>
+                {this.state.selectedImage ? 
+                    this.getSelectedImage()
+                    : null
+                }
                 <div>
                     <h2 className='component-header' id='h2'> Signs </h2>
                 </div>
