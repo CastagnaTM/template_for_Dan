@@ -5,7 +5,7 @@ import checklist from '../Assets/Documents/checklist.docx'
 function PackageContainer() {
 
     const [packages, setPackages] = useState([
-        {id: 1, name: 'package one', download: `${checklist}`, open: false,
+        {id: 1, name: 'Ultimate Wedding Package', download: `${checklist}`, open: false,
             description: 'This is a space to provide a description of the package'},
         {id: 2, name: 'package two', download: `${checklist}`, open: false,
             description: 'This is a space to provide a description of the package'},
@@ -20,9 +20,6 @@ function PackageContainer() {
             if(i === index) {
                 item.open = !item.open
             } 
-            // else {
-            //     item.open = false;    // leaving this part out leaves the other parts of the accordion open = best practices
-            // }
             return item;
         }))
     }

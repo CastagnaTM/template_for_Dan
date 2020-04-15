@@ -55,6 +55,12 @@ nav-bar {
   text-decoration: none;
 }
 
+.nav-style:hover {
+  color: rgb(240, 225, 107);
+  border-bottom: solid 2px #E9D21B;
+  transition: all 200ms ease-in-out;
+}
+
 .active-nav {
   color: rgb(240, 225, 107);
   font-size: larger;
@@ -380,6 +386,7 @@ nav-bar {
 
 .zoom-button:hover{
   border: solid 2px #E9D21B;
+  border-radius: 15px;
   background-color: black;
   color: rgb(236, 226, 145);
   letter-spacing: 0.18em;
@@ -433,11 +440,12 @@ nav-bar {
   flex-direction: row;
   margin-left: 5%;
   margin-bottom:2%;
-  width: 55%;
+  width: 100%;
+  text-align: left;
 }
 
 .package-name-container p, .package-description a { 
-  width: 20%;
+  width: 100%;
   cursor: pointer;
   letter-spacing: 0.12em;
   margin-top: 0;
@@ -483,9 +491,7 @@ nav-bar {
 .packages .packageopen .menu-carrot {
   transform: rotate(90deg);
   transform-origin: center;
-  margin-left: -8%;
   margin-bottom: 3%;
-  margin-right: 8%;
 }
 
 .packages .packageopen .package-description {
@@ -495,6 +501,7 @@ nav-bar {
 
 .menu-carrot {
   width: auto;
+  margin-right: 5%;
   transform: rotate(-90deg);
   transform-origin: center;
   cursor: pointer;
@@ -674,6 +681,14 @@ nav-bar {
 
   .package-name-container a {
     margin-left: 3em;
+  }
+
+  .package-name {
+    margin-left: 10%
+  }
+
+  .menu-carrot {
+    position: absolute;
   }
 
   .contact-link {
