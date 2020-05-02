@@ -112,11 +112,11 @@ export default class Designs extends React.Component {
 
     getSelectedImage = () => {
         return( 
-            <div className={"zoom" + (this.state.selectedImage ? "-in" : "")}>
+            <div className="zoom">
                 <div className='zoom-img-button'>
+                    <button className="zoom-button" onClick={() => this.handleZoom(null)}>&#x2613;</button>
                     <div className='zoom-image-container'>
                         <img src={this.state.selectedImage.import} className='zoom-image' alt={this.state.selectedImage.name}></img>
-                        <button className="zoom-button" onClick={() => this.handleZoom(null)}>Close</button>
                     </div>
                 </div>
             </div>
