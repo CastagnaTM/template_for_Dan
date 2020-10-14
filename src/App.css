@@ -146,11 +146,12 @@ nav-bar {
 }
 
 #scroll-up-button-div.scrolling {
-  z-index: 2;
+  z-index: 4;
+  position: fixed;
 }
 
 #scroll-up-button.scrolling {
-  z-index: 2;
+  z-index: 4;
   display: block;
   cursor: pointer;
   animation: fade 0.5s linear;

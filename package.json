@@ -1,5 +1,6 @@
 {
-  "name": "my_app_for_dan",
+  "name": "dans-unforgettable-creations",
+  "homepage": "http://dansunforgettablecreations.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
