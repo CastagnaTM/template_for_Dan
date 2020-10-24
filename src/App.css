@@ -79,6 +79,7 @@ nav-bar {
   padding-top: 15px;
   padding-bottom: 15px;
   border: solid black .26em;
+  overflow: hidden;
   animation: change 3s infinite;
 }
 @keyframes change {
@@ -170,7 +171,6 @@ nav-bar {
   width: auto;
   overflow: hidden;
   min-height: 100vh;
-  /* max-height: 100vh; */
   animation: fade .25s linear;
 }
 
@@ -199,11 +199,10 @@ nav-bar {
   justify-content: space-around;
   margin-left: 5%;
   margin-right: 5%;
-  /* max-height: 500px; */
 }
 
 #home-component {
-  background-image: url('./Assets/background.jpeg');
+  background-image: url('./Assets/background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -231,7 +230,7 @@ nav-bar {
   padding: .5em;
 }
 
-/* images outside of the designs component */
+/* images outside of the creations component */
 
 .component-image-div {
   max-width: 45%;
@@ -254,11 +253,11 @@ nav-bar {
   padding: 0;
 }
 
-.designs-component-text-div {
+.creations-component-text-div {
   max-width: 45%;
 }
 
-.designs-component-image-div-a, .designs-component-image-div-b, .designs-component-text-div {
+.creations-component-image-div-a, .creations-component-image-div-b, .creations-component-text-div {
   min-width: 45%;
   max-height: 80%;
   min-height: 80%;
@@ -267,7 +266,7 @@ nav-bar {
   margin-bottom: 2%;
 }
 
-.designs-component-image-div-a, .designs-component-image-div-b {
+.creations-component-image-div-a, .creations-component-image-div-b {
   max-width: 500px;
   background-color: rgba(0, 0, 0, 0.774);
   border-top: solid 2px #030909;
@@ -276,14 +275,14 @@ nav-bar {
   box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
-.designs-component-image-div {
+.creations-component-image-div {
   border-top: solid 2px #030909;
   border-left: solid 2px #030909;
   border-right: solid 2px #030909;
   box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
-.designs-component-image {
+.creations-component-image {
   max-width: 100%;
   max-height: 100vh;
   margin: 0 auto;
@@ -301,20 +300,20 @@ nav-bar {
   /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
-.designs-component-image-div-a {
+.creations-component-image-div-a {
   margin-left: 4%;
 }
 
-.designs-component-image-div-b {
+.creations-component-image-div-b {
   margin-right: 4%;
 }
 
-#designs-component-text-b {
+#creations-component-text-b {
   margin-right: 6%;
   margin-left: 4%;
 }
 
-#designs-component-text-a {
+#creations-component-text-a {
   margin-left: 6%;
   margin-right: 4%;
 }
@@ -324,7 +323,7 @@ nav-bar {
   color: aliceblue;
 }
 
-.designs-component-text-div p, h2 {
+.creations-component-text-div p, h2 {
   line-height: 1.5em;
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
@@ -332,7 +331,7 @@ nav-bar {
   color: aliceblue;
 }
 
-.designs-component-text-div p {
+.creations-component-text-div p {
   font-size: 110%;
 }
 
@@ -454,7 +453,7 @@ nav-bar {
 .packages {
   padding-top: 2%;
   padding-bottom: 10vh;
-  background-color: rgb(38, 36, 36);
+  /* background-color: rgb(38, 36, 36); */
 }
 
 .packages h2 {
@@ -674,7 +673,7 @@ nav-bar {
     margin: 0 auto;
   }
 
-  .designs-component-image-div, .designs-component-text-div, .component-image-div {
+  .creations-component-image-div, .creations-component-text-div, .component-image-div {
     min-width: 90%;
     margin: 0 auto;
     margin-top: 4%;
@@ -715,7 +714,7 @@ nav-bar {
     margin-left: -6%;
   }
 
-  #designs-component-text-a, #designs-component-text-b {
+  #creations-component-text-a, #creations-component-text-b {
     margin: 0 auto;
   }
 

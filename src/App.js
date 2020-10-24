@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import './App.css';
 import About from './Components/About';
 import Contact from './Components/Contact';
-// import Navbar from './Components/Navbar';
-import Designs from './Components/Designs';
+import Creations from './Components/Creations';
 import Home from './Components/Home';
+import Packages from './Components/Packages'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -14,11 +14,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* <Navbar /> */}
           <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/designs' component={Designs} />
-            <Route path='/about' component={About} />
+            <Route path='/creations' component={Creations} />
+            <Route path='/packages' component={Packages} />
             <Route path='/contact' component={Contact} />
           </Switch>
         </div>

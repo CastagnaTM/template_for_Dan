@@ -1,7 +1,6 @@
 import React from 'react'
 import Banner from './Banner'
 import Navbar from'./Navbar'
-import PackageContainer from '../Containers/PackageContainer';
 import Image from './Image'
 import One from '../Assets/1.jpeg'
 import Two from '../Assets/2.jpeg'
@@ -9,8 +8,7 @@ import Three from '../Assets/3.jpeg'
 
 
 
-
-export default class Designs extends React.Component {
+export default class Creations extends React.Component {
 
     state = {
         designImages: [],
@@ -26,11 +24,6 @@ export default class Designs extends React.Component {
     componentDidMount = () => {
 
         this.setImages();
-        
-        if (this.props.location.state){
-            this.scrollToPackages()
-            
-        }
            
         window.addEventListener("scroll", this.scrollListener)
         
@@ -57,24 +50,30 @@ export default class Designs extends React.Component {
         this.setState({
             designImages: 
             [
-                { id: 1, name: One, caption:'I Do BBQ',
-                    description: 'This is a space to provide a description of the image / design', import: One}, 
-                { id: 2, name: Two, caption:'Something New',
-                    description: 'This is a space to provide a description of the image / design', import: Two},
-                { id: 3, name: Three, caption:'Baby Shower',
-                    description: 'This is a space to provide a description of the image / design', import: Three}
+                { 
+                    id: 1, name: One, caption:'I Do BBQ',
+                    description: 'This is a space to provide a description of the image / design', import: One
+                }, 
+                { 
+                    id: 2, name: Two, caption:'Something New',
+                    description: 'This is a space to provide a description of the image / design', import: Two
+                },
+                { 
+                    id: 3, name: Three, caption:'Baby Shower',
+                    description: 'This is a space to provide a description of the image / design', import: Three
+                },
             ]
         })
     }
 
    
-    scrollToPackages = () => {
-        setTimeout(() =>{
-            this.packagesRef.scrollIntoView({
-                behavior: 'smooth'
-            }) 
-        }, 500);
-    }
+    // scrollToPackages = () => {
+    //     setTimeout(() =>{
+    //         this.packagesRef.scrollIntoView({
+    //             behavior: 'smooth'
+    //         }) 
+    //     }, 500);
+    // }
 
     scrollUp = () => {
         this.headerRef.scrollIntoView({
@@ -125,10 +124,10 @@ export default class Designs extends React.Component {
     
     render(){
         return (
-            <div className='component' id="designs-component" >
+            <div className='component' id="creations-component" >
                 <Navbar />
                 <Banner 
-                    scrollToPackages={this.scrollToPackages}
+                    // scrollToPackages={this.scrollToPackages}
                 />
                 <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
                     <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
@@ -138,7 +137,7 @@ export default class Designs extends React.Component {
                     </button>
                 </div>
                  <div className='header-container' ref={ref => {this.headerRef = ref}}>
-                    <h1 className='component-header'>Designs</h1>
+                    <h1 className='component-header'>Creations</h1>
                 </div>
                 {this.state.selectedImage ? 
                     this.getSelectedImage()
@@ -148,10 +147,6 @@ export default class Designs extends React.Component {
                     <h2 className='component-header' id='h2'> Signs </h2>
                 </div>
                 <ul className="design-list">{this.displayImages('signs')}</ul>
-                <section className='packages' ref={ref => {this.packagesRef = ref}} >
-                        <h2 className='packages-header'>Available Packages</h2>
-                <PackageContainer />
-                </section>               
             </div>
         )
     }

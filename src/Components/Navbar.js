@@ -10,11 +10,11 @@ export default function Navbar() {
                 <NavLink exact to='/' className='nav-style' activeClassName='active-nav'>
                     <li><img className='icon' src={Logo} alt='home'></img></li>
                 </NavLink>
-                <NavLink exact to='/about' className='nav-style' activeClassName='active-nav'>
-                    <li>About</li>
+                <NavLink exact to='/creations' className='nav-style' activeClassName='active-nav'>
+                    <li>Creations</li>
                 </NavLink>
-                <NavLink exact to='/designs' className='nav-style' activeClassName='active-nav'>
-                    <li>Designs</li>
+                <NavLink exact to='/packages' className='nav-style' activeClassName='active-nav'>
+                    <li>Packages</li>
                 </NavLink>
                 <NavLink exact to='/contact' className='nav-style' activeClassName='active-nav'>
                     <li>Contact</li>

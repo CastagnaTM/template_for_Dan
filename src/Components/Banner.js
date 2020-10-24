@@ -18,7 +18,7 @@ export default class Banner extends React.Component {
                 onClick={this.displayProps}
                 style={{backgroundColor: 'black', border: 'none'}}>
                 <Link className='banner-link' to={{
-                    pathname: '/designs',
+                    pathname: '/packages',
                     state: {
                         fromBanner: true
                     }
