@@ -536,7 +536,7 @@ nav-bar {
   color: aliceblue;
 }
 
-.packages .packageopen .menu-carrot {
+.component .packageopen .menu-carrot {
   transform: rotate(90deg);
   transform-origin: center;
   margin-bottom: 3%;
