@@ -453,7 +453,6 @@ nav-bar {
 .packages {
   padding-top: 2%;
   padding-bottom: 10vh;
-  /* background-color: rgb(38, 36, 36); */
 }
 
 .packages h2 {
@@ -469,6 +468,11 @@ nav-bar {
   background: transparent;
   border: none;
   font-size: 110%;
+}
+
+.package-button:focus {
+  outline: thin dotted;
+  color: #E9D21B;
 }
 
 .package-button:focus .package-name-container p, .package-button:focus .menu-carrot,
@@ -538,7 +542,7 @@ nav-bar {
   margin-bottom: 3%;
 }
 
-.packages .packageopen .package-description {
+.component .packageopen .package-description {
   max-height: 1000px;
   opacity: 1;
 }
