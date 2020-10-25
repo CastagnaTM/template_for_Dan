@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import PackageItems from '../Components/PackageItems'
 import checklist from '../Assets/Documents/checklist.docx'
 
+// Not using this component anymore
+
+
 function PackageContainer() {
 
     const [packages, setPackages] = useState([

@@ -192,7 +192,7 @@ nav-bar {
   color: #E9D21B
 }
 
-.component-body, .design-component-body {
+.component-body, .package-component-body {
   display: flex;
   flex-direction: row;
   width: 90%;
@@ -230,7 +230,7 @@ nav-bar {
   padding: .5em;
 }
 
-/* images outside of the creations component */
+/* images outside of the packages component */
 
 .component-image-div {
   max-width: 45%;
@@ -243,21 +243,21 @@ nav-bar {
   box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
-.design-component-body {
+.package-component-body {
   background-color: rgba(0, 0, 0, 0.671);
   margin-bottom: 2%;
 }
 
-.design-list {
+.package-list {
   list-style: none;
   padding: 0;
 }
 
-.creations-component-text-div {
+.packages-component-text-div {
   max-width: 45%;
 }
 
-.creations-component-image-div-a, .creations-component-image-div-b, .creations-component-text-div {
+.packages-component-image-div-a, .packages-component-image-div-b, .packages-component-text-div {
   min-width: 45%;
   max-height: 80%;
   min-height: 80%;
@@ -266,7 +266,7 @@ nav-bar {
   margin-bottom: 2%;
 }
 
-.creations-component-image-div-a, .creations-component-image-div-b {
+.packages-component-image-div-a, .packages-component-image-div-b {
   max-width: 500px;
   background-color: rgba(0, 0, 0, 0.774);
   border-top: solid 2px #030909;
@@ -275,17 +275,18 @@ nav-bar {
   box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
-.creations-component-image-div {
+.packages-component-image-div {
   border-top: solid 2px #030909;
   border-left: solid 2px #030909;
   border-right: solid 2px #030909;
   box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
-.creations-component-image {
+.packages-component-image {
   max-width: 100%;
   max-height: 100vh;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .caption {
@@ -300,20 +301,20 @@ nav-bar {
   /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
-.creations-component-image-div-a {
+.packages-component-image-div-a {
   margin-left: 4%;
 }
 
-.creations-component-image-div-b {
+.packages-component-image-div-b {
   margin-right: 4%;
 }
 
-#creations-component-text-b {
+#packages-component-text-b {
   margin-right: 6%;
   margin-left: 4%;
 }
 
-#creations-component-text-a {
+#packages-component-text-a {
   margin-left: 6%;
   margin-right: 4%;
 }
@@ -323,7 +324,7 @@ nav-bar {
   color: aliceblue;
 }
 
-.creations-component-text-div p, h2 {
+.packages-component-text-div p, h2 {
   line-height: 1.5em;
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
@@ -331,7 +332,7 @@ nav-bar {
   color: aliceblue;
 }
 
-.creations-component-text-div p {
+.packages-component-text-div p {
   font-size: 110%;
 }
 
@@ -416,28 +417,7 @@ nav-bar {
   transition: all 200ms ease-in-out;
 }
 
-
-/* .zoom-button:hover{
-  border: solid 2px #E9D21B;
-  border-radius: 15px;
-  background-color: black;
-  color: rgb(236, 226, 145);
-  letter-spacing: 0.18em;
-  transition: all 500ms ease-in-out;
-} */
-
-/* .zoom-button {
-  width: 100%;
-  height: 30px;
-  margin-bottom: 5px;
-  font-family: inherit;
-  font-size: 1.2em;
-  letter-spacing: 0.12em;
-  transition: all 200ms ease-in-out;
-  border: solid 2px transparent;
-} */
-
-.package, .packageopen {
+/* .package, .packageopen {
   margin-left: 4%;
 }
 
@@ -470,12 +450,12 @@ nav-bar {
   font-size: 110%;
 }
 
-.package-button:focus {
+.package-button:focus, .package-description a:focus {
   outline: thin dotted;
   color: #E9D21B;
 }
 
-.package-button:focus .package-name-container p, .package-button:focus .menu-carrot,
+.package-name-container p, .package-button:focus .menu-carrot,
 .package-button:hover .package-name-container p, .package-button:hover .menu-carrot {
   color: #E9D21B;
   letter-spacing: 0.22em;
@@ -554,7 +534,7 @@ nav-bar {
   transform-origin: center;
   cursor: pointer;
   color:rgb(120, 151, 177)
-}
+} */
 
 .contact-column {
   display: flex;
@@ -646,6 +626,50 @@ nav-bar {
   width: 30px;
 }
 
+.creations-grid-container {
+  display: grid;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 5%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5em;
+}
+
+.creations-grid-card {
+  background: black;
+  position: relative;
+}
+
+
+.creations-grid-card img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.creations-grid-card-text {
+  position: absolute;
+  box-sizing: border-box;
+  opacity: 0;
+  height: 100%;
+  padding: .5em;
+  text-align: center;
+  font-size: x-large;
+  color: aliceblue;
+  background: rgba(0, 0, 0, 0.699);
+  overflow: hidden;
+  transition: all 500ms ease-in-out;
+}
+
+.creations-grid-card-text:hover {
+  opacity: 1;
+  display: inline-block;
+  transition: all 250ms ease-in-out;
+}
+
+/* Mobile Styling */
+
 @media screen and (max-width: 800px){
  
   nav-bar{
@@ -658,7 +682,7 @@ nav-bar {
     max-height: 50px;
   } */
 
-  .component-body, .design-component-body {
+  .component-body, .package-component-body {
     flex-direction: column;
     width: auto;
   }
@@ -677,7 +701,7 @@ nav-bar {
     margin: 0 auto;
   }
 
-  .creations-component-image-div, .creations-component-text-div, .component-image-div {
+  .packages-component-image-div, .packages-component-text-div, .component-image-div {
     min-width: 90%;
     margin: 0 auto;
     margin-top: 4%;
@@ -718,7 +742,7 @@ nav-bar {
     margin-left: -6%;
   }
 
-  #creations-component-text-a, #creations-component-text-b {
+  #packages-component-text-a, #packages-component-text-b {
     margin: 0 auto;
   }
 

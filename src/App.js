@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-import About from './Components/About';
 import Contact from './Components/Contact';
 import Creations from './Components/Creations';
 import Home from './Components/Home';
@@ -16,9 +15,9 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/creations' component={Creations} />
-            <Route path='/packages' component={Packages} />
-            <Route path='/contact' component={Contact} />
+            <Route path='/creations' exact component={Creations} />
+            <Route path='/packages' exact component={Packages} />
+            <Route path='/contact' exact component={Contact} />
           </Switch>
         </div>
       </Router>

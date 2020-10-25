@@ -1,43 +1,151 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Banner from './Banner'
 import Navbar from'./Navbar'
-import PackageItems from '../Components/PackageItems'
-import checklist from '../Assets/Documents/checklist.docx'
+import Image from './Image'
+import One from '../Assets/1.jpeg'
+// import Two from '../Assets/2.jpeg'
+import Three from '../Assets/3.jpeg'
 
-function Packages() {
+export default class Packages extends React.Component {
 
-    const [packages, setPackages] = useState([
-        {id: 1, name: 'Ultimate Wedding Package', download: `${checklist}`, open: false,
-            description: 'This is a space to provide a description of the package'},
-        {id: 2, name: 'package two', download: `${checklist}`, open: false,
-            description: 'This is a space to provide a description of the package'},
-        {id: 3, name: 'package three', download: `${checklist}`, open: false,
-            description: 'This is a space to provide a description of the package'},
-        {id: 3, name: 'package four', download: `${checklist}`, open: false,
-            description: 'This is a space to provide a description of the package'}
+    state = {
+        packages: [],
+        isMobile: false,
+        selectedImage: null
+    }
+    packagesRef = React.createRef();
+    scrollButtonRef = React.createRef();
+    scrollDivRef = React.createRef();
+    headerRef = React.createRef();
 
-    ])
-    const togglePackages = index => {
-        setPackages(packages.map((item, i) => {
-            if(i === index) {
-                item.open = !item.open
-            } 
-            return item;
-        }))
+    componentDidMount = () => {
+
+        this.setImages();
+           
+        window.addEventListener("scroll", this.scrollListener)
+        
     }
 
-    return (
-        <>
-            <Navbar />
-            <Banner />
-            <div className='component'>
-                <div className='header-container'>
-                    <h1 className='component-header'>Available Packages</h1>
+    componentWillUnmount = () => {
+        window.removeEventListener("scroll", this.scrollListener);
+    }
+
+    scrollListener = () => {
+        let button = this.scrollButtonRef;
+        let buttonDiv = this.scrollDivRef;
+        if (window.scrollY > 20){
+            button.classList.add('scrolling');
+            buttonDiv.classList.add('scrolling');
+        }
+        else {
+            button.classList.remove('scrolling');
+            buttonDiv.classList.remove('scrolling');
+        }
+    }
+
+    setImages = () => {
+        this.setState({
+            packages: 
+            [
+                { 
+                    id: 1, name: One, title:'I Do BBQ',
+                    description: 'This is a space to provide a description of the image / design', import: One
+                }, 
+                // { 
+                //     id: 2, name: Two, title:'Something New',
+                //     description: 'This is a space to provide a description of the image / design', import: Two
+                // },
+                { 
+                    id: 3, name: Three, title:'Baby Shower',
+                    description: 'This is a space to provide a description of the image / design', import: Three
+                },
+            ]
+        })
+    }
+
+   
+    // scrollToPackages = () => {
+    //     setTimeout(() =>{
+    //         this.packagesRef.scrollIntoView({
+    //             behavior: 'smooth'
+    //         }) 
+    //     }, 500);
+    // }
+
+    scrollUp = () => {
+        this.headerRef.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+
+    displayImages = (section) => {
+        switch(section){
+        case 'signs':
+            return this.state.packages.slice(0,3).map((item, i) => <Image key={i} item={item} 
+            isMobile={this.state.isMobile}
+            handleZoom={this.handleZoom} />)
+        default:
+            return this.state.packages.map((item, i) => <Image key={i} item={item} 
+            isMobile={this.state.isMobile}
+            handleZoom={this.handleZoom} />)
+        }
+        
+    }
+
+    setMobile = () => {
+        this.setState({
+            isMobile: !this.state.isMobile
+        })
+        this.displayImages()
+    }
+
+    handleZoom = (value) => {
+        this.setState({
+            selectedImage: value
+        })
+    }
+
+    getSelectedImage = () => {
+        return( 
+            <div className="zoom">
+                <div className='zoom-img-button'>
+                    <button className="zoom-button" onClick={() => this.handleZoom(null)}>&#x2613;</button>
+                    <div className='zoom-image-container'>
+                        <img src={this.state.selectedImage.import} className='zoom-image' alt={this.state.selectedImage.name}></img>
+                    </div>
                 </div>
-                {packages.map((item, i)=> (<PackageItems item={item} index={i} key={i} togglePackages={togglePackages}/>))}
             </div>
-        </>
-    )
+        )
+    }
+    
+    render(){
+        return (
+            <div className='component' id="packages-component" >
+                <Navbar />
+                <Banner 
+                    // scrollToPackages={this.scrollToPackages}
+                />
+                <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
+                    <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
+                    onClick={this.scrollUp}
+                    >
+                     <p>&uarr;</p>
+                    </button>
+                </div>
+                <div className='header-container' ref={ref => {this.headerRef = ref}}>
+                    <h1 className='component-header'>Packages</h1>
+                </div>
+                {this.state.selectedImage ? 
+                    this.getSelectedImage()
+                    : null
+                }
+                {/* <div>
+                    <h2 className='component-header' id='h2'> Signs </h2>
+                </div> */}
+                <ul className="package-list">{this.displayImages('signs')}</ul>
+            </div>
+        )
+    }
 }
 
-export default Packages

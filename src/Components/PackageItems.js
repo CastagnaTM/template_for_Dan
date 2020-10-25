@@ -1,5 +1,9 @@
 import React from 'react'
 
+
+// Not using this component anymore
+
+
 function PackageItems({item, index, togglePackages}) {
     return (
         <div className={'package' + (item.open ? 'open' : '')} key={index} >

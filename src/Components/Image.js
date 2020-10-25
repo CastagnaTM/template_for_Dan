@@ -41,14 +41,14 @@ export default class Image extends React.Component {
         if(this.state.isMobile){
             return (
                 <li>
-                    <div className='design-component-body'>
-                        <div className='creations-component-image-div'>
-                            <img src={this.props.item.name} className='creations-component-image' alt={this.props.item.name}></img>
+                    <div className='package-component-body'>
+                        <div className='packages-component-image-div'>
+                            <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
                         </div>
-                        <div className='creations-component-text-div'>
+                        <div className='packages-component-text-div'>
                             <div className='text-div-container'>
                                 <h2>
-                                    {this.props.item.caption}
+                                    {this.props.item.title}
                                 </h2>
                                 <p id="image-description">
                                     {this.props.item.description}
@@ -63,19 +63,19 @@ export default class Image extends React.Component {
             if(this.props.item.id % 2 === 0){
                 return (
                     <li>
-                        <div className='design-component-body' id='creations-b'>
-                            <div className='creations-component-text-div' id='creations-component-text-b'>
+                        <div className='package-component-body' id='packages-b'>
+                            <div className='packages-component-text-div' id='packages-component-text-b'>
                                 <div className='text-div-container'>
                                     <h2>
-                                        {this.props.item.caption}
+                                        {this.props.item.title}
                                     </h2>
                                     <p id="image-description">
                                         {this.props.item.description}
                                     </p>
                                 </div>
                             </div>
-                            <div className='creations-component-image-div-b' onClick={()=>this.props.handleZoom(this.props.item)}>
-                                <img src={this.props.item.name} className='creations-component-image' alt={this.props.item.name}></img>            
+                            <div className='packages-component-image-div-b' onClick={()=>this.props.handleZoom(this.props.item)}>
+                                <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>            
                             </div>
                         </div>
                     </li>
@@ -84,14 +84,14 @@ export default class Image extends React.Component {
             else {
                 return (
                     <li>
-                        <div className='design-component-body' id='creations-a'>
-                            <div className='creations-component-image-div-a' onClick={()=>this.props.handleZoom(this.props.item)}>
-                                <img src={this.props.item.name} className='creations-component-image' alt={this.props.item.name}></img>
+                        <div className='package-component-body' id='packages-a'>
+                            <div className='packages-component-image-div-a' onClick={()=>this.props.handleZoom(this.props.item)}>
+                                <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
                             </div>
-                            <div className='creations-component-text-div' id='creations-component-text-a'>
+                            <div className='packages-component-text-div' id='packages-component-text-a'>
                                 <div className='text-div-container'>
                                     <h2>
-                                        {this.props.item.caption}
+                                        {this.props.item.title}
                                     </h2>
                                     <p id="image-description">
                                         {this.props.item.description}
