@@ -3,22 +3,17 @@ import React from 'react'
 import Banner from './Banner'
 import Navbar from './Navbar'
 
-import One from '../Assets/1.jpeg'
-// import Two from '../Assets/2.jpeg'
-import Three from '../Assets/3.jpeg'
+import IDoBBQ from '../Assets/I do.jpeg'
+import BabyShower from '../Assets/Baby Shower.jpeg'
 
 const images = [
     { 
-        id: 1, name: One, title:'I Do BBQ',
-        description: 'This is a space to provide a description of the image / design', import: One
+        id: 1, name: IDoBBQ, title:'I Do BBQ',
+        description: 'This is a space to provide a description of the image / design'
     }, 
-    // { 
-    //     id: 2, name: Two, title:'Something New',
-    //     description: 'This is a space to provide a description of the image / design', import: Two
-    // },
     { 
-        id: 3, name: Three, title:'Baby Shower',
-        description: 'This is a space to provide a description of the image / design', import: Three
+        id: 2, name: BabyShower, title:'Baby Shower',
+        description: 'This is a space to provide a description of the image / design'
     },
 ]
 
