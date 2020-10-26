@@ -87,7 +87,6 @@ export default class Packages extends React.Component {
                     id: 7, name: BabyShower, title:'Baby Shower',
                     description: 'This is a space to provide a description of the image / design'
                 },
-
             ]
         })
     }
