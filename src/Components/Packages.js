@@ -8,11 +8,14 @@ import Navbar from'./Navbar'
 import Image from './Image'
 import IDoBBQ from '../Assets/I do.jpeg'
 import BabyShower from '../Assets/Baby Shower.jpeg'
-import Arch1 from '../Assets/Arch 1.png'
-import Arch2 from '../Assets/Arch 2.png'
-import Donut1 from '../Assets/Donut 1.png'
-import Donut2 from '../Assets/Donut 2.png'
-import PicturePallet from '../Assets/Picture Pallet.png'
+import Arch1 from '../Assets/Arch1.jpg'
+import Arch2 from '../Assets/Arch2.jpg'
+import Donut1 from '../Assets/Donut1.jpg'
+import Donut2 from '../Assets/Donut2.jpg'
+import Donut3 from '../Assets/Donut3.jpg'
+import PicturePallet from '../Assets/PicturePallet.jpg'
+import PhotoWall from '../Assets/PhotoWall.jpg'
+import FallCollection from '../Assets/FallCollection.jpg'
 
 export default class Packages extends React.Component {
 
@@ -58,22 +61,30 @@ export default class Packages extends React.Component {
             [
                 {
                     id: 1, name: Arch1, title: 'Triangle Arbor', 
-                    description: 'DESCRIPTION!', second: Arch2
+                    description: 'DESCRIPTION!', images: [Arch1, Arch2]
                 },
                 {
                     id: 2, name: Donut1, title: 'Donut Wall', 
-                    description: 'DESCRIPTION!', second: Donut2   
+                    description: 'DESCRIPTION!', images: [Donut1, Donut2, Donut3]   
                 },
                 {
                     id: 3, name: PicturePallet, title: 'Picture Pallet', 
-                    description: 'DESCRIPTION!', 
+                    description: 'DESCRIPTION!'
+                },
+                {
+                    id: 4, name: PhotoWall, title: 'Photo Wall',
+                    description: 'Descriptive text!!!!'
+                },
+                {
+                    id: 5, name: FallCollection, title: 'Fall Collection',
+                    description: 'Descriptive text!!!!'
                 },
                 { 
-                    id: 4, name: IDoBBQ, title:'I Do BBQ',
+                    id: 6, name: IDoBBQ, title:'I Do BBQ',
                     description: 'This is a space to provide a description of the image / design',
                 }, 
                 { 
-                    id: 5, name: BabyShower, title:'Baby Shower',
+                    id: 7, name: BabyShower, title:'Baby Shower',
                     description: 'This is a space to provide a description of the image / design'
                 },
 
@@ -99,9 +110,15 @@ export default class Packages extends React.Component {
 
     displayImages = () => {
         return (
-            this.state.packages.map((item, i) => <Image key={i} item={item} 
-            isMobile={this.state.isMobile}
-            handleZoom={this.handleZoom} />)
+            this.state.packages.map((item, i) => {
+                return (
+                    <Image key={i} item={item} 
+                        isMobile={this.state.isMobile}
+                        handleZoom={this.handleZoom} 
+                    />
+                )
+
+            })
         )
             
         // switch(section){
@@ -159,24 +176,47 @@ export default class Packages extends React.Component {
         }
     }
 
+    getCarouselItems = () => {
+        return (
+            this.state.selectedImage.images.map((img, i) => {
+                return (
+                    <Carousel.Item key={i}>
+                        <img src={img} className='zoom-image' alt={this.state.selectedImage.title}></img>
+                    </Carousel.Item>
+                )
+            })
+        )
+    }
+
+    getCarousel = () => {
+        return (
+            <Carousel 
+                className='zoom-image-container'
+                interval={null}
+                prevIcon={this.icons('left')}
+                nextIcon={this.icons('right')}
+            >
+                {this.getCarouselItems()}
+            </Carousel>
+        )
+    }
+    getModal = () => {
+        return (
+            <div className='zoom-image-container'>
+                <img src={this.state.selectedImage.name} className='zoom-image' alt={this.state.selectedImage.title}></img>
+            </div>
+        )
+       
+    }
+
     getSelectedImage = () => {
         return( 
             <div className="zoom">
                 <div className='zoom-img-button'>
                     <button className="zoom-button" onClick={() => this.handleZoom(null)}>&#x2613;</button>
-                    <Carousel 
-                        className='zoom-image-container'
-                        interval={null}
-                        prevIcon={this.icons('left')}
-                        nextIcon={this.icons('right')}
-                    >
-                        <Carousel.Item>
-                            <img src={this.state.selectedImage.name} className='zoom-image' alt={this.state.selectedImage.name}></img>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img src={this.state.selectedImage.second} className='zoom-image' alt={this.state.selectedImage.name}></img>
-                        </Carousel.Item>
-                    </Carousel>
+                    {
+                        this.state.selectedImage.images ? this.getCarousel() : this.getModal()
+                    }
                 </div>
             </div>
         )
@@ -189,7 +229,11 @@ export default class Packages extends React.Component {
                 <Banner 
                     // scrollToPackages={this.scrollToPackages}
                 />
-                <div id='scroll-up-button-div' ref={ref => {this.scrollButtonRef = ref}}>
+                <div 
+                    id='scroll-up-button-div' 
+                    ref={ref => {this.scrollButtonRef = ref}}
+                    style={{ display: this.state.selectedImage ? "none" : "initial" }}
+                >
                     <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
                     onClick={this.scrollUp}
                     >
@@ -199,13 +243,9 @@ export default class Packages extends React.Component {
                 <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Packages</h1>
                 </div>
-                {this.state.selectedImage ? 
-                    this.getSelectedImage()
-                    : null
+                {
+                    this.state.selectedImage ? this.getSelectedImage() : null
                 }
-                {/* <div>
-                    <h2 className='component-header' id='h2'> Signs </h2>
-                </div> */}
                 <ul className="package-list">{this.displayImages()}</ul>
             </div>
         )

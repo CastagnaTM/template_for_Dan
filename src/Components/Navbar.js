@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <nav-bar>
             <nav className='nav-links'>
-                <NavLink exact to='/' className='nav-style' activeClassName='active-nav'>
+                <NavLink exact to='/' >
                     <li><img className='icon' src={Logo} alt='home'></img></li>
                 </NavLink>
                 <NavLink exact to='/creations' className='nav-style' activeClassName='active-nav'>
