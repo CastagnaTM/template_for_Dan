@@ -16,38 +16,50 @@ import FallCollection from '../Assets/FallCollection.jpg'
 
 const images = [
     {
-        id: 1, name: Arch1, title: 'Triangle Arbor', 
-        description: 'DESCRIPTION!', images: [Arch1, Arch2]
+        name: FallCollection, title: 'Fall Collection',
+        description: 'Descriptive text!!!!'
     },
     {
-        id: 2, name: Donut1, title: 'Donut Wall', 
-        description: 'DESCRIPTION!', images: [Donut1, Donut2, Donut3]   
-    },
-    {
-        id: 3, name: PicturePallet, title: 'Picture Pallet', 
+        name: Arch1, title: 'Triangle Arbor', 
         description: 'DESCRIPTION!'
     },
     {
-        id: 4, name: PhotoWall, title: 'Photo Wall',
-        description: 'Descriptive text!!!!'
+        name: Arch2, title: 'Triangle Arbor', 
+        description: 'DESCRIPTION!'
     },
     {
-        id: 5, name: FallCollection, title: 'Fall Collection',
+        name: Donut1, title: 'Donut Wall', 
+        description: 'DESCRIPTION!'   
+    },
+    {
+        name: Donut2, title: 'Donut Wall', 
+        description: 'DESCRIPTION!'   
+    },
+    {
+        name: Donut3, title: 'Donut Wall', 
+        description: 'DESCRIPTION!'   
+    },
+    {
+        name: PicturePallet, title: 'Picture Pallet', 
+        description: 'DESCRIPTION!'
+    },
+    {
+        name: PhotoWall, title: 'Pallet Backdrop',
         description: 'Descriptive text!!!!'
     },
     { 
-        id: 6, name: IDoBBQ, title:'I Do BBQ',
+        name: IDoBBQ, title:'I Do BBQ',
         description: 'This is a space to provide a description of the image / design',
     }, 
     { 
-        id: 7, name: BabyShower, title:'Baby Shower',
+        name: BabyShower, title:'Baby Shower',
         description: 'This is a space to provide a description of the image / design'
     },
 ]
 
 const mapImages = () => {
-    return images.map((img) => 
-        <div className="creations-grid-card" key={img.id}>
+    return images.map((img, i) => 
+        <div className="creations-grid-card" key={i}>
             <div className="creations-grid-card-text">
                 <h3>{img.title}</h3>
                 <p>{img.description}</p>
@@ -58,8 +70,6 @@ const mapImages = () => {
 }
 
 const Creations = () => {
-
-    const [selectedImage, setSelectedImage] = useState(null)
 
     return (
         <div className="component" id="creation-component">

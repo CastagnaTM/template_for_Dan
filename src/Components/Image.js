@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { LayersFill } from 'react-bootstrap-icons'
 
 
 export default class Image extends React.Component {
@@ -37,12 +37,22 @@ export default class Image extends React.Component {
         })
     }
 
+    getStack = () => {
+        return (
+            <LayersFill
+                className='packages-image-stack' 
+                size={30}
+                color="white"
+            />
+        )
+    }
+
     render(){
         if(this.state.isMobile){
             return (
                 <li>
                     <div className='package-component-body'>
-                        <div className='packages-component-image-div'>
+                        <div className='packages-component-image-div' >
                             <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
                         </div>
                         <div className='packages-component-text-div'>
@@ -75,6 +85,7 @@ export default class Image extends React.Component {
                                 </div>
                             </div>
                             <div className='packages-component-image-div-b' onClick={()=>this.props.handleZoom(this.props.item)}>
+                                {!this.state.isMobile && this.props.item.images ? this.getStack() : null}
                                 <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>            
                             </div>
                         </div>
@@ -86,6 +97,7 @@ export default class Image extends React.Component {
                     <li>
                         <div className='package-component-body' id='packages-a'>
                             <div className='packages-component-image-div-a' onClick={()=>this.props.handleZoom(this.props.item)}>
+                                {this.props.item.images ? this.getStack() : null}
                                 <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
                             </div>
                             <div className='packages-component-text-div' id='packages-component-text-a'>

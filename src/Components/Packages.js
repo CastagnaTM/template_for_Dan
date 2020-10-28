@@ -60,33 +60,19 @@ export default class Packages extends React.Component {
             packages: 
             [
                 {
-                    id: 1, name: Arch1, title: 'Triangle Arbor', 
-                    description: 'DESCRIPTION!', images: [Arch1, Arch2]
-                },
-                {
-                    id: 2, name: Donut1, title: 'Donut Wall', 
-                    description: 'DESCRIPTION!', images: [Donut1, Donut2, Donut3]   
-                },
-                {
-                    id: 3, name: PicturePallet, title: 'Picture Pallet', 
-                    description: 'DESCRIPTION!'
-                },
-                {
-                    id: 4, name: PhotoWall, title: 'Photo Wall',
-                    description: 'Descriptive text!!!!'
-                },
-                {
-                    id: 5, name: FallCollection, title: 'Fall Collection',
-                    description: 'Descriptive text!!!!'
-                },
-                { 
-                    id: 6, name: IDoBBQ, title:'I Do BBQ',
-                    description: 'This is a space to provide a description of the image / design',
-                }, 
-                { 
-                    id: 7, name: BabyShower, title:'Baby Shower',
-                    description: 'This is a space to provide a description of the image / design'
-                },
+                    id: 1, name: FallCollection, title: 'Fall Collection One', 
+                    description: 'DESCRIPTION!', 
+                    images: 
+                    [ 
+                        { image: FallCollection, title: 'Fall Collection One' }, 
+                        { image: Arch1, title: 'Triangle Arbor' },
+                        { image: Arch2, title: 'Triangle Arbor' },
+                        { image: Donut1, title: 'Donut Wall' },
+                        { image: Donut2, title: 'Donut Wall' },
+                        { image: PicturePallet, title: 'Picture Pallet' },
+                        { image: PhotoWall, title: 'Pallet Backdrop' },
+                    ]
+                }
             ]
         })
     }
@@ -111,7 +97,9 @@ export default class Packages extends React.Component {
         return (
             this.state.packages.map((item, i) => {
                 return (
-                    <Image key={i} item={item} 
+                    <Image 
+                        key={i} 
+                        item={item} 
                         isMobile={this.state.isMobile}
                         handleZoom={this.handleZoom} 
                     />
@@ -135,9 +123,9 @@ export default class Packages extends React.Component {
     }
 
     setMobile = () => {
-        this.setState({
-            isMobile: !this.state.isMobile
-        })
+        // this.setState({
+        //     isMobile: !this.state.isMobile
+        // })
         this.displayImages()
     }
 
@@ -159,18 +147,12 @@ export default class Packages extends React.Component {
     icons = (value) => {
         if (value === 'left') {
             return (
-                <ArrowLeftCircleFill
-                    color="rgb(34, 34, 36)"
-                    size={50}
-                />
+                <ArrowLeftCircleFill size={50} />
             )
         }
         if (value === 'right') {
             return (
-                <ArrowRightCircleFill
-                    color="rgb(34, 34, 36)"
-                    size={50}
-                />
+                <ArrowRightCircleFill size={50} />
             )
         }
     }
@@ -179,8 +161,11 @@ export default class Packages extends React.Component {
         return (
             this.state.selectedImage.images.map((img, i) => {
                 return (
-                    <Carousel.Item key={i}>
-                        <img src={img} className='zoom-image' alt={this.state.selectedImage.title}></img>
+                    <Carousel.Item key={i} >
+                        <img src={img.image} className='zoom-image' alt={this.state.selectedImage.title}></img>
+                        <Carousel.Caption>
+                            <h3>{img.title}</h3>
+                        </Carousel.Caption>
                     </Carousel.Item>
                 )
             })
