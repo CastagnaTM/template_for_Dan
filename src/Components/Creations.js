@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Banner from './Banner'
 import Navbar from './Navbar'
 
-import IDoBBQ from '../Assets/I do.jpeg'
-import BabyShower from '../Assets/Baby Shower.jpeg'
+import IDoBBQ from '../Assets/I do.jpg'
+import BabyShower from '../Assets/Baby Shower.jpg'
 import Arch1 from '../Assets/Arch1.jpg'
 import Arch2 from '../Assets/Arch2.jpg'
 import Donut1 from '../Assets/Donut1.jpg'
@@ -64,7 +64,7 @@ const mapImages = () => {
                 <h3>{img.title}</h3>
                 <p>{img.description}</p>
             </div>
-            <img src={img.name} />
+            <img src={img.name} alt={img.title}/>
         </div>
     )
 }

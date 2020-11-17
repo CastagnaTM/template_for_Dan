@@ -6,8 +6,6 @@ import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons
 import Banner from './Banner'
 import Navbar from'./Navbar'
 import Image from './Image'
-import IDoBBQ from '../Assets/I do.jpeg'
-import BabyShower from '../Assets/Baby Shower.jpeg'
 import Arch1 from '../Assets/Arch1.jpg'
 import Arch2 from '../Assets/Arch2.jpg'
 import Donut1 from '../Assets/Donut1.jpg'
@@ -69,6 +67,7 @@ export default class Packages extends React.Component {
                         { image: Arch2, title: 'Triangle Arbor' },
                         { image: Donut1, title: 'Donut Wall' },
                         { image: Donut2, title: 'Donut Wall' },
+                        { image: Donut3, title: 'Donut Wall' },
                         { image: PicturePallet, title: 'Picture Pallet' },
                         { image: PhotoWall, title: 'Pallet Backdrop' },
                     ]
@@ -184,6 +183,7 @@ export default class Packages extends React.Component {
             </Carousel>
         )
     }
+
     getModal = () => {
         return (
             <div className='zoom-image-container'>
