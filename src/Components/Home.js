@@ -1,8 +1,9 @@
 import React from 'react'
 import Banner from './Banner'
 import Navbar from'./Navbar'
-
-
+import About from './About'
+////2.e4fe80f2.chunk.js:1 
+//main.5e05b7d7.chunk.js:1 
 export default function Home() {
     
     return (
@@ -21,6 +22,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
+            <About/>
         </div>
     )
     

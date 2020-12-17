@@ -223,7 +223,7 @@ nav-bar {
   min-width: 40%;
   max-width: 40%;
   text-align: center;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #about-text {
@@ -313,7 +313,7 @@ nav-bar {
 .text-div-container {
   height: 98%;
   padding: 2px;
-  overflow: scroll;
+  /* overflow: scroll; */
   /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
