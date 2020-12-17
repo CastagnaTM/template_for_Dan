@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from './Banner'
+// import Banner from './Banner'
 import Logo from '../Assets/logo.png'
-import Navbar from './Navbar';
+//import Navbar from './Navbar';
 export default function About() {
 
     
@@ -9,10 +9,8 @@ export default function About() {
     
     return (
         <div className='component'>
-            <Navbar />
-            <Banner />
              <div className='header-container'>
-                <h1 className='component-header'>About Me</h1>
+                <h1 className='component-header'>About Us</h1>
             </div>
             <div className='component-body'>
                 <div className='component-image-div'>

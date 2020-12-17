@@ -313,6 +313,8 @@ nav-bar {
 .text-div-container {
   height: 98%;
   padding: 2px;
+  /* overflow: scroll; */
+  /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
 .packages-component-image-div-a {
