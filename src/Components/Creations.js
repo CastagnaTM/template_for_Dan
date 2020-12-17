@@ -39,6 +39,8 @@ import TakeAPicture from '../Assets/take a picture.JPG'
 import TomFrankDonut from '../Assets/tom frank donut.JPG'
 import WelcomeSetUp from '../Assets/Welcome set up.JPG'
 
+// Hi Chris
+
 const images = [
     {
         name: DanAndrewWelcome, title: 'Welcome Sign',
