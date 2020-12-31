@@ -5,7 +5,7 @@ import Logo from '../Assets/logo.png'
 export default function About() {
 
     
-    document.title="About";
+    //document.title="About";
     
     return (
         <div className='component'>

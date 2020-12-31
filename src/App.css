@@ -675,8 +675,9 @@ nav-bar {
     flex-direction: column;
   }
 
-  .banner-link, .banner-link p {
-    font-size: medium;
+  .banner-link {
+    font-size: x-large;
+    font-weight: bold;
   }
 
   .component-body, .package-component-body {

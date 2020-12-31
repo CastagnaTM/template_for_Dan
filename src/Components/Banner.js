@@ -24,9 +24,9 @@ export default class Banner extends React.Component {
                     }
                 }}
                 >
-                    ULTIMATE &nbsp; WEDDING &nbsp; PACKAGE 
+                    ULTIMATE BACKYARD WEDDING PACKAGE 
                 </Link>
-                <p>EVERYTHING YOU NEED FOR YOUR SPECIAL DAY</p>
+                {/* <p>EVERYTHING YOU NEED FOR YOUR SPECIAL DAY</p> */}
                 </button>
             </div>
         )
