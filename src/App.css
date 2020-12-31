@@ -210,6 +210,10 @@ nav-bar {
 }
 
 #home-component {
+  background-color: black;
+}
+
+#about-component {
   background-image: url('./Assets/background.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -217,6 +221,19 @@ nav-bar {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+}
+
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  background-color: black;
+}
+
+.react-player {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 600px;
 }
 
 .component-text {

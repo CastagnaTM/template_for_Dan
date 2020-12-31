@@ -8,7 +8,7 @@ export default function About() {
     //document.title="About";
     
     return (
-        <div className='component'>
+        <div className='component' id='about-component'>
              <div className='header-container'>
                 <h1 className='component-header'>About Us</h1>
             </div>
