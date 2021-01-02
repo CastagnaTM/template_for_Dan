@@ -731,4 +731,8 @@ nav-bar {
   .zoom-image-container {
     padding: 0;
   }
+
+  .ytp-unmute, .ytp-popup, .ytp-button, .ytp-unmute-animated, .ytp-unmute-shrink {
+    display: inherit;
+  }
 }
