@@ -31,13 +31,21 @@ export default class Packages extends React.Component {
     componentDidMount = () => {
 
         this.setImages();
-           
+        this.windowSizeCheck()
         window.addEventListener("scroll", this.scrollListener)
         
     }
 
     componentWillUnmount = () => {
         window.removeEventListener("scroll", this.scrollListener);
+    }
+
+    windowSizeCheck = () => {
+        if (window.innerWidth < 800){
+            this.setState({
+                isMobile: true
+            })
+        }
     }
 
     scrollListener = () => {
@@ -144,7 +152,7 @@ export default class Packages extends React.Component {
                     <Carousel.Item key={i} >
                         <img src={img.image} className='zoom-image' alt={this.state.selectedImage.title}></img>
                         <Carousel.Caption>
-                            <h3>{img.title}</h3>
+                            {this.state.isMobile ? <h4>{img.title}</h4> : <h3>{img.title}</h3>}
                         </Carousel.Caption>
                     </Carousel.Item>
                 )

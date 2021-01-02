@@ -6,7 +6,7 @@ export default class Image extends React.Component {
 
     state={
         showText: false,
-        isMobile: this.props.isMobile
+        isMobile: false
     }
     componentDidMount() {
         this.windowSizeCheck();
@@ -52,7 +52,7 @@ export default class Image extends React.Component {
             return (
                 <li>
                     <div className='package-component-body'>
-                        <div className='packages-component-image-div' >
+                        <div className='packages-component-image-div' onClick={()=>this.props.handleCarousel(this.props.item)}>
                             <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
                         </div>
                         <div className='packages-component-text-div'>
@@ -85,7 +85,7 @@ export default class Image extends React.Component {
                                 </div>
                             </div>
                             <div className='packages-component-image-div-b' onClick={()=>this.props.handleCarousel(this.props.item)}>
-                                {!this.state.isMobile && this.props.item.images ? this.getStack() : null}
+                                {this.props.item.images && this.getStack() }
                                 <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>            
                             </div>
                         </div>

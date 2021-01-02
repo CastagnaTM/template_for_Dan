@@ -720,4 +720,11 @@ nav-bar {
     text-align: left;
     margin-left: 15%;
   }
+
+  .carousel-caption {
+    padding-bottom: 0;
+  }
+  .carousel-caption h4 {
+    margin: 0;
+  }
 }
