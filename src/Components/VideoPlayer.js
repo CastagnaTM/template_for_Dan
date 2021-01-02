@@ -11,7 +11,7 @@ export default function VideoPlayer() {
             width='100%'
             height='100%'
             controls={true}
-            style={{display: 'inline-block', padding: '8%'}}
+            style={{display: 'inline-block', padding: window.innerWidth > 1200 ? '8%' : '0'}}
             />
     )
 }
