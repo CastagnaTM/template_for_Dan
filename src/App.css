@@ -727,4 +727,8 @@ nav-bar {
   .carousel-caption h4 {
     margin: 0;
   }
+
+  .zoom-image-container {
+    padding: 0;
+  }
 }
