@@ -210,7 +210,7 @@ nav-bar {
 }
 
 #home-component {
-  background-color: black;
+  background-color: #040808;
 }
 
 #about-component {
@@ -226,21 +226,18 @@ nav-bar {
 .video-container {
   position: relative;
   padding-top: 56.25%;
-  background-color: black;
 }
 
 .react-player {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-height: 600px;
 }
 
 .component-text {
   min-width: 40%;
   max-width: 40%;
   text-align: center;
-  /* overflow: scroll; */
 }
 
 #about-text {
@@ -330,8 +327,6 @@ nav-bar {
 .text-div-container {
   height: 98%;
   padding: 2px;
-  /* overflow: scroll; */
-  /* background-color: rgba(0, 0, 0, 0.671); */
 }
 
 .packages-component-image-div-a {

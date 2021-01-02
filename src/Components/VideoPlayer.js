@@ -6,11 +6,12 @@ export default function VideoPlayer() {
 
     return (
         <ReactPlayer 
-            url='https://www.youtube.com/watch?v=BS-oRydlnCE&ab_channel=BroScienceLife' 
+            url='https://www.youtube.com/watch?v=WplLgkM4qck&feature=youtu.be&ab_channel=Dan%27sUnforgettableCreations' 
             className='react-player'
             width='100%'
             height='100%'
             controls={true}
+            style={{display: 'inline-block', padding: '8%'}}
             />
     )
 }
