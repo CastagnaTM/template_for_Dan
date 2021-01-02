@@ -84,7 +84,7 @@ export default class Image extends React.Component {
                                     </p>
                                 </div>
                             </div>
-                            <div className='packages-component-image-div-b' onClick={()=>this.props.handleZoom(this.props.item)}>
+                            <div className='packages-component-image-div-b' onClick={()=>this.props.handleCarousel(this.props.item)}>
                                 {!this.state.isMobile && this.props.item.images ? this.getStack() : null}
                                 <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>            
                             </div>
@@ -96,7 +96,7 @@ export default class Image extends React.Component {
                 return (
                     <li>
                         <div className='package-component-body' id='packages-a'>
-                            <div className='packages-component-image-div-a' onClick={()=>this.props.handleZoom(this.props.item)}>
+                            <div className='packages-component-image-div-a' onClick={()=>this.props.handleCarousel(this.props.item)}>
                                 {this.props.item.images ? this.getStack() : null}
                                 <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
                             </div>

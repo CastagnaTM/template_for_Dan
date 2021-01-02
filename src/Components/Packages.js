@@ -100,25 +100,12 @@ export default class Packages extends React.Component {
                         key={i} 
                         item={item} 
                         isMobile={this.state.isMobile}
-                        handleZoom={this.handleZoom} 
+                        handleCarousel={this.handleCarousel} 
                     />
                 )
 
             })
         )
-            
-        // switch(section){
-        // case 'signs':
-        //     return this.state.packages.slice(0,3).map((item, i) => <Image key={i} item={item} 
-        //     isMobile={this.state.isMobile}
-        //     handleZoom={this.handleZoom} />)
-        // default:
-        //     return this.state.packages.map((item, i) => <Image key={i} item={item} 
-        //     isMobile={this.state.isMobile}
-        //     handleZoom={this.handleZoom} />)
-        // }
-        
-        // I don't remember what this was for ^^^
     }
 
     setMobile = () => {
@@ -128,7 +115,7 @@ export default class Packages extends React.Component {
         this.displayImages()
     }
 
-    handleZoom = (value) => {
+    handleCarousel = (value) => {
         value ? document.body.style.overflow = 'hidden' :
             document.body.style.overflow = 'unset'
 
@@ -136,12 +123,6 @@ export default class Packages extends React.Component {
             selectedImage: value
         })
     }
-
-    handleSelect = (selectedIndex) => {
-        this.setState({
-            index: selectedIndex,
-        })
-    };
 
     icons = (value) => {
         if (value === 'left') {
@@ -184,22 +165,22 @@ export default class Packages extends React.Component {
         )
     }
 
-    getModal = () => {
-        return (
-            <div className='zoom-image-container'>
-                <img src={this.state.selectedImage.name} className='zoom-image' alt={this.state.selectedImage.title}></img>
-            </div>
-        )
+    // getModal = () => {
+    //     return (
+    //         <div className='zoom-image-container'>
+    //             <img src={this.state.selectedImage.name} className='zoom-image' alt={this.state.selectedImage.title}></img>
+    //         </div>
+    //     )
        
-    }
+    // }
 
     getSelectedImage = () => {
         return( 
             <div className="zoom">
                 <div className='zoom-img-button'>
-                    <button className="zoom-button" onClick={() => this.handleZoom(null)}>&#x2613;</button>
+                    <button className="close-carousel" onClick={() => this.handleCarousel(null)}>&#x2613;</button>
                     {
-                        this.state.selectedImage.images ? this.getCarousel() : this.getModal()
+                        this.state.selectedImage.images && this.getCarousel()
                     }
                 </div>
             </div>

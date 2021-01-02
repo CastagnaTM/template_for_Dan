@@ -386,7 +386,7 @@ nav-bar {
   margin: auto;
 }
 
-.zoom-button {
+.close-carousel {
   position: absolute;
   z-index: 2;
   top: 2%; 
@@ -404,7 +404,7 @@ nav-bar {
   transition: all 200ms ease-in-out;
 }
 
-.zoom-button:hover{
+.close-carousel:hover{
   border: solid 2px rgb(236, 226, 145);
   background-color: black;
   color: #E9D21B;
@@ -620,6 +620,25 @@ nav-bar {
   width: 30px;
 }
 
+.link-to-contact {
+  display: flex;
+  flex-direction: row;
+  color: aliceblue;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.creations-link {
+  color: rgb(240, 225, 107);
+  text-decoration: none;
+}
+
+.creations-link:hover {
+  color: rgb(240, 225, 107);
+  text-decoration: none;
+}
+
+
 .creations-grid-container {
   display: grid;
   width: 90%;
@@ -654,7 +673,7 @@ nav-bar {
   width: 100%;
   padding: .5em;
   text-align: center;
-  font-size: x-large;
+  font-size: large;
   color: aliceblue;
   background: rgba(0, 0, 0, 0.699);
   /* overflow: hidden; */

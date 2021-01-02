@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Carousel from 'react-bootstrap/Carousel'
+import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons';
 
 import Banner from './Banner'
 import Navbar from './Navbar'
@@ -38,8 +41,6 @@ import Table from '../Assets/table.JPG'
 import TakeAPicture from '../Assets/take a picture.JPG'
 import TomFrankDonut from '../Assets/tom frank donut.JPG'
 import WelcomeSetUp from '../Assets/Welcome set up.JPG'
-
-// Hi Chris
 
 const images = [
     {
@@ -186,19 +187,83 @@ const images = [
 //   },
 ]
 
-const mapImages = () => {
-    return images.map((img, i) => 
-        <div className="creations-grid-card" key={i}>
-            <div className="creations-grid-card-text">
-                <h3>{img.title}</h3>
-                <p>{img.description}</p>
-            </div>
-            <img src={img.name} alt={img.title}/>
-        </div>
-    )
-}
 
 const Creations = () => {
+    const [selectedImage, setSelectedImage] = useState(null)
+    const [index, setIndex] = useState(null)
+
+    const getCarouselItems = () => {
+        return (
+            images.map((img, i) => {
+                return (
+                    <Carousel.Item key={i} >
+                        <img src={img.name} className='zoom-image' alt={img.title}></img>
+                        <Carousel.Caption>
+                            <h3>{img.title}</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                )
+            })
+        )
+    }
+
+    const openCarousel = () => {
+        return (
+            <Carousel 
+                className='zoom-image-container'
+                interval={null}
+                prevIcon={icons('left')}
+                nextIcon={icons('right')}
+                defaultActiveIndex={index}
+            >
+                {getCarouselItems()}
+            </Carousel>
+        )
+    }
+
+    const icons = (value) => {
+        if (value === 'left') {
+            return (
+                <ArrowLeftCircleFill size={50} />
+            )
+        }
+        if (value === 'right') {
+            return (
+                <ArrowRightCircleFill size={50} />
+            )
+        }
+    }
+
+    const handleCarousel = (value, index) => {
+        value ? document.body.style.overflow = 'hidden' :
+            document.body.style.overflow = 'unset'
+        
+        setSelectedImage(value)
+        setIndex(index)
+    }
+
+    const getSelectedImage = () => {
+        return ( 
+            <div className="zoom">
+                <div className='zoom-img-button'>
+                    <button className="close-carousel" onClick={() => handleCarousel(null)}>&#x2613;</button>
+                    { openCarousel() }
+                </div>
+            </div>
+        )
+    }
+
+    const mapImages = () => {
+        return images.map((img, i) => 
+            <div className="creations-grid-card" key={i} onClick={() => handleCarousel(img, i)}>
+                <div className="creations-grid-card-text">
+                    <h3>{img.title}</h3>
+                    <p>{img.description}</p>
+                </div>
+                <img src={img.name} alt={img.title}/>
+            </div>
+        )
+    }
 
     return (
         <div className="component" id="creation-component">
@@ -206,7 +271,14 @@ const Creations = () => {
             <Banner />
             <div className='header-container' >
                 <h1 className='component-header'>Creations</h1>
+                <div className='link-to-contact'>
+                    <p>Don't see something you want? &nbsp;</p>
+                    <Link className='creations-link' to={{pathname: '/contact'}}>
+                        Let us know!
+                    </Link>
+                </div>
             </div>
+            {selectedImage && getSelectedImage()}
             <div className="creations-grid-container">
                 {mapImages()}
             </div>
