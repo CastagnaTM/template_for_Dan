@@ -423,125 +423,6 @@ nav-bar {
   transition: all 200ms ease-in-out;
 }
 
-/* .package, .packageopen {
-  margin-left: 4%;
-}
-
-.packageopen {
-  background-color: rgb(26, 24, 24);
-  margin-bottom: 3%;
-}
-
-.packages-component {
-  width: 100%;
-}
-
-.packages {
-  padding-top: 2%;
-  padding-bottom: 10vh;
-}
-
-.packages h2 {
-  text-align: left;
-  letter-spacing: .12em;
-  margin-left: 20%;
-  color: aliceblue;
-}
-
-.package-button {
-  width: 70%;
-  height: auto;
-  background: transparent;
-  border: none;
-  font-size: 110%;
-}
-
-.package-button:focus, .package-description a:focus {
-  outline: thin dotted;
-  color: #E9D21B;
-}
-
-.package-name-container p, .package-button:focus .menu-carrot,
-.package-button:hover .package-name-container p, .package-button:hover .menu-carrot {
-  color: #E9D21B;
-  letter-spacing: 0.22em;
-  transition: all 200ms ease;
-}
-
-.package-name-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  margin-left: 5%;
-  margin-bottom:2%;
-  width: 100%;
-  text-align: left;
-}
-
-.package-name-container p, .package-description a { 
-  width: 100%;
-  cursor: pointer;
-  letter-spacing: 0.12em;
-  margin-top: 0;
-  color: aliceblue;
-}
-
-.package-description a {
-  text-decoration: none;
-  font-size: 110%;
-  font-weight: bolder;
-  margin-left: 3em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
-.package-description a:hover { 
-  color: #E9D21B;
-  letter-spacing: 0.3em;
-  transition: all 200ms ease;
-}
-
-.package-description {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5%;
-  width:80%;
-  opacity: 0;
-  max-height: 0;
-  overflow-y: hidden;
-  transition: all 400ms ease-out;
-}
-
-.package-description p {
-  margin-left: 5%;
-  font-size: large;
-  line-height: 1.5em;
-  letter-spacing: 0.12em;
-  word-spacing: 0.16em;
-  padding: .5em;
-  color: aliceblue;
-}
-
-.component .packageopen .menu-carrot {
-  transform: rotate(90deg);
-  transform-origin: center;
-  margin-bottom: 3%;
-}
-
-.component .packageopen .package-description {
-  max-height: 1000px;
-  opacity: 1;
-}
-
-.menu-carrot {
-  width: auto;
-  margin-right: 5%;
-  transform: rotate(-90deg);
-  transform-origin: center;
-  cursor: pointer;
-  color:rgb(120, 151, 177)
-} */
-
 .contact-column {
   display: flex;
   flex-direction: column;
@@ -708,7 +589,6 @@ nav-bar {
 
   .banner-link {
     font-size: x-large;
-    font-weight: bold;
   }
 
   .component-body, .package-component-body {
@@ -828,6 +708,12 @@ nav-bar {
 
   .header-container {
     margin-top: 180px;
+  }
+
+  .link-to-contact {
+    flex-direction: column;
+    text-align: center;
+    font-size: large;
   }
 
   .contact-link {
