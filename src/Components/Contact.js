@@ -46,14 +46,14 @@ export default class Contact extends React.Component {
                 </div>
                 <div className='component-body'>
                     <div className='contact-column'>
-                        <form className='contact-form'>
+                        <form className='contact-form' onSubmit={e => this.handleSubmit(e)} method="POST">
                             <label >Your Name</label>
                             <input type="text" id="Name" name="name" placeholder="Your Name..." onChange={e => this.setState({ name: e.target.value })} value={this.state.name}></input>
                             <label hmtlfor="Email">Your Email</label>
                             <input type="text" id="Email" name="email" placeholder="example@email..." onChange={e => this.setState({ email: e.target.value }) }value={this.state.email}></input>
                             <label hmtlfor="Message">Message</label>
                             <textarea type="text" id="Message" name="message" placeholder="Message..." onChange={e => this.setState({ message: e.target.value })} value={this.state.message}></textarea>
-                            <input type="submit" id="submit-button" value="Send" onClick={e => this.handleSubmit(e)}></input>
+                            <input type="submit" id="submit-button" value="Send" ></input>
                         </form>
                         <div><p style={{ color: "aliceblue"}}>{this.state.success}</p></div>
                         <div className='contact-link'>
