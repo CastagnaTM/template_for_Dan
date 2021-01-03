@@ -67,7 +67,7 @@ export default class Packages extends React.Component {
             [
                 {
                     id: 1, name: FallCollection, title: 'Fall Collection One', 
-                    description: 'DESCRIPTION!', 
+                    description: ['point one', 'point two', 'point three'], 
                     images: 
                     [ 
                         { image: FallCollection, title: 'Fall Collection One' }, 

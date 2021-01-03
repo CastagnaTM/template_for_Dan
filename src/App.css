@@ -365,9 +365,16 @@ nav-bar {
 }
 
 #image-description {
+  list-style: none;
+  color: aliceblue;
+  text-align: left;
+  padding: 1rem;
   border-bottom: solid #E9D21B 2px;
 }
 
+#image-description li {
+  margin-bottom: 5px;
+}
 .zoom {
   z-index: 2;
   position: fixed;

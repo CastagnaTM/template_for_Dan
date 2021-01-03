@@ -60,9 +60,9 @@ export default class Image extends React.Component {
                                 <h2>
                                     {this.props.item.title}
                                 </h2>
-                                <p id="image-description">
-                                    {this.props.item.description}
-                                </p>
+                                <ul id="image-description">
+                                    {this.props.item.description.map((point, i) => <li key={i} >{point}</li>)}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -79,9 +79,9 @@ export default class Image extends React.Component {
                                     <h2>
                                         {this.props.item.title}
                                     </h2>
-                                    <p id="image-description">
-                                        {this.props.item.description}
-                                    </p>
+                                    <ul id="image-description">
+                                        {this.props.item.description.map((point, i) => <li key={i} >{point}</li>)}
+                                    </ul>
                                 </div>
                             </div>
                             <div className='packages-component-image-div-b' onClick={()=>this.props.handleCarousel(this.props.item)}>
@@ -105,9 +105,9 @@ export default class Image extends React.Component {
                                     <h2>
                                         {this.props.item.title}
                                     </h2>
-                                    <p id="image-description">
-                                        {this.props.item.description}
-                                    </p>
+                                    <ul id="image-description">
+                                        {this.props.item.description.map((point, i) => <li key={i} >{point}</li>)}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
