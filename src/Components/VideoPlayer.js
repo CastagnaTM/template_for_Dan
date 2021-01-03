@@ -6,7 +6,7 @@ export default function VideoPlayer() {
 
     return (
         <ReactPlayer 
-            url='https://www.youtube.com/watch?v=WplLgkM4qck&feature=youtu.be&ab_channel=Dan%27sUnforgettableCreations' 
+            url='https://www.dailymotion.com/video/x7yg8h9'
             className='react-player'
             width='100%'
             height='100%'

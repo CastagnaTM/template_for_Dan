@@ -3,7 +3,7 @@ import Banner from './Banner'
 import Navbar from './Navbar'
 import Insta from '../Assets/insta_logo.png'
 
-export default  class Contact extends React.Component {
+export default class Contact extends React.Component {
 
     state = {
         name: '',

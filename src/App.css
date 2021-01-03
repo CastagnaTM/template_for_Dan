@@ -580,7 +580,7 @@ nav-bar {
 
 /* Mobile Styling */
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 820px){
  
   nav-bar{
     display: flex;
@@ -730,9 +730,5 @@ nav-bar {
 
   .zoom-image-container {
     padding: 0;
-  }
-
-  .ytp-unmute, .ytp-popup, .ytp-button, .ytp-unmute-animated, .ytp-unmute-shrink {
-    display: inherit;
   }
 }
