@@ -9,31 +9,38 @@ export default class Contact extends React.Component {
         name: '',
         email: '',
         message: '',
-        success: null,
+        status: null,
         error: null
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        if(this.state.name && this.state.email && this.state.message){
-            this.setState({
-                success: "Thank you! We'll be in touch as soon as possible"
-            })
-            window.emailjs.send(
-                'gmail', 'contact_form',
-                {message_html: this.state.message, from_name: this.state.name,
-                reply_to: this.state.email
-                }
-            )
-            .catch(err => this.setState({
-                success: "Whoops! There seems to have been an error. Please try again"
-            }))
-        } else {
-            this.setState({
-                success: "*Please fill out all of the above fields"
-            })
-        }
-        
+
+        fetch('http://localhost:3002/send', {
+        method: "POST",
+        body: JSON.stringify(this.state),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        }).then(
+            (response) => (response.json())
+        ).then((response)=> {
+            if (response.status === 'success') {
+                this.setState({
+                    status: "Thank you! We'll be in touch as soon as possible"
+                })
+            this.resetForm()
+            } else if(response.status === 'fail') {
+                this.setState({
+                    status: "Whoops! There seems to have been an error. Please try again"
+                })
+            }
+        })
+    }
+
+    resetForm(){
+        this.setState({name: '', email: '', message: ''})
     }
 
     render() {
@@ -55,7 +62,7 @@ export default class Contact extends React.Component {
                             <textarea type="text" id="Message" name="message" placeholder="Message..." onChange={e => this.setState({ message: e.target.value })} value={this.state.message}></textarea>
                             <input type="submit" id="submit-button" value="Send" ></input>
                         </form>
-                        <div><p style={{ color: "aliceblue"}}>{this.state.success}</p></div>
+                        <div><p style={{ color: "aliceblue"}}>{this.state.status}</p></div>
                         <div className='contact-link'>
                             <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"> Follow Dan's Unforgettable Creations! &nbsp;
                                 <img className='contact-logo' style={{marginBottom: '-5px'}} src={Insta} alt="Instagram Logo"></img>
