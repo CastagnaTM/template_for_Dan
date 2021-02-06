@@ -30,6 +30,7 @@ import DonutAngleFull from '../Assets/donut angle full.JPG'
 import DonutWallAngle from '../Assets/Donut Wall angle.JPG'
 import FakeWedding from '../Assets/fake wedding.JPG'
 import FrankEleniWelcome from '../Assets/frank eleni welcome.JPG'
+import EleniFrankArbor from '../Assets/EleniFrankArbor.JPG'
 import JengaPeek from '../Assets/jenga peek.JPG'
 import Jenga from '../Assets/jenga.JPG'
 import LBArbor from '../Assets/LB Arbor.JPG'
@@ -37,10 +38,12 @@ import LightBulb from '../Assets/light bulb.JPG'
 import PictureOfPicture from '../Assets/picture of picture.JPG'
 import Polaroid from '../Assets/polaroid.JPG'
 import Polaroids from '../Assets/polaroids4.jpg'
+import PicturePalletSign from '../Assets/PicturePalletSign.JPG'
 import Table from '../Assets/table.JPG'
 import TakeAPicture from '../Assets/take a picture.JPG'
 import TomFrankDonut from '../Assets/tom frank donut.JPG'
 import WelcomeSetUp from '../Assets/Welcome set up.JPG'
+
 
 const images = [
     {
@@ -64,11 +67,15 @@ const images = [
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
     {
-        name: Jenga, title: 'Giant Jenga',
+        name: Jenga, title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
     },
     {
-        name: Polaroids, title: 'Polaroid Picture Pallet',
+        name: Polaroids, title: 'Picture Pallet',
+        description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
+    },
+    {
+        name: PicturePalletSign, title: 'Picture Pallet',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
     },
     {
@@ -94,6 +101,10 @@ const images = [
     {
         name: WelcomeSetUp, title: 'Welcome Sign',
         description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+    },
+    {
+        name: EleniFrankArbor, title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
     },
     {
         name: ArborChairs, title: 'Triangular Arbor',
@@ -124,12 +135,12 @@ const images = [
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
     {
-        name: JengaPeek, title: 'Giant Jenga',
+        name: JengaPeek, title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
     },   
     {
         name: FallCollection, title: 'Fall Collection',
-        description: "Fall themed Arbor, Donut Wall, Champagne Wall, Picture Backdrop, Polaroid Picture Pallet, and more!"
+        description: "Fall themed Arbor, Donut Wall, Champagne Wall, Picture Backdrop, Picture Pallet, and more!"
     },
     {
         name: Arch1, title: 'Triangular Arbor', 
@@ -168,7 +179,7 @@ const images = [
         description: '3 Feet Wide x 2.5 Feet Tall with Stand'
     },
     {
-        name: PicturePallet, title: 'Polaroid Picture Pallet', 
+        name: PicturePallet, title: 'Picture Pallet', 
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
     },
     {

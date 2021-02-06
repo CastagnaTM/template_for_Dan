@@ -6,14 +6,17 @@ import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons
 import Banner from './Banner'
 import Navbar from'./Navbar'
 import Image from './Image'
-import Arch1 from '../Assets/Arch1.jpg'
-import Arch2 from '../Assets/Arch2.jpg'
-import Donut1 from '../Assets/Donut1.jpg'
-import Donut2 from '../Assets/Donut2.jpg'
-import Donut3 from '../Assets/Donut3.jpg'
-import PicturePallet from '../Assets/PicturePallet.jpg'
-import PhotoWall from '../Assets/PhotoWall.jpg'
-import FallCollection from '../Assets/FallCollection.jpg'
+import UBWP from '../Assets/arbor chairs.JPG'
+import FrankEleniWelcome from '../Assets/frank eleni welcome.JPG'
+import TomFrankDonut from '../Assets/tom frank donut.JPG'
+import ChampagneGlass from '../Assets/champagne glass.JPG'
+import Polaroids from '../Assets/polaroids4.jpg'
+import PictureOfPicture from '../Assets/picture of picture.JPG'
+import Jenga from '../Assets/jenga.JPG'
+import FakeWedding from '../Assets/fake wedding.JPG'
+import Lights2 from '../Assets/Lights2.JPG'
+
+
 
 export default class Packages extends React.Component {
 
@@ -66,18 +69,20 @@ export default class Packages extends React.Component {
             packages: 
             [
                 {
-                    id: 1, name: FallCollection, title: 'Fall Collection One', 
-                    description: ['point one', 'point two', 'point three'], 
+                    id: 1, name: UBWP, title: 'Ultimate Backyard Wedding Package', 
+                    description: ['$2000 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly, and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Plummeting Prisms Game, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', '____________________________________________________________________', 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
                     images: 
                     [ 
-                        { image: FallCollection, title: 'Fall Collection One' }, 
-                        { image: Arch1, title: 'Triangle Arbor' },
-                        { image: Arch2, title: 'Triangle Arbor' },
-                        { image: Donut1, title: 'Donut Wall' },
-                        { image: Donut2, title: 'Donut Wall' },
-                        { image: Donut3, title: 'Donut Wall' },
-                        { image: PicturePallet, title: 'Picture Pallet' },
-                        { image: PhotoWall, title: 'Pallet Backdrop' },
+                        { image: UBWP, title: 'Ultimate Backyard Wedding Package' }, 
+                        { image: FakeWedding, title: 'Arbor' },
+                        { image: FrankEleniWelcome, title: 'Welcome Sign' },
+                        { image: TomFrankDonut, title: 'Donut Wall' },
+                        { image: ChampagneGlass, title: 'Champagne Wall' },
+                        { image: PictureOfPicture, title: 'Picture Backdrop' },
+                        { image: Polaroids, title: 'Picture Pallet' },
+                        { image: Jenga, title: 'Plummeting Prisms' },
+                        { image: Lights2, title: 'Lights' },
+
                     ]
                 }
             ]
