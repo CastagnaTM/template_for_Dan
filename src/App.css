@@ -291,6 +291,7 @@ nav-bar {
 .packages-component-image-div-a, .packages-component-image-div-b {
   position: relative;
   max-width: 500px;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.774);
   border-top: solid 2px #030909;
   border-left: solid 2px #030909;
@@ -377,7 +378,7 @@ nav-bar {
 }
 
 #image-description hr {
-  border-top: aliceblue;
+  border-top: 1px solid aliceblue;
 }
 .zoom {
   z-index: 2;
@@ -631,7 +632,7 @@ nav-bar {
     min-width: 90%;
     margin: 0 auto;
     margin-top: 4%;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .zoom-img-button {
@@ -721,6 +722,15 @@ nav-bar {
 
   .header-container {
     margin-top: 180px;
+  }
+
+  #about-header {
+    margin-top: 20px;
+  }
+
+  #about-component {
+    width: 100%;
+    margin: 0;
   }
 
   .link-to-contact {

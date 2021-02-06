@@ -10,10 +10,10 @@ export default function About() {
     
     return (
         <div className='component' id='about-component'>
-             <div className='header-container'>
+             <div className='header-container' id='about-header'>
                 <h1 className='component-header'>About Us</h1>
             </div>
-            <div className='component-body'>
+            <div className='component-body' id='about-component'>
                 <div className='component-image-div'>
                     <img src={DanAbout} className='component-image' alt="gif"></img>
                 </div>
