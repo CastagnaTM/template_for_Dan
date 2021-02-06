@@ -1,12 +1,6 @@
 import React from 'react'
-// import Banner from './Banner'
-//import Logo from '../Assets/logo.png'
 import DanAbout from '../Assets/DanAbout.JPG'
-//import Navbar from './Navbar';
 export default function About() {
-
-    
-    //document.title="About";
     
     return (
         <div className='component' id='about-component'>

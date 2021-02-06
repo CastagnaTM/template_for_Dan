@@ -32,15 +32,8 @@ export default class Packages extends React.Component {
     headerRef = React.createRef();
 
     componentDidMount = () => {
-
         this.setImages();
         this.windowSizeCheck()
-        window.addEventListener("scroll", this.scrollListener)
-        
-    }
-
-    componentWillUnmount = () => {
-        window.removeEventListener("scroll", this.scrollListener);
     }
 
     windowSizeCheck = () => {
@@ -48,19 +41,6 @@ export default class Packages extends React.Component {
             this.setState({
                 isMobile: true
             })
-        }
-    }
-
-    scrollListener = () => {
-        let button = this.scrollButtonRef;
-        let buttonDiv = this.scrollDivRef;
-        if (window.scrollY > 20){
-            button.classList.add('scrolling');
-            buttonDiv.classList.add('scrolling');
-        }
-        else {
-            button.classList.remove('scrolling');
-            buttonDiv.classList.remove('scrolling');
         }
     }
 
@@ -89,15 +69,6 @@ export default class Packages extends React.Component {
         })
     }
 
-   
-    // scrollToPackages = () => {
-    //     setTimeout(() =>{
-    //         this.packagesRef.scrollIntoView({
-    //             behavior: 'smooth'
-    //         }) 
-    //     }, 500);
-    // }
-
     scrollUp = () => {
         this.headerRef.scrollIntoView({
             behavior: 'smooth',
@@ -122,9 +93,6 @@ export default class Packages extends React.Component {
     }
 
     setMobile = () => {
-        // this.setState({
-        //     isMobile: !this.state.isMobile
-        // })
         this.displayImages()
     }
 
@@ -178,15 +146,6 @@ export default class Packages extends React.Component {
         )
     }
 
-    // getModal = () => {
-    //     return (
-    //         <div className='zoom-image-container'>
-    //             <img src={this.state.selectedImage.name} className='zoom-image' alt={this.state.selectedImage.title}></img>
-    //         </div>
-    //     )
-       
-    // }
-
     getSelectedImage = () => {
         return( 
             <div className="zoom">
@@ -205,19 +164,7 @@ export default class Packages extends React.Component {
             <div className='component' id="packages-component" >
                 <Navbar />
                 <Banner 
-                    // scrollToPackages={this.scrollToPackages}
-                />
-                <div 
-                    id='scroll-up-button-div' 
-                    ref={ref => {this.scrollButtonRef = ref}}
-                    style={{ display: this.state.selectedImage ? "none" : "initial" }}
-                >
-                    <button id='scroll-up-button' ref={ref => {this.scrollDivRef = ref}}
-                    onClick={this.scrollUp}
-                    >
-                     <p>&uarr;</p>
-                    </button>
-                </div>
+            />
                 <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Packages</h1>
                 </div>

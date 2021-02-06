@@ -4,7 +4,6 @@ import Contact from './Components/Contact';
 import Creations from './Components/Creations';
 import Home from './Components/Home';
 import Packages from './Components/Packages'
-// import Footer from './Components/Footer'
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -13,7 +12,6 @@ class App extends Component {
   render() {
 
     return (
-      <>
       <Router>
         <div className="App">
           <Switch>
@@ -24,8 +22,6 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
-      {/* <Footer /> */}
-      </>
     );
   }
 }
