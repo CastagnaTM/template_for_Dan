@@ -285,7 +285,7 @@ const Creations = () => {
                 <div className='link-to-contact'>
                     <p>Don't see something you want? &nbsp;</p>
                     <Link className='creations-link' to={{pathname: '/contact'}}>
-                        Let us know!
+                        Let us know !
                     </Link>
                 </div>
             </div>
