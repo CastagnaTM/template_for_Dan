@@ -9,21 +9,29 @@ html {
   -o-background-size: cover;
   margin: 0%;
   max-height: 100vh;
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Alex Brush', cursive;
 }
 
-body{
+.App {
+  margin: 0 auto;
+  min-height: 100vmax;
+}
+
+body {
   margin: 0 auto;
   padding:0;
   max-height: 100vh;
   background: rgb(7, 7, 7);
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Alex Brush', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
-.app{
-  margin: 0 auto;
-  min-height: 100vmax;
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
 }
 
 nav-bar {
@@ -82,7 +90,7 @@ nav-bar {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  border: solid black .26em;
+  border: solid black .4em;
   overflow: hidden;
   animation: change 3s infinite;
 }
@@ -93,8 +101,8 @@ nav-bar {
 
 .banner-link {
   color: rgb(236, 226, 145);
-  font-size: 200%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3em;
+  font-family: 'Dancing Script', cursive;
   text-decoration: none;
   letter-spacing: 0.12em;
   word-spacing: 0.16em;
@@ -148,6 +156,11 @@ nav-bar {
 
 #home-component {
   background-color: #040808;
+}
+
+#home-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
 }
 
 #about-component {
@@ -429,7 +442,8 @@ nav-bar {
   margin-top: 2%;
   margin-bottom: 10%;
   text-align: center;
-  transition: all 500ms
+  transition: all 500ms;
+  font-family: 'Dancing Script', cursive;
 }
 
 .contact-link a, .email-link a {
@@ -642,7 +656,7 @@ nav-bar {
 
   #about-header { margin-top: 20px }
 
-  #package-header { font-size: 1.6rem }
+  /* #package-header { font-size: 1.6rem } */
 
   #about-component {
     width: 100%;

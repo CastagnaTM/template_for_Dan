@@ -13,7 +13,7 @@ export default function Home() {
             <Banner />
 
             <div className='header-container'>
-                <h1 className='component-header'>Dan's Unforgettable Creations</h1>
+                <h1 className='component-header' id='home-header'>Dan's Unforgettable Creations</h1>
             </div>
             <div className='video-container'>
                 <VideoPlayer />
