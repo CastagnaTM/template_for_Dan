@@ -1,201 +1,153 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
-import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons';
+import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons'
+
+import { Image } from 'cloudinary-react'
+import { Cloud, Key, Secret } from '../constants'
 
 import Banner from './Banner'
 import Navbar from './Navbar'
 
-//import IDoBBQ from '../Assets/I do.jpg'
-//import BabyShower from '../Assets/Baby Shower.jpg'
-import Arch1 from '../Assets/Arch1.jpg'
-import Arch2 from '../Assets/Arch2.jpg'
-import Donut1 from '../Assets/Donut1.jpg'
-import Donut2 from '../Assets/Donut2.jpg'
-import Donut3 from '../Assets/Donut3.jpg'
-import ChampagneWall1 from '../Assets/champagne wall.jpeg'
-import ChampagneWall2 from '../Assets/champagne wall2.jpeg'
-import ChampagneWall3 from '../Assets/champagne wall3.jpeg'
-import WelcomeSign from '../Assets/welcome sign.jpeg'
-import PicturePallet from '../Assets/PicturePallet.jpg'
-import PhotoWall from '../Assets/PhotoWall.jpg'
-import FallCollection from '../Assets/FallCollection.jpg'
-import ChampagneGlass from '../Assets/champagne glass.JPG'
-import ChampagneGlasses from '../Assets/champagne glasses.JPG'
-import AndrewDemiCheers from '../Assets/andrew demi cheers.JPG'
-import ArborChairs from '../Assets/arbor chairs.JPG'
-import DanAndrewWelcome from '../Assets/dan andrew welcome.JPG'
-import DemiDonut from '../Assets/demi donut.JPG'
-import DonutAngleFull from '../Assets/donut angle full.JPG'
-import DonutWallAngle from '../Assets/Donut Wall angle.JPG'
-import FakeWedding from '../Assets/fake wedding.JPG'
-import FrankEleniWelcome from '../Assets/frank eleni welcome.JPG'
-import EleniFrankArbor from '../Assets/EleniFrankArbor.JPG'
-import JengaPeek from '../Assets/jenga peek.JPG'
-import Jenga from '../Assets/jenga.JPG'
-import LBArbor from '../Assets/LB Arbor.JPG'
-import LightBulb from '../Assets/light bulb.JPG'
-import PictureOfPicture from '../Assets/picture of picture.JPG'
-import Polaroid from '../Assets/polaroid.JPG'
-import Polaroids from '../Assets/polaroids4.jpg'
-import PicturePalletSign from '../Assets/PicturePalletSign.JPG'
-import Table from '../Assets/table.JPG'
-import TakeAPicture from '../Assets/take a picture.JPG'
-import TomFrankDonut from '../Assets/tom frank donut.JPG'
-import WelcomeSetUp from '../Assets/Welcome set up.JPG'
-
 
 const images = [
     {
-        name: DanAndrewWelcome, title: 'Welcome Sign',
+        name: 'danAndrewWelcome', title: 'Welcome Sign',
         description: "3 Feet Wide x 2.5 Feet Tall with Stand"
     },
     {
-        name: FakeWedding, title: 'Triangular Arbor',
+        name: 'fakeWedding', title: 'Triangular Arbor',
         description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
     },
     {
-        name: TomFrankDonut, title: 'Donut Wall',
+        name: 'tomFrankDonut', title: 'Donut Wall',
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
     },
     {
-        name: ChampagneGlass, title: 'Champagne Wall',
+        name: 'champagneGlass', title: 'Champagne Wall',
         description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."
     },
     {
-        name: PictureOfPicture, title: 'Picture Backdrop',
+        name: 'pictureOfAPicture', title: 'Picture Backdrop',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
     {
-        name: Jenga, title: 'Plummeting Prisms',
+        name: 'jenga', title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
     },
     {
-        name: Polaroids, title: 'Picture Pallet',
+        name: 'polaroids', title: 'Picture Pallet',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
     },
     {
-        name: PicturePalletSign, title: 'Picture Pallet',
+        name: 'picturePalletSign', title: 'Picture Pallet',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
     },
     {
-        name: Table, title: '',
+        name: 'table', title: '',
         description: ""
     },
     {
-        name: DemiDonut, title: '',
+        name: 'demiDonut', title: '',
         description: ""
     },
     {
-        name: AndrewDemiCheers, title: '',
+        name: 'andrewDemiCheers', title: '',
         description: ""
     },
     {
-        name: Polaroid, title: '',
-        description: ""
-    },   
-    {
-        name: FrankEleniWelcome, title: 'Welcome Sign',
-        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
-    },
-    {
-        name: WelcomeSetUp, title: 'Welcome Sign',
-        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
-    },
-    {
-        name: EleniFrankArbor, title: 'Triangular Arbor',
-        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
-    },
-    {
-        name: ArborChairs, title: 'Triangular Arbor',
-        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
-    },
-    {
-        name: LBArbor, title: 'Triangular Arbor',
-        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
-    },
-    {
-        name: DonutWallAngle, title: 'Donut Wall',
-        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
-    },
-    {
-        name: DonutAngleFull, title: 'Donut Wall',
-        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
-    },
-    {
-        name: LightBulb, title: '',
+        name: 'polaroid', title: '',
         description: ""
     },   
     {
-        name: ChampagneGlasses, title: 'Champagne Wall',
+        name: 'frankEleniWelcome', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+    },
+    {
+        name: 'welcomeSetUp', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+    },
+    {
+        name: 'eleniFrankArbor', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
+    },
+    {
+        name: 'arborChairs', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers.",
+        version: true
+    },
+    {
+        name: 'LBArbor', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
+    },
+    {
+        name: 'donutWallAngle', title: 'Donut Wall',
+        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
+    },
+    {
+        name: 'donutAngleFull', title: 'Donut Wall',
+        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
+    },
+    {
+        name: 'lightBulb', title: '',
+        description: ""
+    },   
+    {
+        name: 'champagneGlasses', title: 'Champagne Wall',
         description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."
     },
     {
-        name: TakeAPicture, title: 'Picture Backdrop',
+        name: 'takeAPicture', title: 'Picture Backdrop',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
     {
-        name: JengaPeek, title: 'Plummeting Prisms',
+        name: 'jengaPeek', title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
     },   
     {
-        name: FallCollection, title: 'Fall Collection',
+        name: 'fallCollection', title: 'Fall Collection',
         description: "Fall themed Arbor, Donut Wall, Champagne Wall, Picture Backdrop, Picture Pallet, and more!"
     },
     {
-        name: Arch1, title: 'Triangular Arbor', 
+        name: 'arch1', title: 'Triangular Arbor', 
         description: '9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers.'
     },
     {
-        name: Arch2, title: 'Triangular Arbor', 
+        name: 'Arch2', title: 'Triangular Arbor', 
         description: '9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers.'
     },
     {
-        name: Donut1, title: 'Donut Wall', 
+        name: 'donut1', title: 'Donut Wall', 
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."   
     },
     {
-        name: Donut2, title: 'Donut Wall', 
+        name: 'donut2', title: 'Donut Wall', 
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."   
     },
     {
-        name: Donut3, title: 'Donut Wall', 
+        name: 'donut3', title: 'Donut Wall', 
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."   
     },
     {
-        name: ChampagneWall1, title: 'Champagne Wall', 
+        name: 'champagneWall2', title: 'Champagne Wall', 
         description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."   
     },
     {
-        name: ChampagneWall2, title: 'Champagne Wall', 
+        name: 'champagneWall3', title: 'Champagne Wall', 
         description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."   
     },
     {
-        name: ChampagneWall3, title: 'Champagne Wall', 
-        description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."   
-    },
-    {
-        name: WelcomeSign, title: 'Welcome Sign', 
+        name: 'welcomeSign', title: 'Welcome Sign', 
         description: '3 Feet Wide x 2.5 Feet Tall with Stand'
     },
     {
-        name: PicturePallet, title: 'Picture Pallet', 
+        name: 'picturePallet', title: 'Picture Pallet', 
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
     },
     {
-        name: PhotoWall, title: 'Picture Backdrop',
+        name: 'photoWall', title: 'Picture Backdrop',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
-
-  // { 
- //       name: IDoBBQ, title:'I Do BBQ',
-  //      description: 'This is a space to provide a description of the image / design',
-   // }, 
-
-    //{ 
-    //     name: BabyShower, title:'Baby Shower',
-  //      description: 'This is a space to provide a description of the image / design'
-//   },
 ]
 
 
@@ -208,7 +160,15 @@ const Creations = () => {
             images.map((img, i) => {
                 return (
                     <Carousel.Item key={i} >
-                        <img src={img.name} className='zoom-image' alt={img.title}></img>
+                        <Image
+                            cloudName={Cloud}
+                            apiKey={Key}
+                            apiSecret={Secret}
+                            publicId={img.name}
+                            className='zoom-image'
+                            alt={img.title}
+                        >
+                        </Image>
                         <Carousel.Caption>
                             <h3>{img.title}</h3>
                         </Carousel.Caption>
@@ -271,7 +231,15 @@ const Creations = () => {
                     <h3>{img.title}</h3>
                     <p>{img.description}</p>
                 </div>
-                <img src={img.name} alt={img.title}/>
+                <Image
+                    cloudName={Cloud}
+                    apiKey={Key}
+                    apiSecret={Secret}
+                    publicId={img.name}
+                    className='zoom-image'
+                    alt={img.title}
+                    version={img.version && '1613431345'}
+                />
             </div>
         )
     }

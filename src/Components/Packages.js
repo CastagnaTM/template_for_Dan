@@ -1,22 +1,14 @@
 import React from 'react'
 
 import Carousel from 'react-bootstrap/Carousel'
-import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons';
+import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons'
+
+import { Image } from 'cloudinary-react'
+import { Cloud, Key, Secret } from '../constants'
 
 import Banner from './Banner'
 import Navbar from'./Navbar'
-import Image from './Image'
-import UBWP from '../Assets/arbor chairs.JPG'
-import FrankEleniWelcome from '../Assets/frank eleni welcome.JPG'
-import TomFrankDonut from '../Assets/tom frank donut.JPG'
-import ChampagneGlass from '../Assets/champagne glass.JPG'
-import Polaroids from '../Assets/polaroids4.jpg'
-import PictureOfPicture from '../Assets/picture of picture.JPG'
-import Jenga from '../Assets/jenga.JPG'
-import FakeWedding from '../Assets/fake wedding.JPG'
-import Lights2 from '../Assets/Lights2.JPG'
-
-
+import PackageImage from './PackageImage'
 
 export default class Packages extends React.Component {
 
@@ -49,19 +41,19 @@ export default class Packages extends React.Component {
             packages: 
             [
                 {
-                    id: 1, name: UBWP, title: 'Ultimate Backyard Wedding Package', 
+                    id: 1, name: 'arborChairs', title: 'Ultimate Backyard Wedding Package', 
                     description: ['$2000 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly, and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Plummeting Prisms Game, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', <hr></hr>, 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
                     images: 
                     [ 
-                        { image: UBWP, title: 'Ultimate Backyard Wedding Package' }, 
-                        { image: FakeWedding, title: 'Arbor' },
-                        { image: FrankEleniWelcome, title: 'Welcome Sign' },
-                        { image: TomFrankDonut, title: 'Donut Wall' },
-                        { image: ChampagneGlass, title: 'Champagne Wall' },
-                        { image: PictureOfPicture, title: 'Picture Backdrop' },
-                        { image: Polaroids, title: 'Picture Pallet' },
-                        { image: Jenga, title: 'Plummeting Prisms' },
-                        { image: Lights2, title: 'Lights' },
+                        { image: 'arborChairs', title: 'Ultimate Backyard Wedding Package' }, 
+                        { image: 'fakeWedding', title: 'Arbor' },
+                        { image: 'frankEleniWelcome', title: 'Welcome Sign' },
+                        { image: 'tomFrankDonut', title: 'Donut Wall' },
+                        { image: 'champagneGlass', title: 'Champagne Wall' },
+                        { image: 'pictureOfAPicture', title: 'Picture Backdrop' },
+                        { image: 'polaroids', title: 'Picture Pallet' },
+                        { image: 'jenga', title: 'Plummeting Prisms' },
+                        { image: 'lights2', title: 'Lights' },
 
                     ]
                 }
@@ -80,7 +72,7 @@ export default class Packages extends React.Component {
         return (
             this.state.packages.map((item, i) => {
                 return (
-                    <Image 
+                    <PackageImage 
                         key={i} 
                         item={item} 
                         isMobile={this.state.isMobile}
@@ -123,7 +115,14 @@ export default class Packages extends React.Component {
             this.state.selectedImage.images.map((img, i) => {
                 return (
                     <Carousel.Item key={i} >
-                        <img src={img.image} className='zoom-image' alt={this.state.selectedImage.title}></img>
+                        <Image
+                            cloudName={Cloud}
+                            apiKey={Key}
+                            apiSecret={Secret}
+                            publicId={img.image}
+                            className='zoom-image'
+                            alt={this.state.selectedImage.title}
+                        />
                         <Carousel.Caption>
                             {this.state.isMobile ? <h4>{img.title}</h4> : <h3>{img.title}</h3>}
                         </Carousel.Caption>

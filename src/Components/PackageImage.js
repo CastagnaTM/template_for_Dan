@@ -1,8 +1,10 @@
 import React from 'react'
 import { LayersFill } from 'react-bootstrap-icons'
 
+import { Image } from 'cloudinary-react'
+import { Cloud, Key, Secret } from '../constants'
 
-export default class Image extends React.Component {
+export default class PackageImage extends React.Component {
 
     state={
         showText: false,
@@ -53,11 +55,20 @@ export default class Image extends React.Component {
                 <li>
                     <div className='package-component-body'>
                         <div className='packages-component-image-div' onClick={()=>this.props.handleCarousel(this.props.item)}>
-                            <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
+                            {this.props.item.images && this.getStack()}
+                            {/* <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img> */}
+                            <Image
+                                cloudName={Cloud}
+                                apiKey={Key}
+                                apiSecret={Secret}
+                                publicId={this.props.item.name}
+                                className='packages-component-image'
+                                alt={this.props.item.name}
+                            />
                         </div>
                         <div className='packages-component-text-div'>
                             <div className='text-div-container'>
-                                <h2>
+                                <h2 id='package-header'>
                                     {this.props.item.title}
                                 </h2>
                                 <ul id="image-description">
@@ -85,8 +96,16 @@ export default class Image extends React.Component {
                                 </div>
                             </div>
                             <div className='packages-component-image-div-b' onClick={()=>this.props.handleCarousel(this.props.item)}>
-                                {this.props.item.images && this.getStack() }
-                                <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>            
+                                {this.props.item.images && this.getStack()}
+                                {/* <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>             */}
+                                <Image
+                                    cloudName={Cloud}
+                                    apiKey={Key}
+                                    apiSecret={Secret}
+                                    publicId={this.props.item.name}
+                                    className='packages-component-image'
+                                    alt={this.props.item.name}
+                                />
                             </div>
                         </div>
                     </li>
@@ -97,8 +116,16 @@ export default class Image extends React.Component {
                     <li>
                         <div className='package-component-body' id='packages-a'>
                             <div className='packages-component-image-div-a' onClick={()=>this.props.handleCarousel(this.props.item)}>
-                                {this.props.item.images ? this.getStack() : null}
-                                <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>
+                                {this.props.item.images && this.getStack()}
+                                {/* <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img> */}
+                                <Image
+                                    cloudName={Cloud}
+                                    apiKey={Key}
+                                    apiSecret={Secret}
+                                    publicId={this.props.item.name}
+                                    className='packages-component-image'
+                                    alt={this.props.item.name}
+                                />
                             </div>
                             <div className='packages-component-text-div' id='packages-component-text-a'>
                                 <div className='text-div-container'>

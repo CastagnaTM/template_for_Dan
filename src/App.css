@@ -254,7 +254,7 @@ nav-bar {
 
 .packages-image-stack {
   position: absolute;
-  right: 2%;
+  right: 5%;
 }
 
 .caption {
@@ -638,13 +638,11 @@ nav-bar {
     max-height: 125px;
   }
 
-  .header-container {
-    margin-top: 180px;
-  }
+  .header-container { margin-top: 180px }
 
-  #about-header {
-    margin-top: 20px;
-  }
+  #about-header { margin-top: 20px }
+
+  #package-header { font-size: 1.6rem }
 
   #about-component {
     width: 100%;
@@ -662,14 +660,9 @@ nav-bar {
     padding: 0;
   }
 
-  .carousel-caption {
-    padding-bottom: 0;
-  }
-  .carousel-caption h4 {
-    margin: 0;
-  }
+  .carousel-caption { padding-bottom: 0 }
 
-  .zoom-image-container {
-    padding: 0;
-  }
+  .carousel-caption h4 { margin: 0 }
+
+  .zoom-image-container { padding: 0 }
 }
