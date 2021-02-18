@@ -13,13 +13,11 @@ html {
 
 .App {
   margin: 0 auto;
-  min-height: 100vmax;
 }
 
 body {
   margin: 0 auto;
   padding:0;
-  max-height: 100vh;
   background: rgb(7, 7, 7);
   font-family: 'Montserrat', sans-serif;
 }
@@ -120,6 +118,22 @@ nav-bar {
   letter-spacing: 0.3em;
 }
 
+footer {
+  text-align: center;
+  color: aliceblue;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #E9D21B;
+}
+
+footer a:hover {
+  color: #E9D21B;
+}
+
 .component {
   width: auto;
   overflow: hidden;
@@ -172,6 +186,8 @@ nav-bar {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+
+#about-header { margin-top: 120px }
 
 .video-container {
   position: relative;
@@ -355,6 +371,12 @@ nav-bar {
 }
 
 .zoom-image {
+  max-height: 90vh;
+  display: block;
+  margin: auto;
+}
+
+.carousel-image {
   max-height: 90vh;
   display: block;
   margin: auto;
@@ -588,6 +610,10 @@ nav-bar {
   }
 
   .zoom-image {
+    max-width: 100%;
+  }
+
+  .carousel-image {
     max-width: 100%;
     margin-top: 25%;
   }

@@ -165,7 +165,7 @@ const Creations = () => {
                             apiKey={Key}
                             apiSecret={Secret}
                             publicId={img.name}
-                            className='zoom-image'
+                            className='carousel-image'
                             alt={img.title}
                         >
                         </Image>

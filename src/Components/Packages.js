@@ -42,7 +42,7 @@ export default class Packages extends React.Component {
             [
                 {
                     id: 1, name: 'arborChairs', title: 'Ultimate Backyard Wedding Package', 
-                    description: ['$2000 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly, and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Plummeting Prisms Game, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', <hr></hr>, 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
+                    description: ['$2000 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Plummeting Prisms Game, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', <hr></hr>, 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
                     images: 
                     [ 
                         { image: 'arborChairs', title: 'Ultimate Backyard Wedding Package' }, 
