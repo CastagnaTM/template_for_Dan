@@ -11,6 +11,7 @@ import Navbar from './Navbar'
 
 
 const images = [
+    
     {
         name: 'danAndrewWelcome', title: 'Welcome Sign',
         description: "3 Feet Wide x 2.5 Feet Tall with Stand"
@@ -42,6 +43,10 @@ const images = [
     {
         name: 'picturePalletSign', title: 'Picture Pallet',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
+    },
+    {
+        name: 'mrmrsign', title: 'Couple Chair Sign',
+        description: "Hangs on the back of couple's chairs"
     },
     {
         name: 'table', title: '',
