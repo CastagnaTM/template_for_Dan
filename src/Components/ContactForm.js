@@ -27,7 +27,10 @@ export default class ContactForm extends React.Component {
             try {
                 await sendEmail()
                 this.setState({
-                    success: "Thank you! We'll be in touch as soon as possible"
+                    success: "Thank you! We'll be in touch as soon as possible",
+                    name: '',
+                    email: '',
+                    message: '',
                 })
             } catch (error) {
                 console.log(error)
