@@ -3,7 +3,7 @@ import Banner from './Banner'
 import Navbar from './Navbar'
 import Insta from '../Assets/insta_logo.png'
 
-export default class Contact extends React.Component {
+export default class ContactForm extends React.Component {
 
     state = {
         name: '',
@@ -13,27 +13,33 @@ export default class Contact extends React.Component {
         error: null
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async(e) => {
         e.preventDefault();
-        if(this.state.name && this.state.email && this.state.message){
-            this.setState({
-                success: "Thank you! We'll be in touch as soon as possible"
-            })
+        const sendEmail = () => {
             window.emailjs.send(
-                'gmail', 'contact_form',
+                'default_service', 'template_83wcjjt',
                 {message_html: this.state.message, from_name: this.state.name,
                 reply_to: this.state.email
                 }
             )
-            .catch(err => this.setState({
-                success: "Whoops! There seems to have been an error. Please try again"
-            }))
+        }
+        if(this.state.name && this.state.email && this.state.message){
+            try {
+                await sendEmail()
+                this.setState({
+                    success: "Thank you! We'll be in touch as soon as possible"
+                })
+            } catch (error) {
+                console.log(error)
+                this.setState({
+                    success: "Sorry, something went wrong! Please get in touch with us at dan@dansunforgettablecreations.com"
+                })
+            }
         } else {
             this.setState({
                 success: "*Please fill out all of the above fields"
             })
-        }
-        
+        }   
     }
 
     render() {
@@ -55,9 +61,9 @@ export default class Contact extends React.Component {
                             <textarea type="text" id="Message" name="message" placeholder="Message..." onChange={e => this.setState({ message: e.target.value })} value={this.state.message}></textarea>
                             <input type="submit" id="submit-button" value="Send" onClick={e => this.handleSubmit(e)}></input>
                         </form>
-                        <div><p style={{ color: "aliceblue"}}>{this.state.success}</p></div>
+                        <div id="form-response"><p>{this.state.success}</p></div>
                         <div className='contact-link'>
-                            <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"> Follow Dan's Unforgettable Creations! &nbsp;
+                            <a href='https://www.instagram.com/dansunforgettablecreations/' target='_blank' rel="noopener noreferrer"> Follow Us! &nbsp;
                                 <img className='contact-logo' style={{marginBottom: '-5px'}} src={Insta} alt="Instagram Logo"></img>
                             </a>
                         </div>
@@ -66,5 +72,4 @@ export default class Contact extends React.Component {
             </div>
         )
     }
-    
 }
