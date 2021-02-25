@@ -451,6 +451,7 @@ footer a:hover {
 #submit-button {
   width: 90%;
   min-width: 100px;
+  background-color: #EFEFEF;
   transition: all 500ms ease-in-out;
   border: solid .26em transparent;
 }
