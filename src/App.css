@@ -683,3 +683,8 @@ footer a:hover {
 
   .zoom-image-container { padding: 0 }
 }
+
+@media screen and (max-width: 360px) { 
+  .banner button { padding-top: 10px }
+  .banner-link { font-size: 2em } 
+}
