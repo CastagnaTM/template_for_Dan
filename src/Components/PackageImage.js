@@ -27,7 +27,7 @@ export default class PackageImage extends React.Component {
     }
 
     windowSizeCheck = () => {
-        if (window.innerWidth < 800){
+        if (window.innerWidth < 821){
             this.setState({
                 isMobile: true
             })
