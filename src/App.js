@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import OldContact from './Components/ContactForm';
+import ContactForm from './Components/ContactForm';
 import Creations from './Components/Creations';
 import Home from './Components/Home';
 import Packages from './Components/Packages'
@@ -18,7 +18,7 @@ class App extends Component {
             <Route path='/' exact component={Home} />
             <Route path='/creations' exact component={Creations} />
             <Route path='/packages' exact component={Packages} />
-            <Route path='/contact' exact component={OldContact} />
+            <Route path='/contact' exact component={ContactForm} />
           </Switch>
         </div>
       </Router>

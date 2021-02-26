@@ -162,8 +162,7 @@ export default class Packages extends React.Component {
         return (
             <div className='component' id="packages-component" >
                 <Navbar />
-                <Banner 
-            />
+                <Banner />
                 <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Packages</h1>
                 </div>
@@ -175,4 +174,3 @@ export default class Packages extends React.Component {
         )
     }
 }
-

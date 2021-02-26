@@ -60,8 +60,8 @@ export default class ContactForm extends React.Component {
                             <input type="text" id="Name" name="name" placeholder="Your Name..." onChange={e => this.setState({ name: e.target.value })} value={this.state.name}></input>
                             <label hmtlfor="Email">Your Email</label>
                             <input type="text" id="Email" name="email" placeholder="example@email..." onChange={e => this.setState({ email: e.target.value }) }value={this.state.email}></input>
-                            <label hmtlfor="Message">Message</label>
-                            <textarea type="text" id="Message" name="message" placeholder="Message..." onChange={e => this.setState({ message: e.target.value })} value={this.state.message}></textarea>
+                            <label hmtlfor="Message">How can we make your event unforgettable?</label>
+                            <textarea type="text" id="Message" name="message" placeholder="Let us know..." onChange={e => this.setState({ message: e.target.value })} value={this.state.message}></textarea>
                             <input type="submit" id="submit-button" value="Send" onClick={e => this.handleSubmit(e)}></input>
                         </form>
                         <div id="form-response"><p>{this.state.success}</p></div>

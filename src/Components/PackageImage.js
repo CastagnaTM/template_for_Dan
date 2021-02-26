@@ -10,6 +10,7 @@ export default class PackageImage extends React.Component {
         showText: false,
         isMobile: false
     }
+
     componentDidMount() {
         this.windowSizeCheck();
         window.addEventListener('resize', this.resizeListener);
@@ -21,7 +22,7 @@ export default class PackageImage extends React.Component {
 
     resizeListener = () => {
         this.setState({
-            isMobile: window.innerWidth < 800
+            isMobile: window.innerWidth < 821
         });
     }
 
@@ -50,13 +51,12 @@ export default class PackageImage extends React.Component {
     }
 
     render(){
-        if(this.state.isMobile){
+        if(this.state.isMobile) {
             return (
                 <li>
                     <div className='package-component-body'>
                         <div className='packages-component-image-div' onClick={()=>this.props.handleCarousel(this.props.item)}>
                             {this.props.item.images && this.getStack()}
-                            {/* <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img> */}
                             <Image
                                 cloudName={Cloud}
                                 apiKey={Key}
@@ -81,7 +81,7 @@ export default class PackageImage extends React.Component {
             )
         }
         else {
-            if(this.props.item.id % 2 === 0){
+            if(this.props.item.id % 2 === 0) {
                 return (
                     <li>
                         <div className='package-component-body' id='packages-b'>
@@ -97,7 +97,6 @@ export default class PackageImage extends React.Component {
                             </div>
                             <div className='packages-component-image-div-b' onClick={()=>this.props.handleCarousel(this.props.item)}>
                                 {this.props.item.images && this.getStack()}
-                                {/* <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img>             */}
                                 <Image
                                     cloudName={Cloud}
                                     apiKey={Key}
@@ -117,7 +116,6 @@ export default class PackageImage extends React.Component {
                         <div className='package-component-body' id='packages-a'>
                             <div className='packages-component-image-div-a' onClick={()=>this.props.handleCarousel(this.props.item)}>
                                 {this.props.item.images && this.getStack()}
-                                {/* <img src={this.props.item.name} className='packages-component-image' alt={this.props.item.name}></img> */}
                                 <Image
                                     cloudName={Cloud}
                                     apiKey={Key}
@@ -141,7 +139,6 @@ export default class PackageImage extends React.Component {
                     </li>
                 )
             }
-        }
-        
+        }   
     }
 }
