@@ -1,5 +1,5 @@
 import React from 'react'
-import { LayersFill } from 'react-bootstrap-icons'
+import { Images, LayersFill } from 'react-bootstrap-icons'
 
 import { Image } from 'cloudinary-react'
 import { Cloud, Key, Secret } from '../constants'
@@ -42,9 +42,9 @@ export default class PackageImage extends React.Component {
 
     getStack = () => {
         return (
-            <LayersFill
+            <Images
                 className='packages-image-stack' 
-                size={30}
+                size={55}
                 color="white"
             />
         )

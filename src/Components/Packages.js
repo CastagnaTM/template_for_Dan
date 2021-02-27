@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Carousel from 'react-bootstrap/Carousel'
-import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons'
+import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
 
 import { Image } from 'cloudinary-react'
 import { Cloud, Key, Secret } from '../constants'
@@ -100,12 +100,12 @@ export default class Packages extends React.Component {
     icons = (value) => {
         if (value === 'left') {
             return (
-                <ArrowLeftCircleFill size={50} />
+                <ChevronLeft size={50} aria-label='previous'/>
             )
         }
         if (value === 'right') {
             return (
-                <ArrowRightCircleFill size={50} />
+                <ChevronRight size={50} aria-label='next'/>
             )
         }
     }

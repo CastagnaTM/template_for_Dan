@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
-import { ArrowLeftCircleFill, ArrowRightCircleFill } from 'react-bootstrap-icons'
+import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
 
 import { Image } from 'cloudinary-react'
 import { Cloud, Key, Secret } from '../constants'
@@ -45,7 +45,7 @@ const images = [
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
     },
     {
-        name: 'mrmrsign', title: 'Couple Chair Sign',
+        name: 'mrmrssign', title: 'Couple Chair Sign',
         description: "Hangs on the back of couple's chairs"
     },
     {
@@ -200,12 +200,12 @@ const Creations = () => {
     const icons = (value) => {
         if (value === 'left') {
             return (
-                <ArrowLeftCircleFill size={50} />
+                <ChevronLeft size={50} aria-label='previous'/>
             )
         }
         if (value === 'right') {
             return (
-                <ArrowRightCircleFill size={50} />
+                <ChevronRight size={50} aria-label='next'/>
             )
         }
     }

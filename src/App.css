@@ -79,14 +79,15 @@ nav-bar {
 .banner {
   position: fixed;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   z-index:2;
   margin-top: 50px;
   min-height: 90px;
   max-height: 94px;
   width: 100%;
   background: black;
-  text-align: center;
-  padding-top: 8px;
+  line-height: initial;
   border: solid black .4em;
   overflow: hidden;
   animation: change 3s infinite;
@@ -96,9 +97,13 @@ nav-bar {
   50% { border-color: #E9D21B;}
 }
 
+.banner button {
+  padding: 0;
+}
+
 .banner-link {
   color: white;
-  font-size: 3em;
+  font-size: min(3.5em, 4.5vw);
   font-family: 'Dancing Script', cursive;
   text-decoration: none;
   letter-spacing: 0.12em;
@@ -108,13 +113,6 @@ nav-bar {
 .banner-link:hover {
   color: rgb(236, 226, 145);
   text-decoration: none;
-}
-
-.banner p {
-  color: rgb(235, 233, 222);
-  font-size: 95%;
-  word-spacing: 0.5em;
-  letter-spacing: 0.3em;
 }
 
 footer {
@@ -229,7 +227,6 @@ footer a:hover {
 .component-image{
   max-width: 80%;
   margin-left: 10%;
-  /* border: solid 1px aliceblue; */
   box-shadow: 0px 0px 3px 3px rgba(240, 248, 255, 0.541);
 }
 
@@ -684,7 +681,15 @@ footer a:hover {
   .zoom-image-container { padding: 0 }
 }
 
+@media screen and (max-width: 455px) {
+  .banner-link { font-size: xx-large }
+}
+
 @media screen and (max-width: 360px) { 
   .banner button { padding-top: 10px }
   .banner-link { font-size: 2em } 
+}
+
+@media screen and (max-width: 315px) { 
+  .banner-link { font-size: x-large } 
 }
