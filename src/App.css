@@ -406,6 +406,57 @@ footer a:hover {
   transition: all 200ms ease-in-out;
 }
 
+.modal-content {
+  background-color: rgb(14, 14, 15);
+  color: white;
+  font-family: 'Montserrat', 'Sans-serif';
+}
+
+.modal-header {
+  font-family: 'Dancing Script', cursive;
+  border-bottom: 1px solid #E9D21B;
+}
+
+.modal-title h4 {
+  font-size: 1.8rem;
+}
+
+.contact-form button {
+  border-color: #E9D21B;
+  color: #E9D21B;
+  width: 90%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+
+.contact-form button:hover {
+  background-color: #E9D21B;
+  color: rgb(14, 14, 15);
+  border-color: black;
+}
+
+.modal-footer {
+  border-top: 1px solid #E9D21B;
+}
+
+.modal-footer button {
+  background-color: #E9D21B;
+  color: rgb(14, 14, 15);
+  border-color: black;
+}
+
+.modal-footer button:hover {
+  background-color: rgb(14, 14, 15);
+  color: #E9D21B;
+  border-color: #E9D21B;
+}
+
+/* .modal-footer button {
+  background-color: #E9D21B;
+  color: rgb(14, 14, 15);
+  border-color: black;
+} */
+
 .contact-column {
   display: flex;
   flex-direction: column;

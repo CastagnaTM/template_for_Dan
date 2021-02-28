@@ -1,5 +1,5 @@
 import React from 'react'
-import { Images, LayersFill } from 'react-bootstrap-icons'
+import { Images } from 'react-bootstrap-icons'
 
 import { Image } from 'cloudinary-react'
 import { Cloud, Key, Secret } from '../constants'

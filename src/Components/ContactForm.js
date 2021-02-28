@@ -18,8 +18,9 @@ export default class ContactForm extends React.Component {
         const sendEmail = () => {
             window.emailjs.send(
                 'default_service', 'template_83wcjjt',
-                {message_html: this.state.message, from_name: this.state.name,
-                reply_to: this.state.email
+                {
+                    message_html: this.state.message, from_name: this.state.name,
+                    reply_to: this.state.email
                 }
             )
         }
