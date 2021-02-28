@@ -11,7 +11,7 @@ const CustomModal = () => {
 
     useEffect(
         () => {
-            subscribedUser != "true" && (!noThanks && showModal())
+            subscribedUser !== "true" && (!noThanks && showModal())
         }, []
     )
 
