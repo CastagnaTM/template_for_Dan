@@ -6,20 +6,32 @@ import Button from 'react-bootstrap/Button'
 const CustomModal = () => {
     const [show, setShow] = useState(false)
     const [email, setEmail] = useState('')
+    const subscribedUser = localStorage.getItem('subscribedUser')
+    const noThanks = sessionStorage.getItem('noThanks')
 
     useEffect(
         () => {
-            let timer = setTimeout(() => setShow(true), 2000)
-            return () => {
-                clearTimeout(timer)
-            }
+            subscribedUser != "true" && (!noThanks && showModal())
         }, []
     )
+
+    const showModal = () => {
+        let timer = setTimeout(() => setShow(true), 2000)
+        return () => {
+            clearTimeout(timer)
+        }
+    }
     // once we have a signup form to embed from mailchimp, set up async await here
     // Also can use this to set localstorgae
     const handleSubmit = (e) => {
         e.preventDefault();
         setShow(false)
+        localStorage.setItem('subscribedUser', true)
+    }
+
+    const closeModal = () => {
+        setShow(false)
+        sessionStorage.setItem('noThanks', true)
     }
 
     return (
@@ -47,7 +59,7 @@ const CustomModal = () => {
                 </form>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={() => setShow(false)}>No Thanks</Button>
+                <Button onClick={() => closeModal()} >No Thanks</Button>
             </Modal.Footer>
         </Modal>
     )

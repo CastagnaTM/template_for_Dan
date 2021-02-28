@@ -435,6 +435,13 @@ footer a:hover {
   border-color: black;
 }
 
+.btn-outline-primary:active {
+  background-color: #E9D21B !important;
+  color: rgb(14, 14, 15) !important;
+  border-color: black !important;
+  box-shadow: none !important;
+}
+
 .modal-footer {
   border-top: 1px solid #E9D21B;
 }
@@ -451,11 +458,15 @@ footer a:hover {
   border-color: #E9D21B;
 }
 
-/* .modal-footer button {
-  background-color: #E9D21B;
-  color: rgb(14, 14, 15);
-  border-color: black;
-} */
+.btn-primary:active,
+.btn-primary:visited,
+.modal-footer .btn:active,
+.btn:visited {
+  color: #E9D21B !important;
+  background-color: rgb(14, 14, 15) !important;
+  border-color: #E9D21B !important;
+  box-shadow: none !important;
+}
 
 .contact-column {
   display: flex;
