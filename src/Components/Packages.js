@@ -63,13 +63,6 @@ export default class Packages extends React.Component {
         })
     }
 
-    scrollUp = () => {
-        this.headerRef.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    }
-
     displayImages = () => {
         return (
             this.state.packages.map((item, i) => {

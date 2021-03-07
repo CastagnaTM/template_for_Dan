@@ -15,15 +15,29 @@ export default class ContactForm extends React.Component {
 
     handleSubmit = async(e) => {
         e.preventDefault();
-        const sendEmail = () => {
-            window.emailjs.send(
-                'default_service', 'template_83wcjjt',
-                {
-                    message_html: this.state.message, from_name: this.state.name,
-                    reply_to: this.state.email
-                }
-            )
+        const data = {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
         }
+        const sendEmail = () => {
+                fetch('http://localhost:3001/send', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+        }
+            // window.emailjs.send(
+            //     'default_service', 'template_83wcjjt',
+            //     {
+            //         message_html: this.state.message, from_name: this.state.name,
+            //         reply_to: this.state.email
+            //     }
+            // )
+        // }
         if(this.state.name && this.state.email && this.state.message){
             try {
                 await sendEmail()
