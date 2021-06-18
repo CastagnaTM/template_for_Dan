@@ -10,6 +10,7 @@ import Banner from './Banner'
 import Navbar from'./Navbar'
 import PackageImage from './PackageImage'
 import CustomModal from './CustomModal'
+// import MailchimpformTest from './MailchimpformTest'
 
 
 export default class Packages extends React.Component {
@@ -163,6 +164,7 @@ export default class Packages extends React.Component {
                 </div>
                 { this.state.selectedImage && this.getSelectedImage() }
                 <CustomModal />
+                {/* <MailchimpformTest/> */}
                 <ul className="package-list">{this.displayImages()}</ul>
             </div>
         )

@@ -425,6 +425,12 @@ footer a:hover {
   width: 220px;
 }
 
+#mc-response {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  text-align: center;
+}
+
 .btn-outline-primary {
   border-color: #E9D21B;
   color: #E9D21B;
