@@ -11,12 +11,17 @@ const CustomModal = () => {
     const [robot, setRobot] = useState('')
     const [show, setShow] = useState(false)
     const [response, setResponse] = useState(null)
+    const [subscribeError, setSubscribeError] = useState(null)
     const subscribedUser = localStorage.getItem('subscribedUser')
     const noThanks = sessionStorage.getItem('noThanks')
 
     useEffect(
         () => {
-            subscribedUser !== "true" && (!noThanks && showModal())
+            if (subscribedUser !== "true") {
+                if (!subscribeError && noThanks !== "true") {
+                    showModal()
+                }
+            }
         }
     )
 
@@ -34,20 +39,26 @@ const CustomModal = () => {
             fName: firstName,
             lName: lastName
         }
-
-        const resp = await axios.post('https://dansunforgettablecreations.herokuapp.com/adduser', { data })
-        if (resp.status === 200) {
-            console.log(resp)
+        try {
+            await axios.post('https://dansunforgettablecreations.herokuapp.com/adduser', { data })
             localStorage.setItem('subscribedUser', true)
             setResponse('Thanks for subscribing!')
-        } else {
-            setResponse('Whoops, something dun broke!')
+        } catch(e) {
+            setSubscribeError(e)
+            setResponse("Please try again later")
+            window.emailjs.send(
+                'default_service', 'template_8bngb5l',
+                { message_html: `first name: ${firstName}, last name: ${lastName}, email: ${email}. Error message: ${e}` }
+            )
         }
     }
 
     const closeModal = () => {
+        if (subscribedUser !== "true" && !subscribeError) {
+            sessionStorage.setItem('noThanks', true)
+        }
         setShow(false)
-        sessionStorage.setItem('noThanks', true)
+        // debugger
     }
 
     const showMessage = () => {
@@ -91,7 +102,7 @@ const CustomModal = () => {
         >
             <Modal.Header>
                 <Modal.Title id='contained-modal-title-vcenter'>
-                    Join our mailing list for special offers!
+                {subscribeError ? "We're sorry, something isn't working right." : "Enter your email for an instant $500 savings on one of our stress free wedding packages."}
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
