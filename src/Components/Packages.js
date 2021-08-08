@@ -9,14 +9,17 @@ import { Cloud, Key, Secret } from '../constants'
 import Banner from './Banner'
 import Navbar from'./Navbar'
 import PackageImage from './PackageImage'
+import CustomModal from './CustomModal'
+// import MailchimpformTest from './MailchimpformTest'
+
 
 export default class Packages extends React.Component {
 
     state = {
-        packages: [],
-        isMobile: false,
-        selectedImage: null,
         index: 0,
+        isMobile: false,
+        packages: [],
+        selectedImage: null,
     }
     packagesRef = React.createRef();
     scrollButtonRef = React.createRef();
@@ -59,13 +62,6 @@ export default class Packages extends React.Component {
                 }
             ]
         })
-    }
-
-    scrollUp = () => {
-        this.headerRef.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
     }
 
     displayImages = () => {
@@ -146,7 +142,7 @@ export default class Packages extends React.Component {
     }
 
     getSelectedImage = () => {
-        return( 
+        return ( 
             <div className="zoom">
                 <div className='zoom-img-button'>
                     <button className="close-carousel" onClick={() => this.handleCarousel(null)}>&#x2613;</button>
@@ -166,9 +162,9 @@ export default class Packages extends React.Component {
                 <div className='header-container' ref={ref => {this.headerRef = ref}}>
                     <h1 className='component-header'>Packages</h1>
                 </div>
-                {
-                    this.state.selectedImage ? this.getSelectedImage() : null
-                }
+                { this.state.selectedImage && this.getSelectedImage() }
+                <CustomModal />
+                {/* <MailchimpformTest/> */}
                 <ul className="package-list">{this.displayImages()}</ul>
             </div>
         )

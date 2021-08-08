@@ -406,6 +406,80 @@ footer a:hover {
   transition: all 200ms ease-in-out;
 }
 
+.modal-content {
+  background-color: rgb(14, 14, 15);
+  color: white;
+  font-family: 'Montserrat', 'Sans-serif';
+}
+
+.modal-header {
+  font-family: 'Dancing Script', cursive;
+  border-bottom: 1px solid #E9D21B;
+}
+
+.modal-title h4 {
+  font-size: 1.8rem;
+}
+
+#mc_embed_signup input{
+  width: 220px;
+}
+
+#mc-response {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  text-align: center;
+}
+
+.btn-outline-primary {
+  border-color: #E9D21B;
+  color: #E9D21B;
+  width: 50%;
+  margin-top: 4px;
+  padding: 2px;
+}
+.btn-outline-primary:disabled {
+  color: #ffffff;
+}
+.btn-outline-primary:hover {
+  background-color: #E9D21B;
+  color: rgb(14, 14, 15);
+  border-color: black;
+}
+
+.btn-outline-primary:active {
+  background-color: #E9D21B !important;
+  color: rgb(14, 14, 15) !important;
+  border-color: black !important;
+  box-shadow: none !important;
+}
+
+.modal-footer {
+  border-top: 1px solid #E9D21B;
+}
+
+.modal-footer button {
+  background-color: #FFFFFF;
+  color: rgb(14, 14, 15);
+  border-color: black;
+}
+
+.modal-footer button:hover {
+  background-color: rgb(14, 14, 15);
+  color: #E9D21B;
+  border-color: #E9D21B;
+}
+
+.btn-primary:active,
+.btn-primary:visited,
+.modal-footer .btn:active,
+.btn:visited {
+  color: #E9D21B !important;
+  background-color: rgb(14, 14, 15) !important;
+  border-color: #E9D21B !important;
+  box-shadow: none !important;
+}
+
 .contact-column {
   display: flex;
   flex-direction: column;

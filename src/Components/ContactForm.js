@@ -17,7 +17,7 @@ export default class ContactForm extends React.Component {
         e.preventDefault();
         const sendEmail = () => {
             window.emailjs.send(
-                'default_service', 'template_83wcjjt',
+                'default_service', 'template_83wcj',
                 {message_html: this.state.message, from_name: this.state.name,
                 reply_to: this.state.email
                 }
@@ -25,7 +25,13 @@ export default class ContactForm extends React.Component {
         }
         if(this.state.name && this.state.email && this.state.message){
             try {
-                await sendEmail()
+                await window.emailjs.send(
+                    'default_service', 'template_83wcjjt',
+                    {
+                        message_html: this.state.message, from_name: this.state.name,
+                        reply_to: this.state.email
+                    }
+                )
                 this.setState({
                     success: "Thank you! We'll be in touch as soon as possible",
                     name: '',
