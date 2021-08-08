@@ -58,7 +58,6 @@ const CustomModal = () => {
             sessionStorage.setItem('noThanks', true)
         }
         setShow(false)
-        // debugger
     }
 
     const showMessage = () => {
