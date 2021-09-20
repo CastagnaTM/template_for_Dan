@@ -11,7 +11,7 @@ const CustomModal = () => {
     const [robot, setRobot] = useState('')
     const [show, setShow] = useState(false)
     const [response, setResponse] = useState(null)
-    const [subscribeError, setSubscribeError] = useState(null)
+    const [subscribeError, setSubscribeError] = useState(false)
     const subscribedUser = localStorage.getItem('subscribedUser')
     const noThanks = sessionStorage.getItem('noThanks')
 
@@ -32,26 +32,41 @@ const CustomModal = () => {
         }
     }
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const data = {
             email: email,
             fName: firstName,
             lName: lastName
         }
-        try {
-            await axios.post('https://dansunforgettablecreations.herokuapp.com/adduser', { data })
-            localStorage.setItem('subscribedUser', true)
-            setResponse('Thanks for subscribing!')
-        } catch(e) {
-            setSubscribeError(e)
-            setResponse("Please try again later")
-            window.emailjs.send(
-                'default_service', 'template_8bngb5l',
-                { message_html: `first name: ${firstName}, last name: ${lastName}, email: ${email}. Error message: ${e}` }
-            )
-        }
-    }
+        
+        axios.post('https://dansunforgettablecreations.herokuapp.com/adduser', { data })
+            .then(() => {
+                localStorage.setItem('subscribedUser', true)
+                setResponse('Thanks for subscribing!')
+                window.emailjs.send(
+                    'default_service', 'template_8bngb5l',
+                    {
+                        status: 'Subscribe succeeded! Here is the info of the person who just subscribed:',
+                        info: `First name: ${firstName}, Last name: ${lastName}, Email: ${email}.`,
+                        error_message: '',
+                        raw_response: ''
+                    }
+                )
+            })
+            .catch(error => {
+                setSubscribeError(true)
+                setResponse("Please try again later")
+                window.emailjs.send(
+                    'default_service', 'template_8bngb5l',
+                    {
+                        status: 'Subscribe failed! Here is the info of the person who attempted to subscribe and the error message from the server/mailchimp:',
+                        info: `First name: ${firstName}, Last name: ${lastName}, Email: ${email}.`,
+                        error_message: `Error message: ${error.response.data.trimmed_message}`,
+                        raw_response: `Raw response: ${error.response.data.raw}`
+                    }
+                )
+            })
 
     const closeModal = () => {
         if (subscribedUser !== "true" && !subscribeError) {
