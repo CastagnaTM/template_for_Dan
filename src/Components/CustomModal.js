@@ -67,6 +67,7 @@ const CustomModal = () => {
                     }
                 )
             })
+    }
 
     const closeModal = () => {
         if (subscribedUser !== "true" && !subscribeError) {
