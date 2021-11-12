@@ -10,6 +10,7 @@ import Banner from './Banner'
 import Navbar from './Navbar'
 
 
+
 const images = [
     
     {
@@ -17,7 +18,35 @@ const images = [
         description: "3 Feet Wide x 2.5 Feet Tall with Stand"
     },
     {
-        name: 'fakeWedding', title: 'Triangular Arbor',
+        name: 'NewBeginningWelcomeSign', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+    },
+    {
+        name: 'BriWelcome', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+    },
+    {
+        name: 'BestWeddingEverSign', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+    },
+    {
+        name: 'BriArbor', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
+    },
+    {
+        name: 'BriArbor2', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
+    },
+    {
+        name: 'BriChrisArbor', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
+    },
+    {
+        name: 'BriArborOutside', title: 'Triangular Arbor',
+        description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
+    },
+    {
+        name: 'Arbor', title: 'Triangular Arbor',
         description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
     },
     {
@@ -25,8 +54,20 @@ const images = [
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
     },
     {
-        name: 'champagneGlass', title: 'Champagne Wall',
+        name: 'Sterno3', title: 'Donut Wall',
+        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
+    },
+    {
+        name: 'WeddingChampagne', title: 'Champagne Wall',
         description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."
+    },
+    {
+        name: 'MiniDonutWall3', title: 'Mini Donut Wall',
+        description: "2.5 Feet Tall x 2 Feet Wide x 1 Foot Deep. Holds between 30-90 donuts."
+    },
+    {
+        name: 'ShotGlass', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
     },
     {
         name: 'pictureOfAPicture', title: 'Picture Backdrop',
@@ -35,6 +76,42 @@ const images = [
     {
         name: 'jenga', title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
+    },
+    {
+        name: 'JengaDay', title: 'Plummeting Prisms',
+        description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
+    },
+    {
+        name: 'JengaNight', title: 'Plummeting Prisms',
+        description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
+    },
+    {
+        name: 'Cornhole', title: 'Custom Cornhole',
+        description: "Custom Cornhole with Wheels, Cup Holders, Scorekeeper, LED Lights, and Bean Bags"
+    },
+    {
+        name: 'CornholePlay', title: 'Custom Cornhole',
+        description: "Custom Cornhole with Wheels, Cup Holders, Scorekeeper, LED Lights, and Bean Bags"
+    },
+    {
+        name: 'DonutMind', title: 'Custom Sign',
+        description: ""
+    },
+    {
+        name: 'TakeAPic', title: 'Custom Sign',
+        description: ""
+    },
+    {
+        name: 'Posivibes', title: 'Custom Sign',
+        description: ""
+    },
+    {
+        name: 'WalkSign', title: 'Custom Sign',
+        description: ""
+    },
+    {
+        name: 'ChampagneGlassTags', title: '',
+        description: ""
     },
     {
         name: 'polaroids', title: 'Picture Pallet',
@@ -49,6 +126,10 @@ const images = [
         description: "Hangs on the back of couple's chairs"
     },
     {
+        name: 'Centerpieces', title: '',
+        description: ""
+    },
+    {
         name: 'table', title: '',
         description: ""
     },
@@ -57,12 +138,16 @@ const images = [
         description: ""
     },
     {
-        name: 'andrewDemiCheers', title: '',
+        name: 'SeatingArrangements2', title: '',
         description: ""
     },
     {
-        name: 'polaroid', title: '',
+        name: 'SeatingArrangements', title: '',
         description: ""
+    },
+    {
+        name: 'SheetBackdrop', title: '',
+        description: "Picture Backdrop"
     },   
     {
         name: 'frankEleniWelcome', title: 'Welcome Sign',
@@ -82,11 +167,11 @@ const images = [
         version: true
     },
     {
-        name: 'LBArbor', title: 'Triangular Arbor',
+        name: 'ArborOutside', title: 'Triangular Arbor',
         description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
     },
     {
-        name: 'donutWallAngle', title: 'Donut Wall',
+        name: 'Donuts', title: 'Donut Wall',
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
     },
     {
@@ -105,54 +190,7 @@ const images = [
         name: 'takeAPicture', title: 'Picture Backdrop',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
-    {
-        name: 'jengaPeek', title: 'Plummeting Prisms',
-        description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
-    },   
-    {
-        name: 'fallCollection', title: 'Fall Collection',
-        description: "Fall themed Arbor, Donut Wall, Champagne Wall, Picture Backdrop, Picture Pallet, and more!"
-    },
-    {
-        name: 'arch1', title: 'Triangular Arbor', 
-        description: '9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers.'
-    },
-    {
-        name: 'Arch2', title: 'Triangular Arbor', 
-        description: '9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers.'
-    },
-    {
-        name: 'donut1', title: 'Donut Wall', 
-        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."   
-    },
-    {
-        name: 'donut2', title: 'Donut Wall', 
-        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."   
-    },
-    {
-        name: 'donut3', title: 'Donut Wall', 
-        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."   
-    },
-    {
-        name: 'champagneWall2', title: 'Champagne Wall', 
-        description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."   
-    },
-    {
-        name: 'champagneWall3', title: 'Champagne Wall', 
-        description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."   
-    },
-    {
-        name: 'welcomeSign', title: 'Welcome Sign', 
-        description: '3 Feet Wide x 2.5 Feet Tall with Stand'
-    },
-    {
-        name: 'picturePallet', title: 'Picture Pallet', 
-        description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with mini clothespins, battery powered LED lights, and 'Take a Picture Let's Fill This Pallet With Memories' sign."
-    },
-    {
-        name: 'photoWall', title: 'Picture Backdrop',
-        description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
-    },
+    
 ]
 
 
@@ -256,9 +294,9 @@ const Creations = () => {
             <div className='header-container' >
                 <h1 className='component-header'>Creations</h1>
                 <div className='link-to-contact'>
-                    <p>Don't see something you want? &nbsp;</p>
+                    <p>Don't see something you want? We can make it!&nbsp;</p>
                     <Link className='creations-link' to={{pathname: '/contact'}}>
-                        Let us know !
+                        Contact Us!
                     </Link>
                 </div>
             </div>

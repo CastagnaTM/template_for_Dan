@@ -18,7 +18,7 @@ export default function About() {
                             cloudName={Cloud}
                             apiKey={Key}
                             apiSecret={Secret}
-                            publicId='DanAbout'
+                            publicId='DanArbor'
                             className='component-image'
                             alt='Dan with Welcome sign'
                         />
