@@ -24,7 +24,7 @@ export default class Banner extends React.Component {
                     }
                 }}
                 >
-                    Ultimate Backyard Wedding Package
+                    The Perfect Wedding Package
                 </Link>
                 </button>
             </div>
