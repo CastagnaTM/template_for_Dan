@@ -14,20 +14,32 @@ import Navbar from './Navbar'
 const images = [
     
     {
-        name: 'danAndrewWelcome', title: 'Welcome Sign',
-        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+        name: 'Degroff', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
     },
     {
-        name: 'NewBeginningWelcomeSign', title: 'Welcome Sign',
-        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+        name: 'Tequila', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    }, 
+    {
+        name: 'Tequila2', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
     },
     {
-        name: 'BriWelcome', title: 'Welcome Sign',
-        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+        name: 'ShotGlass', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
     },
     {
-        name: 'BestWeddingEverSign', title: 'Welcome Sign',
-        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
+        name: 'Degroff2', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
+        name: 'Tequila3', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
+        name: 'Tequila4', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
     },
     {
         name: 'BriArbor', title: 'Triangular Arbor',
@@ -62,45 +74,45 @@ const images = [
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
     },
     {
+        name: 'Donuts', title: 'Donut Wall',
+        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
+    },
+    {
         name: 'WeddingChampagne', title: 'Champagne Wall',
         description: "7 Feet Tall x 3 Feet Wide x 2 Feet Deep. Holds 60-120 champagne flutes. Comes with 'Cheers!' sign."
     },
     {
         name: 'MiniDonutWall3', title: 'Mini Donut Wall',
         description: "2.5 Feet Tall x 2 Feet Wide x 1 Foot Deep. Holds between 30-90 donuts."
+    },  
+    {
+        name: 'danAndrewWelcome', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
     },
     {
-        name: 'Degroff', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+        name: 'NewBeginningWelcomeSign', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
     },
     {
-        name: 'Tequila', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
-    }, 
-    {
-        name: 'Tequila2', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+        name: 'BriWelcome', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
     },
     {
-        name: 'ShotGlass', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
-    },
-    {
-        name: 'Degroff2', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
-    },
-    {
-        name: 'Tequila3', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
-    },
-    {
-        name: 'Tequila4', title: 'Shot Glass Wall',
-        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+        name: 'BestWeddingEverSign', title: 'Welcome Sign',
+        description: "3 Feet Wide x 2.5 Feet Tall with Stand"
     },
     {
         name: 'pictureOfAPicture', title: 'Picture Backdrop',
         description: "6.5 Feet Tall x 7 Feet Wide x 1.5 Feet Deep. Comes with 'Take A Picture It'll Last Longer' sign."
     },
+    {
+        name: 'Cornhole', title: 'Custom Cornhole',
+        description: "Custom Cornhole with Wheels, Cup Holders, Scorekeeper, LED Lights, and Bean Bags"
+    },
+    {
+        name: 'CornholePlay', title: 'Custom Cornhole',
+        description: "Custom Cornhole with Wheels, Cup Holders, Scorekeeper, LED Lights, and Bean Bags"
+    }, 
     {
         name: 'jenga', title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
@@ -112,14 +124,6 @@ const images = [
     {
         name: 'JengaNight', title: 'Plummeting Prisms',
         description: "Blocks are 12 Inches Long x 4 Inches Wide x 2 Inches Tall. The full stack is 2.5 feet tall."
-    },
-    {
-        name: 'Cornhole', title: 'Custom Cornhole',
-        description: "Custom Cornhole with Wheels, Cup Holders, Scorekeeper, LED Lights, and Bean Bags"
-    },
-    {
-        name: 'CornholePlay', title: 'Custom Cornhole',
-        description: "Custom Cornhole with Wheels, Cup Holders, Scorekeeper, LED Lights, and Bean Bags"
     },
     {
         name: 'DonutMind', title: 'Custom Sign',
@@ -205,10 +209,6 @@ const images = [
     {
         name: 'ArborOutside', title: 'Triangular Arbor',
         description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
-    },
-    {
-        name: 'Donuts', title: 'Donut Wall',
-        description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
     },
     {
         name: 'donutAngleFull', title: 'Donut Wall',
