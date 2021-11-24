@@ -25,7 +25,7 @@ export default function About() {
                     </div>
                     <div className='component-text' id="about-text">
                         <p>
-                            Welcome to Dan’s Unforgettable Creations! My name is Dan, and I started this company with 2 of my best friends, Andrew and Chris. 
+                            Welcome to Dan’s Unforgettable Creations! My name is Dan, and I started this company with one of my best friends, Chris. 
                             Born and raised on Long Island, my ultimate goal in life has always been to use my passion for designing and engineering to help people and bring them happiness. 
                             There’s nothing like the feeling of making people smile, especially when dealing with a day that is extremely special. 
                             Here at Dan’s Unforgettable Creations, our goal is to make any special day of yours unforgettable! 

@@ -50,6 +50,10 @@ const images = [
         description: "9 Feet Tall x 8.5 Feet Wide with 4.5 foot long base. Includes eye hooks on the back for flowers."
     },
     {
+        name: 'Chuppah', title: 'Chuppah',
+        description: "8 Feet Tall x 7 Feet Wide x 7 Feet Deep."
+    },
+    {
         name: 'tomFrankDonut', title: 'Donut Wall',
         description: "6 Feet Tall x 3 Feet Wide x 2.5 Feet Deep. Holds between 32-96 donuts. Has 2 shelves and utensil holder. Comes with 'Donut Mind If I Do' sign."
     },
@@ -66,7 +70,31 @@ const images = [
         description: "2.5 Feet Tall x 2 Feet Wide x 1 Foot Deep. Holds between 30-90 donuts."
     },
     {
+        name: 'Degroff', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
+        name: 'Tequila', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    }, 
+    {
+        name: 'Tequila2', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
         name: 'ShotGlass', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
+        name: 'Degroff2', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
+        name: 'Tequila3', title: 'Shot Glass Wall',
+        description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
+    },
+    {
+        name: 'Tequila4', title: 'Shot Glass Wall',
         description: "6 Feet Tall x 4 Feet Wide. 7 Acrylic Shelves that Holds 126 Shot Glasses. Comes with Changing LED Light Strips and Custom Lettering on Top."
     },
     {
@@ -124,6 +152,14 @@ const images = [
     {
         name: 'mrmrssign', title: 'Couple Chair Sign',
         description: "Hangs on the back of couple's chairs"
+    },
+    {
+        name: 'weddingrules', title: '',
+        description: ""
+    },
+    {
+        name: 'kaiasign', title: '',
+        description: ""
     },
     {
         name: 'Centerpieces', title: '',

@@ -44,19 +44,24 @@ export default class Packages extends React.Component {
             packages: 
             [
                 {
-                    id: 1, name: 'arborChairs', title: 'The Perfect Wedding Package', 
-                    description: ['$2000 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Plummeting Prisms Game, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', <hr></hr>, 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
+                    id: 1, name: 'BriArbor', title: 'The Perfect Wedding Package', 
+                    description: ['$2500 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Games, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', <hr></hr>, 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
                     images: 
                     [ 
-                        { image: 'arborChairs', title: 'The Perfect Wedding Package' }, 
-                        { image: 'fakeWedding', title: 'Arbor' },
-                        { image: 'frankEleniWelcome', title: 'Welcome Sign' },
-                        { image: 'tomFrankDonut', title: 'Donut Wall' },
-                        { image: 'champagneGlass', title: 'Champagne Wall' },
-                        { image: 'pictureOfAPicture', title: 'Picture Backdrop' },
-                        { image: 'polaroids', title: 'Picture Pallet' },
-                        { image: 'jenga', title: 'Plummeting Prisms' },
-                        { image: 'lights2', title: 'Lights' },
+                        { image: 'ArborOutside', title: 'Arbor' },
+                        { image: 'BriWelcome', title: 'Welcome Sign' },
+                        { image: 'Sterno3', title: 'Donut Wall' },
+                        { image: 'WeddingChampagne', title: 'Champagne Wall' },
+                        { image: 'SheetBackdrop', title: 'Picture Backdrop' },
+                        { image: 'JengaDay', title: 'Jenga' },
+                        { image: 'CornholePlay', title: 'Cornhole' },
+                        { image: 'TakeAPic', title: 'Picture Backdrop Sign' },
+                        { image: 'weddingrules', title: 'Custom Sign' },
+                        { image: 'kaiasign', title: 'Custom Signature Drinks Sign' },
+                        { image: 'WalkSign', title: 'Custom Sign' },
+                        { image: 'Centerpieces', title: 'Centerpieces' },
+                        { image: 'mrmrssign', title: 'Mr & Mrs Chair Signs' },
+
 
                     ]
                 }

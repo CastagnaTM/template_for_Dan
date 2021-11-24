@@ -6,7 +6,7 @@ export default function VideoPlayer() {
 
     return (
         <ReactPlayer 
-            url='https://www.dailymotion.com/video/x7ygcbd'
+            url='https://www.dailymotion.com/video/x85js3a'
             className='react-player'
             width='100%'
             height='100%'
