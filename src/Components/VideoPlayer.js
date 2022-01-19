@@ -19,6 +19,7 @@ export default function VideoPlayer() {
                     params: {
                         "queue-autoplay-next": false,
                         "queue-enable": false,
+                        "loop": true,
                     }
                 }
             }}

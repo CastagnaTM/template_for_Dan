@@ -4,14 +4,13 @@ import Carousel from 'react-bootstrap/Carousel'
 import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
 
 import { Image } from 'cloudinary-react'
-import { Cloud, Key, Secret } from '../constants'
 
 import Banner from './Banner'
 import Navbar from'./Navbar'
 import PackageImage from './PackageImage'
 import CustomModal from './CustomModal'
-// import MailchimpformTest from './MailchimpformTest'
 
+import { packageOneImages, Cloud, Key, Secret } from '../constants'
 
 export default class Packages extends React.Component {
 
@@ -46,24 +45,7 @@ export default class Packages extends React.Component {
                 {
                     id: 1, name: 'BriArbor', title: 'The Perfect Wedding Package', 
                     description: ['$2500 to rent the entire package for your special day', 'Comes with: Contactless Delivery, Assembly and Disassembly, Arbor, Welcome Sign, Donut Wall, Champagne Wall, Picture Pallet and Sign, Picture Backdrop and Sign, Games, Centerpieces, and Lights', 'Plus a Personalized Custom Decoration to keep as a Permanent Memory as a Thank You for Using Our Services!', <hr></hr>, 'Looking to make decorations in your wedding package more personalized? Contact us to discuss custom pieces for an additional cost.'], 
-                    images: 
-                    [ 
-                        { image: 'ArborOutside', title: 'Arbor' },
-                        { image: 'BriWelcome', title: 'Welcome Sign' },
-                        { image: 'Sterno3', title: 'Donut Wall' },
-                        { image: 'WeddingChampagne', title: 'Champagne Wall' },
-                        { image: 'SheetBackdrop', title: 'Picture Backdrop' },
-                        { image: 'JengaDay', title: 'Jenga' },
-                        { image: 'CornholePlay', title: 'Cornhole' },
-                        { image: 'TakeAPic', title: 'Picture Backdrop Sign' },
-                        { image: 'weddingrules', title: 'Custom Sign' },
-                        { image: 'kaiasign', title: 'Custom Signature Drinks Sign' },
-                        { image: 'WalkSign', title: 'Custom Sign' },
-                        { image: 'Centerpieces', title: 'Centerpieces' },
-                        { image: 'mrmrssign', title: 'Mr & Mrs Chair Signs' },
-
-
-                    ]
+                    images: packageOneImages
                 }
             ]
         })
@@ -98,30 +80,17 @@ export default class Packages extends React.Component {
         })
     }
 
-    icons = (value) => {
-        if (value === 'left') {
-            return (
-                <ChevronLeft size={50} aria-label='previous'/>
-            )
-        }
-        if (value === 'right') {
-            return (
-                <ChevronRight size={50} aria-label='next'/>
-            )
-        }
-    }
-
     getCarouselItems = () => {
         return (
             this.state.selectedImage.images.map((img, i) => {
                 return (
-                    <Carousel.Item key={i} >
+                    <Carousel.Item key={i} className='carousel-item'>
                         <Image
                             cloudName={Cloud}
                             apiKey={Key}
                             apiSecret={Secret}
                             publicId={img.image}
-                            className='zoom-image'
+                            className='carousel-image'
                             alt={this.state.selectedImage.title}
                         />
                         <Carousel.Caption>
@@ -138,8 +107,8 @@ export default class Packages extends React.Component {
             <Carousel 
                 className='zoom-image-container'
                 interval={null}
-                prevIcon={this.icons('left')}
-                nextIcon={this.icons('right')}
+                prevIcon={<ChevronLeft size={50} aria-label='previous'/>}
+                nextIcon={<ChevronRight size={50} aria-label='next'/>}
             >
                 {this.getCarouselItems()}
             </Carousel>
@@ -169,7 +138,6 @@ export default class Packages extends React.Component {
                 </div>
                 { this.state.selectedImage && this.getSelectedImage() }
                 <CustomModal />
-                {/* <MailchimpformTest/> */}
                 <ul className="package-list">{this.displayImages()}</ul>
             </div>
         )

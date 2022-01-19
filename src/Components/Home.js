@@ -2,7 +2,10 @@ import React from 'react'
 import Banner from './Banner'
 import Navbar from'./Navbar'
 import About from './About'
-import VideoPlayer from './VideoPlayer'
+import HomeCarousel from './HomeCarousel'
+
+// import VideoPlayer from './VideoPlayer'
+
 ////2.e4fe80f2.chunk.js:1 
 //main.5e05b7d7.chunk.js:1 
 export default function Home() {
@@ -15,8 +18,9 @@ export default function Home() {
             <div className='header-container'>
                 <h1 className='component-header' id='home-header'>Dan's Unforgettable Creations</h1>
             </div>
-            <div className='video-container'>
-                <VideoPlayer />
+            <div>
+                <HomeCarousel />
+                {/* <VideoPlayer /> */}
             </div>
             <About/>
         </div>

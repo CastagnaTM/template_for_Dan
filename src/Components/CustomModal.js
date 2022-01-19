@@ -117,7 +117,7 @@ const CustomModal = () => {
         >
             <Modal.Header>
                 <Modal.Title id='contained-modal-title-vcenter'>
-                {subscribeError ? "We're sorry, something isn't working right." : "Enter your email for an instant $500 savings on one of our stress free wedding packages."}
+                {subscribeError ? "We're sorry, something isn't working right." : "Enter your email for an instant $250 savings on one of our stress free wedding packages."}
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>

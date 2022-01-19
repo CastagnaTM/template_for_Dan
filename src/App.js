@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/creations' exact component={Creations} />
-            <Route path='/packages' exact component={Packages} />
+            <Route path='/packages' exact component={Packages} packageOne={this.PACKAGE_ONE_IMAGES}/>
             <Route path='/contact' exact component={ContactForm} />
           </Switch>
         </div>

@@ -369,16 +369,9 @@ footer a:hover {
 }
 
 .zoom-image-container {
-  display: grid;
-  margin: 0 auto;
+  display: block;
   padding: 2em;
   width: 100%;
-}
-
-.zoom-image {
-  max-height: 90vh;
-  display: block;
-  margin: auto;
 }
 
 .carousel-image {
@@ -386,6 +379,25 @@ footer a:hover {
   display: block;
   margin: auto;
 }
+
+.carousel-image {
+  max-height: 75vh;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.carousel-item {
+  height: 90vh;
+}
+
+.home-carousel-item { 
+  height: 75vh;
+}
+
+.carousel-caption { padding-bottom: 0 }
 
 .close-carousel {
   position: absolute;
@@ -682,10 +694,10 @@ footer a:hover {
 
   .zoom-image { max-width: 100% }
 
-  .carousel-inner {
+  /* .carousel-inner {
     display: flex;
     align-items: center;
-  }
+  } */
 
   .carousel-image { max-width: 100% }
 
@@ -753,8 +765,6 @@ footer a:hover {
     font-size: 2em;
     padding: 0;
   }
-
-  .carousel-caption { padding-bottom: 0 }
 
   .carousel-caption h4 { margin: 0 }
 
