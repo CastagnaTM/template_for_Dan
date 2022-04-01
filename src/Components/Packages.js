@@ -3,14 +3,42 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
 
-import { Image } from 'cloudinary-react'
-
 import Banner from './Banner'
 import Navbar from'./Navbar'
 import PackageImage from './PackageImage'
 import CustomModal from './CustomModal'
 
-import { packageOneImages, Cloud, Key, Secret } from '../constants'
+import { packageOneImages } from '../constants'
+
+import ArborOutside from '../Assets/ArborOutside.jpg'
+import BriWelcome from '../Assets/BriWelcome.jpg'
+import Sterno3 from '../Assets/Sterno3.jpg'
+import WeddingChampagne from '../Assets/WeddingChampagne.jpg'
+import SheetBackdrop from '../Assets/SheetBackdrop.jpg'
+import JengaDay from '../Assets/JengaDay.jpg'
+import CornholePlay from '../Assets/CornholePlay.jpg'
+import TakeAPic from '../Assets/TakeAPic.jpg'
+import weddingrules from '../Assets/weddingrules.jpg'
+import kaiasign from '../Assets/kaiasign.jpg'
+import WalkSign from '../Assets/WalkSign.jpg'
+import Centerpieces from '../Assets/Centerpieces.jpg'
+import mrmrssign from '../Assets/mrmrssign.png'
+
+const images = {
+    'Sterno3': Sterno3,
+    'WeddingChampagne': WeddingChampagne,
+    'BriWelcome': BriWelcome,
+    'CornholePlay': CornholePlay,
+    'JengaDay': JengaDay,
+    'TakeAPic': TakeAPic,
+    'WalkSign': WalkSign,
+    'mrmrssign': mrmrssign,
+    'weddingrules': weddingrules,
+    'kaiasign': kaiasign,
+    'Centerpieces': Centerpieces,
+    'SheetBackdrop': SheetBackdrop,
+    'ArborOutside': ArborOutside
+}
 
 export default class Packages extends React.Component {
 
@@ -85,14 +113,7 @@ export default class Packages extends React.Component {
             this.state.selectedImage.images.map((img, i) => {
                 return (
                     <Carousel.Item key={i} className='carousel-item'>
-                        <Image
-                            cloudName={Cloud}
-                            apiKey={Key}
-                            apiSecret={Secret}
-                            publicId={img.image}
-                            className='carousel-image'
-                            alt={this.state.selectedImage.title}
-                        />
+                        <img src={images[img.image]} className='carousel-image' alt={this.state.selectedImage.title}/>
                         <Carousel.Caption>
                             {this.state.isMobile ? <h4>{img.title}</h4> : <h3>{img.title}</h3>}
                         </Carousel.Caption>
